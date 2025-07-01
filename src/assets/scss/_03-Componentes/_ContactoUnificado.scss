@@ -1,0 +1,272 @@
+.ContactoUnificado-unificado-container {
+  position: relative;
+  background: #112240;
+  border: 2px solid #64ffda;
+  border-radius: 8px;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 1200px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  font-family: 'Space Grotesk', sans-serif;
+  color: #e6f1ff;
+}
+
+.ContactoUnificado-cinta-top,
+.ContactoUnificado-cinta-bottom {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: linear-gradient(90deg, #0a192f, #64ffda, #0a192f);
+  z-index: 2;
+}
+
+.ContactoUnificado-cinta-top {
+  top: 0;
+}
+
+.ContactoUnificado-cinta-bottom {
+  bottom: 0;
+}
+
+.ContactoUnificado-titulo-principal {
+  color: #64ffda;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.ContactoUnificado-tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  gap: 1rem;
+}
+
+.ContactoUnificado-tab {
+  background: #0a192f;
+  color: #64ffda;
+  border: 1px solid #64ffda;
+  border-radius: 4px;
+  padding: 0.8rem 1.5rem;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    background: rgba(100, 255, 218, 0.1);
+  }
+  
+  &.active {
+    background: #64ffda;
+    color: #0a192f;
+    font-weight: bold;
+  }
+}
+
+.ContactoUnificado-contenido {
+  padding: 1rem;
+}
+
+.ContactoUnificado-redes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  
+  @media (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+.ContactoUnificado-logo-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  
+  .ContactoUnificado-logo {
+    max-width: 300px;
+    border: 2px solid #64ffda;
+    border-radius: 8px;
+  }
+}
+
+.ContactoUnificado-redes-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.ContactoUnificado-red-item {
+  background: #0a192f;
+  border: 1px solid #64ffda;
+  border-radius: 8px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  color: #64ffda;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    background: rgba(100, 255, 218, 0.1);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(100, 255, 218, 0.2);
+  }
+  
+  span {
+    font-size: 1rem;
+    text-transform: uppercase;
+  }
+}
+
+.ContactoUnificado-formulario-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  
+  @media (min-width: 1024px) {
+    flex-direction: row;
+  }
+}
+
+.ContactoUnificado-formulario {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.formulario-grupo {
+  label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    color: #64ffda;
+    font-size: 1rem;
+    
+    .formulario-icono {
+      font-size: 1rem;
+    }
+  }
+  
+  input,
+  textarea {
+    width: 100%;
+    padding: 0.8rem;
+    background: #0a192f;
+    border: 1px solid #64ffda;
+    border-radius: 4px;
+    color: #e6f1ff;
+    font-family: 'Poppins', sans-serif;
+    
+    &:focus {
+      outline: none;
+      border-color: #e6f1ff;
+    }
+    
+    &::placeholder {
+      color: #8892b0;
+    }
+  }
+  
+  textarea {
+    min-height: 120px;
+    resize: vertical;
+  }
+}
+
+.formulario-boton {
+  background: #0a192f;
+  color: #64ffda;
+  border: 1px solid #64ffda;
+  border-radius: 4px;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  
+  span {
+    font-weight: bold;
+  }
+  
+  .boton-icono {
+    font-size: 1.2rem;
+  }
+  
+  &:hover {
+    background: #64ffda;
+    color: #0a192f;
+  }
+}
+
+.ContactoUnificado-slider {
+  flex: 1;
+  border: 1px solid #64ffda;
+  border-radius: 8px;
+  overflow: hidden;
+  
+  .slider-item {
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.slick-prev,
+.slick-next {
+  width: 40px;
+  height: 40px;
+  z-index: 1;
+  
+  &:before {
+    font-size: 40px;
+    color: #64ffda;
+    opacity: 0.8;
+  }
+  
+  &:hover:before {
+    opacity: 1;
+  }
+}
+
+.slick-prev {
+  left: 15px;
+}
+
+.slick-next {
+  right: 15px;
+}
+
+@media (max-width: 768px) {
+  .ContactoUnificado-titulo-principal {
+    font-size: 1.5rem;
+  }
+  
+  .ContactoUnificado-tabs {
+    margin-bottom: 1.5rem;
+  }
+  
+  .ContactoUnificado-tab {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+}

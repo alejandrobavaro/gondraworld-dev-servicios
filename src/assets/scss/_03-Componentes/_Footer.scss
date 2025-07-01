@@ -1,0 +1,176 @@
+.site-footer {
+  background-color: #0a192f;
+  color: #e6f1ff;
+  border-top: 1px solid #64ffda;
+  padding: 1.5rem 1rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer-top {
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 1.5rem;
+}
+
+.footer-brand {
+  text-align: center;
+  
+  .brand-logo {
+    max-height: 80px;
+  }
+}
+
+.footer-sections {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.footer-section {
+  text-align: center;
+}
+
+.section-heading {
+  color: #64ffda;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #64ffda;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: #e6f1ff;
+  text-decoration: none;
+  
+  i {
+    color: #64ffda;
+    font-size: 1rem;
+  }
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.footer-link {
+  color: #e6f1ff;
+  text-decoration: none;
+  
+  &:hover {
+    color: #64ffda;
+  }
+}
+
+.footer-social {
+  max-width: 1200px;
+  margin: 1.5rem auto 0;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(100, 255, 218, 0.2);
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(100, 255, 218, 0.1);
+  color: #64ffda;
+  font-size: 1rem;
+  border: 1px solid #64ffda;
+  
+  &:hover {
+    background: #64ffda;
+    color: #0a192f;
+  }
+}
+
+.footer-bottom {
+  max-width: 1200px;
+  margin: 1.5rem auto 0;
+  padding-top: 1rem;
+  text-align: center;
+  border-top: 1px solid rgba(100, 255, 218, 0.2);
+}
+
+.copyright {
+  font-size: 0.8rem;
+  color: #8892b0;
+  margin-bottom: 0.5rem;
+}
+
+.credits {
+  font-size: 0.8rem;
+  color: #64ffda;
+  
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer-top {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .footer-brand {
+    flex: 1;
+    text-align: left;
+  }
+  
+  .footer-sections {
+    grid-template-columns: repeat(2, 1fr);
+    flex: 2;
+  }
+  
+  .footer-section {
+    text-align: left;
+  }
+  
+  .brand-logo {
+    max-height: 100px;
+  }
+  
+  .contact-item {
+    justify-content: flex-start;
+  }
+}
+
+@media (min-width: 1024px) {
+  .site-footer {
+    padding: 2rem 1.5rem;
+  }
+  
+  .section-heading {
+    font-size: 1.2rem;
+  }
+  
+  .social-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
+  }
+}
