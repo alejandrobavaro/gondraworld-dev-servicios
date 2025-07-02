@@ -1,180 +1,201 @@
-.CurriculumCv-container {
-    width: 100%;
-    padding: 1rem;
-    background-color: #001a4d;
-    border-radius: 20px;
-  }
-  
-  .CurriculumCv-section {
-    margin-bottom: 2rem;
-  }
-  
-  .CurriculumCv-section-title {
-    color: #ffd800;
-    font-family: 'Arial Black', sans-serif;
-    font-size: 1.2rem;
-    margin: 0 0 1rem 0;
-    padding: 0.5rem 0;
-    border-bottom: 2px solid #ffd800;
+.cv-container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #0a192f;
+  color: #e6f1ff;
+  font-family: 'Poppins', sans-serif;
+  padding: 2rem 0;
+  display: flex;
+  justify-content: center;
+}
 
-    text-transform: uppercase;
+.cv-wrapper {
+  width: 100%;
+  max-width: 900px;
+  padding: 0 1.5rem;
+}
+
+.cv-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  
+  .cv-name {
+    color: #64ffda;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
     letter-spacing: 1px;
   }
   
-  .CurriculumCv-movies-container {
-    display: grid;
-    grid-template-columns: 3fr;
-    gap: 1rem;
+  .cv-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #ccd6f6;
   }
   
-  .CurriculumCv-movie-item {
-    width: 100%;
+  .cv-contact {
+    p {
+      margin: 0.3rem 0;
+      font-size: 1.1rem;
+      
+      a {
+        color: #64ffda;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+.cv-divider {
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #64ffda, transparent);
+  margin: 2rem auto;
+  width: 80%;
+  transform-origin: left;
+}
+
+.cv-section {
+  margin-bottom: 2rem;
+  
+  .cv-section-title {
+    color: #64ffda;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
   }
   
-  .CurriculumCv-movie-image-container {
-    position: relative;
-    width: 100%;
-    padding-top: 150%;
+  .cv-section-content {
+    color: #ccd6f6;
+    line-height: 1.6;
+    font-size: 1rem;
+    
+    p, li {
+      margin-bottom: 0.5rem;
+    }
+    
+    strong {
+      color: #e6f1ff;
+    }
+  }
+}
+
+.cv-experience {
+  margin-bottom: 2rem;
+  
+  h4 {
+    color: #e6f1ff;
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+  }
+  
+  .cv-experience-period {
+    color: #8892b0;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    font-style: italic;
+  }
+  
+  ul {
+    padding-left: 1.5rem;
+    
+    li {
+      margin-bottom: 0.5rem;
+      position: relative;
+      
+      &::before {
+        content: "•";
+        color: #64ffda;
+        position: absolute;
+        left: -1rem;
+      }
+    }
+  }
+}
+
+.cv-education {
+  li {
+    margin-bottom: 1rem;
+    padding-left: 0.5rem;
+    border-left: 2px solid #64ffda;
+    padding-left: 1rem;
+    
+    &::before {
+      display: none;
+    }
+  }
+}
+
+/* Animaciones específicas */
+.cv-section-content {
+  li, p {
     overflow: hidden;
   }
-  
-  .CurriculumCv-movie-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border: 2px solid #ffd800;
-    border-radius: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cv-wrapper {
+    padding: 0 1rem;
   }
   
-  .CurriculumCv-movie-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding: 0.5rem;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-  }
-  
-  .CurriculumCv-movie-item:hover .CurriculumCv-movie-overlay {
-    opacity: 1;
-  }
-  
-  .CurriculumCv-play-button {
-    background-color: #ffd800;
-    color: #001a4d;
-    border: none;
-    width: 2.5rem;
-    height: 2.5rem;
-    border-radius: 50%;
-    margin: 0 auto 0.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
-  }
-  
-  .CurriculumCv-movie-info {
-    display: flex;
-    justify-content: space-between;
-    font-size: 0.8rem;
-  }
-  
-  .CurriculumCv-movie-rating {
-    color: #ffd800;
-  }
-  
-  .CurriculumCv-movie-details {
-    padding: 0.5rem 0;
-  }
-  
-  .CurriculumCv-movie-title {
-    font-size: 0.9rem;
-    margin: 0.3rem 0;
-    color: #ffffff;
-  }
-  
-  .CurriculumCv-movie-genre {
-    font-size: 0.8rem;
-    margin: 0;
-    color: rgba(255, 255, 255, 0.7);
-  }
-  
-  .CurriculumCv-categories-container {
-    display: grid;
-    grid-template-columns: 3fr 3fr;
-    gap: 0.8rem;
-  }
-  
-  .CurriculumCv-category-item {
-    background: rgba(255, 216, 0, 0.1);
-    border: 1px solid rgba(255, 216, 0, 0.3);
-    padding: 0.8rem;
-    text-align: center;
-    transition: all 0.3s ease;
-    border-radius: 20px;
-  }
-  
-  .CurriculumCv-category-item:hover {
-    background: rgba(255, 216, 0, 0.2);
-    border-color: #ffd800;
+  .cv-header {
+    .cv-name {
+      font-size: 2rem;
+    }
     
-  }
-  
-  .CurriculumCv-category-name {
-    font-size: 0.9rem;
-    color: #ffd800;
-    margin: 0 0 0.3rem 0;
-  }
-  
-  .CurriculumCv-category-count {
-    font-size: 0.8rem;
-    margin: 0;
-    color: rgba(255, 255, 255, 0.7);
-  }
-  
-  @media (min-width: 768px) {
-    .CurriculumCv-container {
-      padding: 1.5rem;
-      max-width: 1200px;
-      margin: 0 auto;
+    .cv-title {
+      font-size: 1.3rem;
     }
-  
-    .CurriculumCv-section-title {
-      font-size: 1.5rem;
-    }
-  
-    .CurriculumCv-movies-container {
-      grid-template-columns: repeat(2, 3fr);
-      gap: 1.5rem;
-    }
-  
-    .CurriculumCv-categories-container {
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.2rem;
+    
+    .cv-contact p {
+      font-size: 1rem;
     }
   }
   
-  @media (min-width: 1024px) {
-    .CurriculumCv-section-title {
+  .cv-section {
+    .cv-section-title {
+      font-size: 1.3rem;
+    }
+    
+    .cv-section-content {
+      font-size: 0.95rem;
+    }
+  }
+  
+  .cv-experience {
+    h4 {
+      font-size: 1.1rem;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .cv-wrapper {
+    padding: 0 2rem;
+  }
+  
+  .cv-header {
+    .cv-name {
+      font-size: 3rem;
+    }
+    
+    .cv-title {
       font-size: 1.8rem;
     }
+  }
   
-    .CurriculumCv-movies-container {
-      grid-template-columns: repeat(4, 1fr);
-      gap: 2rem;
+  .cv-section {
+    .cv-section-title {
+      font-size: 1.8rem;
     }
-  
-    .CurriculumCv-categories-container {
-      grid-template-columns: repeat(6, 1fr);
-      gap: 1.5rem;
+    
+    .cv-section-content {
+      font-size: 1.1rem;
     }
   }
+}

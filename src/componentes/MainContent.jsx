@@ -1,14 +1,18 @@
 import React from 'react';
+import MainBanner from './MainBanner';
 import MainNovedades from './MainNovedades';
 import MainUltimosProyectos from './MainUltimosProyectos';
 import MainGaleria from './MainGaleria';
+import MainDestacadosSlider from './MainDestacadosSlider';
 import '../assets/scss/_03-Componentes/_MainContent.scss';
 
-const MainContent = ({ showModal, darkMode }) => {
+const MainContent = () => {
   return (
-    <div className={`content-container ${darkMode ? 'dark-mode' : 'light-mode'}`}>
+    <div className="main-content-wrapper">
+      <MainBanner />
+      
       <div className="content-block">
-        <MainNovedades darkMode={darkMode} />
+        <MainNovedades />
       </div>
       
       <div className="content-separator">
@@ -19,7 +23,7 @@ const MainContent = ({ showModal, darkMode }) => {
       </div>
       
       <div className="content-block">
-        <MainUltimosProyectos showModal={showModal} darkMode={darkMode} />
+        <MainUltimosProyectos />
       </div>
       
       <div className="content-separator">
@@ -30,8 +34,10 @@ const MainContent = ({ showModal, darkMode }) => {
       </div>
       
       <div className="content-block">
-        <MainGaleria darkMode={darkMode} />
+        <MainGaleria />
       </div>
+
+      <MainDestacadosSlider />
     </div>
   );
 };

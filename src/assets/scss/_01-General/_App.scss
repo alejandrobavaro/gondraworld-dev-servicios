@@ -9,6 +9,28 @@
   position: relative;
   overflow-x: hidden;
 
+  /* Layout mejorado para centrado */
+  > *:not(.content-divider) {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    flex-shrink: 0;
+  }
+
+  /* Excepciones para componentes a ancho completo */
+  > .main-destacados-slider {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  /* Contenedor principal */
+  > main {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+
   &.active-effect {
     transform: scale(0.99);
     opacity: 0.98;
@@ -90,6 +112,12 @@
 
 /* Responsive - Tablet (768px) */
 @media (min-width: 768px) {
+  .app-wrapper {
+    > *:not(.content-divider) {
+      padding: 0 2rem;
+    }
+  }
+
   .content-divider {
     margin: 1.5rem 0;
 
@@ -109,6 +137,12 @@
 
 /* Responsive - Desktop (1024px) */
 @media (min-width: 1024px) {
+  .app-wrapper {
+    > *:not(.content-divider) {
+      padding: 0 2.5rem;
+    }
+  }
+
   .content-divider {
     margin: 2rem 0;
 

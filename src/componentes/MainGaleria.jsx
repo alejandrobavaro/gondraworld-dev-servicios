@@ -24,18 +24,18 @@ const MainGaleria = () => {
     fetchProyectos();
   }, []);
 
-  if (loading) return <div className="portfolio-loading">CARGANDO PORTAFOLIO...</div>;
+  if (loading) return <div className="portfolio-loading">CARGANDO PROYECTOS...</div>;
   if (error) return <div className="portfolio-error">ERROR: {error}</div>;
 
   return (
     <section className="portfolio-completo">
-      <h2 className="portfolio-completo-title">PORTAFOLIO COMPLETO</h2>
-      <div className="portfolio-completo-grid">
-        {proyectos.map(proyecto => (
-          <div key={proyecto.id} className="portfolio-item">
-            <MainProyectosCard proyecto={proyecto} />
-          </div>
-        ))}
+      <div className="content-container">
+        <h2 className="portfolio-completo-title">GALERIA</h2>
+        <div className="portfolio-completo-grid">
+          {proyectos.map(proyecto => (
+            <MainProyectosCard key={proyecto.id} proyecto={proyecto} />
+          ))}
+        </div>
       </div>
     </section>
   );

@@ -4,7 +4,6 @@ import '../assets/scss/_03-Componentes/_MainProyectosCard.scss';
 const MainProyectosCard = ({ proyecto }) => {
   const [isHovered, setIsHovered] = useState(false);
 
-  // Verificación de objeto proyecto
   if (!proyecto) {
     return (
       <div className="project-card error">
@@ -22,15 +21,17 @@ const MainProyectosCard = ({ proyecto }) => {
       onMouseLeave={() => setIsHovered(false)}
     >
       <a href={proyecto.url || '#'} target="_blank" rel="noopener noreferrer">
-        <img 
-          src={proyecto.imagen || '/img/placeholder-project.jpg'} 
-          alt={proyecto.nombre || 'Proyecto'} 
-          className="project-image"
-          loading="lazy"
-          onError={(e) => {
-            e.target.src = '/img/placeholder-project.jpg';
-          }}
-        />
+        <div className="image-container">
+          <img 
+            src={proyecto.imagen || '/img/placeholder-project.jpg'} 
+            alt={proyecto.nombre || 'Proyecto'} 
+            className="project-image"
+            loading="lazy"
+            onError={(e) => {
+              e.target.src = '/img/placeholder-project.jpg';
+            }}
+          />
+        </div>
         <div className="project-overlay">
           <div className="project-info">
             <h3>{proyecto.nombre || 'Proyecto sin nombre'}</h3>

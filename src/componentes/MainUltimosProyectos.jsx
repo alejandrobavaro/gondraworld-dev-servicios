@@ -33,13 +33,13 @@ const MainUltimosProyectos = () => {
 
   return (
     <section className="main-ultimos-proyectos">
-      <h2 className="main-ultimos-proyectos-title">ÚLTIMOS PROYECTOS</h2>
-      <div className="main-ultimos-proyectos-grid">
-        {ultimosProyectos.map(proyecto => (
-          <div key={proyecto.id} className="main-proyecto-container">
-            <MainProyectosCard proyecto={proyecto} />
-          </div>
-        ))}
+      <div className="content-container">
+        <h2 className="main-ultimos-proyectos-title">ÚLTIMOS PROYECTOS</h2>
+        <div className="main-ultimos-proyectos-grid">
+          {ultimosProyectos.map(proyecto => (
+            <MainProyectosCard key={proyecto.id} proyecto={proyecto} />
+          ))}
+        </div>
       </div>
     </section>
   );

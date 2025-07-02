@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useAuth } from "./SesionAuthContext";
 import { BiUser, BiUserPlus, BiLogOut } from "react-icons/bi";
 import "../assets/scss/_03-Componentes/_Header.scss";
 
 const Header = ({ searchQuery, setSearchQuery }) => {
   const location = useLocation();
+  const navigate = useNavigate();
   const { state, dispatch } = useAuth();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -66,57 +67,66 @@ const Header = ({ searchQuery, setSearchQuery }) => {
         <nav className={`main-nav ${isMenuOpen ? "open" : ""}`}>
           <div className="nav-links">
             <Link to="/" className="nav-link">Inicio</Link>
-            <Link to="/CurriculumCv" className="nav-link">CV</Link>
-            <Link to="/ContactoUnificado" className="nav-link">ContactoUnificado</Link>
             <Link to="/tienda" className="nav-link">Tienda</Link>
+            <Link to="/ContactoUnificado" className="nav-link">Contacto</Link>
           </div>
           
-          <div className="auth-links">
-            {state.isAuthenticated ? (
-              <>
-                {isMobile && (
-                  <button 
-                    className="logout-btn" 
-                    onClick={() => dispatch({ type: "LOGOUT" })}
+          <div className="header-actions">
+            {/* Botón de CV destacado */}
+            <button 
+              className="cv-button"
+              onClick={() => navigate("/CurriculumCv")}
+            >
+              CV
+            </button>
+            
+            <div className="auth-links">
+              {state.isAuthenticated ? (
+                <>
+                  {isMobile && (
+                    <button 
+                      className="logout-btn" 
+                      onClick={() => dispatch({ type: "LOGOUT" })}
+                    >
+                      Cerrar sesión
+                    </button>
+                  )}
+                  <Link 
+                    to="/account" 
+                    className="auth-icon-btn" 
+                    title="Mi cuenta"
                   >
-                    Cerrar sesión
-                  </button>
-                )}
-                <Link 
-                  to="/account" 
-                  className="auth-icon-btn" 
-                  title="Mi cuenta"
-                >
-                  <BiUser className="auth-icon" />
-                </Link>
-                {!isMobile && (
-                  <button 
-                    className="logout-btn" 
-                    onClick={() => dispatch({ type: "LOGOUT" })}
-                  >
-                    Cerrar sesión
-                  </button>
-                )}
-              </>
-            ) : (
-              <>
-                {isMobile ? (
-                  <>
-                    <Link to="/login" className="login-btn">Iniciar sesión</Link>
-                    <Link to="/register" className="register-btn">Registrarse</Link>
-                  </>
-                ) : (
-                  <>
-                    <Link to="/login" className="auth-icon-btn" title="Iniciar sesión">
-                      <BiUser className="auth-icon" />
-                    </Link>
-                    <Link to="/register" className="auth-icon-btn" title="Registrarse">
-                      <BiUserPlus className="auth-icon" />
-                    </Link>
-                  </>
-                )}
-              </>
-            )}
+                    <BiUser className="auth-icon" />
+                  </Link>
+                  {!isMobile && (
+                    <button 
+                      className="logout-btn" 
+                      onClick={() => dispatch({ type: "LOGOUT" })}
+                    >
+                      Cerrar sesión
+                    </button>
+                  )}
+                </>
+              ) : (
+                <>
+                  {isMobile ? (
+                    <>
+                      <Link to="/login" className="login-btn">Iniciar sesión</Link>
+                      <Link to="/register" className="register-btn">Registrarse</Link>
+                    </>
+                  ) : (
+                    <>
+                      <Link to="/login" className="auth-icon-btn" title="Iniciar sesión">
+                        <BiUser className="auth-icon" />
+                      </Link>
+                      <Link to="/register" className="auth-icon-btn" title="Registrarse">
+                        <BiUserPlus className="auth-icon" />
+                      </Link>
+                    </>
+                  )}
+                </>
+              )}
+            </div>
           </div>
         </nav>
 

@@ -1,18 +1,18 @@
 .project-card {
   width: 100%;
+  max-width: 360px;
   position: relative;
   overflow: hidden;
-  border: 1px solid rgba(100, 255, 218, 0.3);
   border-radius: 8px;
   background: #112240;
   aspect-ratio: 16/9;
   transition: all 0.3s ease;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(100, 255, 218, 0.3);
 
   &.hovered {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(100, 255, 218, 0.2);
-    z-index: 10;
     border-color: #64ffda;
   }
 
@@ -25,19 +25,17 @@
   }
 }
 
-.project-error-message {
-  color: #ff6b6b;
-  padding: 1rem;
-  text-align: center;
-  font-size: 0.9rem;
+.image-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
-
 
 .project-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
+  object-position: center;
   transition: transform 0.3s ease;
 }
 
@@ -51,82 +49,63 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 1rem;
-  opacity: 1;
-  transition: all 0.3s ease;
+  padding: 1.5rem;
 }
 
 .project-info {
-  transform: translateY(20px);
-  transition: transform 0.3s ease;
-  
   h3 {
     color: #64ffda;
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 1rem;
-    margin: 0 0 0.5rem 0;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
   }
-
+  
   p {
     color: #ccd6f6;
-    font-size: 0.8rem;
-    margin: 0 0 0.8rem 0;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
   }
 }
 
 .project-tech {
   display: flex;
+  gap: 0.5rem;
   flex-wrap: wrap;
-  gap: 0.3rem;
 }
 
 .tech-tag {
   background: rgba(100, 255, 218, 0.1);
   color: #64ffda;
-  padding: 0.2rem 0.6rem;
+  padding: 0.3rem 0.6rem;
   border-radius: 4px;
-  font-size: 0.7rem;
-  font-weight: 500;
+  font-size: 0.8rem;
 }
 
-.project-card:hover {
-  .project-image {
-    transform: scale(1.05);
-  }
-  
-  .project-info {
-    transform: translateY(0);
-  }
+.project-card:hover .project-image {
+  transform: scale(1.05);
+}
+
+.project-error-message {
+  color: #ff6b6b;
+  padding: 1rem;
+  text-align: center;
 }
 
 @media (min-width: 768px) {
   .project-overlay {
-    padding: 1.2rem;
+    padding: 2rem;
   }
-
+  
   .project-info {
     h3 {
-      font-size: 1.1rem;
+      font-size: 1.3rem;
     }
-
+    
     p {
-      font-size: 0.9rem;
+      font-size: 1rem;
     }
   }
-
+  
   .tech-tag {
-    font-size: 0.8rem;
-    padding: 0.3rem 0.7rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .project-info {
-    h3 {
-      font-size: 1.2rem;
-    }
+    font-size: 0.9rem;
   }
 }

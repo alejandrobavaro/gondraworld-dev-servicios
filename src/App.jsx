@@ -2,12 +2,9 @@ import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import Header from './componentes/Header';
-import MainBanner from './componentes/MainBanner';
 import MainContent from './componentes/MainContent';
 import CurriculumCv from './componentes/CurriculumCv';
 import ContactoUnificado from './componentes/ContactoUnificado';
-
-import MainDestacadosSlider from './componentes/MainDestacadosSlider';
 import Footer from './componentes/Footer';
 import Tienda from './componentes/Tienda';
 import CarritoCompleto from './componentes/TiendaCarritoCompra';
@@ -74,41 +71,41 @@ function App() {
         <DestacadosProvider>
           <div className={`app-wrapper ${activeEffect ? 'active-effect' : ''}`}>
             <Header searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
-            <MainBanner />
             
             <div className="content-divider"></div>
             
-            <Routes>
-              <Route path="/" element={<MainContent />} />
-              <Route path="/CurriculumCv" element={<CurriculumCv />} />
-              <Route path="/ContactoUnificado" element={<><ContactoUnificado /></>} />
-              <Route path="/tienda" element={
-                <Tienda 
-                  setCart={setProductCart} 
-                  cart={productCart} 
-                  addToCart={addProductToCart} 
-                  removeFromCart={removeProductFromCart} 
-                  searchQuery={searchQuery} 
-                  setSearchQuery={setSearchQuery} 
-                />
-              } />
-              <Route path="/carrito" element={
-                <CarritoCompleto 
-                  cart={productCart} 
-                  removeFromCart={removeProductFromCart} 
-                  handlePayment={handlePayment} 
-                />
-              } />
-              <Route path="/login" element={<Login />} />
-              <Route path="/register" element={<Register />} />
-              <Route path="/logout" element={<Logout />} />
-            </Routes>
+            <main>
+              <Routes>
+                <Route path="/" element={<MainContent />} />
+                <Route path="/CurriculumCv" element={<CurriculumCv />} />
+                <Route path="/ContactoUnificado" element={<><ContactoUnificado /></>} />
+                <Route path="/tienda" element={
+                  <Tienda 
+                    setCart={setProductCart} 
+                    cart={productCart} 
+                    addToCart={addProductToCart} 
+                    removeFromCart={removeProductFromCart} 
+                    searchQuery={searchQuery} 
+                    setSearchQuery={setSearchQuery} 
+                  />
+                } />
+                <Route path="/carrito" element={
+                  <CarritoCompleto 
+                    cart={productCart} 
+                    removeFromCart={removeProductFromCart} 
+                    handlePayment={handlePayment} 
+                  />
+                } />
+                <Route path="/login" element={<Login />} />
+                <Route path="/register" element={<Register />} />
+                <Route path="/logout" element={<Logout />} />
+              </Routes>
+            </main>
             
             <div className="content-divider with-icon">
               <div className="divider-element"></div>
             </div>
             
-            <MainDestacadosSlider />
             <Footer />
             <MainWhatsappIcon />
           </div>

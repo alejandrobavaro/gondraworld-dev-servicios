@@ -8,7 +8,7 @@ function Footer() {
       <div className="footer-top">
         <div className="footer-brand">
           <img 
-            src="/img/gondra-world-logo.png" 
+            src="../../public/img/05-gif/1logoanimadogif2a.gif" 
             alt="Gondra World Logo" 
             className="brand-logo"
             loading="lazy"
@@ -17,7 +17,7 @@ function Footer() {
 
         <div className="footer-sections">
           <div className="footer-section">
-            <h3 className="section-heading">ContactoUnificado</h3>
+            <h3 className="section-heading">Contacto</h3>
             <div className="contact-info">
               <a href="#" className="contact-item">
                 <i className="bi bi-geo-alt-fill"></i>
@@ -40,7 +40,7 @@ function Footer() {
               <Link to="/about" className="footer-link">NOSOTROS</Link>
               <Link to="/terms" className="footer-link">TÉRMINOS</Link>
               <Link to="/privacy" className="footer-link">PRIVACIDAD</Link>
-              <Link to="/contact" className="footer-link">ContactoUnificado</Link>
+              <Link to="/contact" className="footer-link">Contacto</Link>
             </nav>
           </div>
         </div>

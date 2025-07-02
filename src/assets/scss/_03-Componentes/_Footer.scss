@@ -16,9 +16,12 @@
 
 .footer-brand {
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   
   .brand-logo {
-    max-height: 80px;
+    max-height: 150px;
   }
 }
 

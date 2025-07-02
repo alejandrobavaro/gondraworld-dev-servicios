@@ -78,56 +78,75 @@ const MainDestacadosSlider = () => {
     );
   }
 
-  if (loading) return <div className="gwd-loading">CARGANDO SERVICIOS DESTACADOS...</div>;
-  if (error) return <div className="gwd-error">ERROR: {error}</div>;
+  if (loading) return (
+    <div className="gwd-loading-container">
+      <div className="gwd-loading">CARGANDO SERVICIOS DESTACADOS...</div>
+    </div>
+  );
+  
+  if (error) return (
+    <div className="gwd-error-container">
+      <div className="gwd-error">ERROR: {error}</div>
+    </div>
+  );
 
   return (
-    <section className="gwd-destacados" aria-labelledby="servicios-destacados">
-      <div className="gwd-destacados-header">
-        <h2 className="gwd-destacados-title" id="servicios-destacados">SERVICIOS DESTACADOS</h2>
-        <div className="gwd-divider"></div>
-      </div>
-      
-      <div className="gwd-slider-container">
-        <Slider {...settings}>
-          {servicios.map((servicio) => (
-            <div key={servicio.id} className="gwd-slide-item">
-              <div className="gwd-slide-content">
-                <img
-                  src={servicio.imagenes[0]}
-                  alt={`Imagen de ${servicio.nombre}`}
-                  className="gwd-slide-img"
-                  loading="lazy"
-                />
-                <div className="gwd-slide-info">
-                  <h3 className="gwd-slide-name">{servicio.nombre}</h3>
-                  <p className="gwd-slide-desc">{servicio.descripcion}</p>
-                  <div className="gwd-slide-price">
-                    ${servicio.precio.toLocaleString()}
-                    <span className="gwd-price-month">/proyecto</span>
+    <section className="gwd-destacados-container">
+      <div className="gwd-destacados" aria-labelledby="servicios-destacados">
+        <div className="gwd-destacados-header">
+          <h2 className="gwd-destacados-title" id="servicios-destacados">SERVICIOS DESTACADOS</h2>
+          <div className="gwd-divider"></div>
+        </div>
+        
+        <div className="gwd-slider-wrapper">
+          <div className="gwd-slider-container">
+            <Slider {...settings}>
+              {servicios.map((servicio) => (
+                <div key={servicio.id} className="gwd-slide-item">
+                  <div className="gwd-slide-content">
+                    <img
+                      src={servicio.imagenes[0]}
+                      alt={`Imagen de ${servicio.nombre}`}
+                      className="gwd-slide-img"
+                      loading="lazy"
+                      onError={(e) => {
+                        e.target.src = '/img/default-service.png';
+                      }}
+                    />
+                    <div className="gwd-slide-info">
+                      <h3 className="gwd-slide-name">{servicio.nombre}</h3>
+                      <p className="gwd-slide-desc">{servicio.descripcion}</p>
+                      <div className="gwd-slide-price">
+                        ${servicio.precio.toLocaleString()}
+                        <span className="gwd-price-month">/proyecto</span>
+                      </div>
+                    </div>
+                    <div className="gwd-slide-badge">POPULAR</div>
                   </div>
                 </div>
-                <div className="gwd-slide-badge">POPULAR</div>
-              </div>
-            </div>
-          ))}
-        </Slider>
-      </div>
+              ))}
+            </Slider>
+          </div>
+        </div>
 
-      <div className="gwd-thumbnails-container">
-        <h3 className="gwd-thumbnails-title">NUESTROS SERVICIOS</h3>
-        <div className="gwd-thumbnails-grid">
-          {servicios.map((servicio) => (
-            <div key={`thumb-${servicio.id}`} className="gwd-thumbnail-item">
-              <img
-                src={servicio.imagenes[0]}
-                alt={`Miniatura de ${servicio.nombre}`}
-                className="gwd-thumbnail-img"
-                loading="lazy"
-              />
-              <span className="gwd-thumbnail-label">{servicio.nombre}</span>
-            </div>
-          ))}
+        <div className="gwd-thumbnails-wrapper">
+          <h3 className="gwd-thumbnails-title">NUESTROS SERVICIOS</h3>
+          <div className="gwd-thumbnails-grid">
+            {servicios.map((servicio) => (
+              <div key={`thumb-${servicio.id}`} className="gwd-thumbnail-item">
+                <img
+                  src={servicio.imagenes[0]}
+                  alt={`Miniatura de ${servicio.nombre}`}
+                  className="gwd-thumbnail-img"
+                  loading="lazy"
+                  onError={(e) => {
+                    e.target.src = '/img/default-service.png';
+                  }}
+                />
+                <span className="gwd-thumbnail-label">{servicio.nombre}</span>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

@@ -23,19 +23,18 @@ const MainNovedades = () => {
 
     fetchProyectos();
   }, []);
-  if (loading) return <div className="loading-state">Cargando proyectos destacados...</div>;
-  if (error) return <div className="error-state">Error: {error}</div>;
+
+  if (loading) return <div className="novedades-loading">Cargando proyectos destacados...</div>;
+  if (error) return <div className="novedades-error">Error: {error}</div>;
 
   const proyectosDestacados = proyectos.filter(proyecto => proyecto?.destacado);
 
   return (
-    <section className="featured-projects">
-      <h2 className="section-title">Proyectos Destacados</h2>
-      <div className="projects-grid">
+    <section className="novedades-section">
+      <h2 className="section-title">NOVEDADES</h2>
+      <div className="novedades-grid">
         {proyectosDestacados.map(proyecto => (
-          <div key={proyecto?.id || Math.random()} className="project-item">
-            <MainProyectosCard proyecto={proyecto} />
-          </div>
+          <MainProyectosCard key={proyecto.id} proyecto={proyecto} />
         ))}
       </div>
     </section>

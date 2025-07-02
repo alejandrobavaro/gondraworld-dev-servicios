@@ -1,31 +1,35 @@
-.content-container {
+.main-content-wrapper {
   width: 100%;
-  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   
-  &.dark-mode {
-    background-color: #0a192f;
-    color: #e6f1ff;
-  }
-  
-  &.light-mode {
-    background-color: #f8f9fa;
-    color: #495057;
+  > .main-banner {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 2rem;
   }
 }
 
 .content-block {
   width: 100%;
   max-width: 1200px;
-  margin: 0 auto;
-  padding: 1rem 0;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .content-separator {
   position: relative;
-  margin: 2rem 0;
+  width: 100%;
+  margin: 1.5rem 0;
   height: 1px;
+  display: flex;
+  justify-content: center;
   
   .separator-line {
+    width: 80%;
     height: 1px;
     background: linear-gradient(90deg, transparent, #64ffda, transparent);
   }
@@ -35,49 +39,59 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.2rem;
-    
-    .dark-mode & {
-      background: #0a192f;
-      color: #64ffda;
-    }
-    
-    .light-mode & {
-      background: #f8f9fa;
-      color: #495057;
-    }
+    background: #0a192f;
+    color: #64ffda;
+    border-radius: 50%;
+    border: 1px solid #64ffda;
   }
 }
 
 @media (min-width: 768px) {
-  .content-container {
-    padding: 1.5rem;
-  }
-  
   .content-block {
-    padding: 1.5rem 0;
+    padding: 2.5rem 0;
   }
   
   .content-separator {
-    margin: 2.5rem 0;
+    margin: 2rem 0;
+    
+    .separator-line {
+      width: 85%;
+    }
+    
+    .separator-icon {
+      width: 35px;
+      height: 35px;
+      font-size: 1.3rem;
+    }
   }
 }
 
 @media (min-width: 1024px) {
-  .content-container {
-    padding: 2rem;
-  }
-  
   .content-block {
-    padding: 2rem 0;
+    padding: 3rem 0;
   }
   
   .content-separator {
-    margin: 3rem 0;
+    margin: 2.5rem 0;
+    
+    .separator-line {
+      width: 90%;
+    }
+    
+    .separator-icon {
+      width: 40px;
+      height: 40px;
+      font-size: 1.5rem;
+    }
+  }
+  
+  .main-content-wrapper > .main-banner {
+    margin-bottom: 3rem;
   }
 }
