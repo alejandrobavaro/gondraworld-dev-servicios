@@ -14,6 +14,11 @@ export const DestacadosProvider = ({ children }) => {
         if (!response.ok) throw new Error('Error al cargar servicios');
         const servicios = await response.json();
         
+        // Verifica que servicios es un array
+        if (!Array.isArray(servicios)) {
+          throw new Error('Los datos de servicios no son válidos');
+        }
+        
         const serviciosDestacados = [...servicios]
           .sort((a, b) => b.precio - a.precio)
           .slice(0, 3)
@@ -23,12 +28,13 @@ export const DestacadosProvider = ({ children }) => {
       } catch (err) {
         console.error('Error al cargar servicios destacados:', err);
         setError(err.message);
+        // Provee valores por defecto que no rompan la UI
         setDestacados([1, 2, 3]);
       } finally {
         setLoading(false);
       }
     };
-
+  
     fetchDestacados();
   }, []);
 

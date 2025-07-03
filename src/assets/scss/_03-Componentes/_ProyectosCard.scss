@@ -1,0 +1,119 @@
+.project-card {
+  width: 100%;
+  max-width: 360px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #112240;
+  aspect-ratio: 16/9;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(100, 255, 218, 0.3);
+
+  &.hovered {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(100, 255, 218, 0.2);
+    border-color: #64ffda;
+  }
+
+  &.error {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 107, 107, 0.1);
+    border-color: rgba(255, 107, 107, 0.5);
+  }
+}
+
+.image-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.3s ease;
+
+  /* Estilo específico para imágenes tipo banner */
+  &.banner-image {
+    object-fit: contain;
+    background: #0a192f; // Fondo para los espacios vacíos
+    object-position: center top;
+  }
+}
+
+.project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(10, 25, 47, 0.9) 20%, transparent 50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.5rem;
+}
+
+.project-info {
+  h3 {
+    color: #64ffda;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  p {
+    color: #ccd6f6;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.project-tech {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.tech-tag {
+  background: rgba(100, 255, 218, 0.1);
+  color: #64ffda;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+.project-card:hover .project-image {
+  transform: scale(1.05);
+}
+
+.project-error-message {
+  color: #ff6b6b;
+  padding: 1rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .project-overlay {
+    padding: 2rem;
+  }
+  
+  .project-info {
+    h3 {
+      font-size: 1.3rem;
+    }
+    
+    p {
+      font-size: 1rem;
+    }
+  }
+  
+  .tech-tag {
+    font-size: 0.9rem;
+  }
+}

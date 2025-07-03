@@ -1,210 +1,197 @@
 [
   {
     "id": 1,
-    "nombre": "VHS - Star Wars: Una Nueva Esperanza",
-    "precio": 50000,
+    "nombre": "Cámara - Alta Resolución",
+    "precio": 45000,
     "imagenes": [
       "/img/06-tienda/tienda1-a.png",
       "/img/06-tienda/tienda1-b.png",
       "/img/06-tienda/tienda1-c.png",
       "/img/06-tienda/tienda1-d.png"
     ],
-    "categoria": "vhs",
-    "descripcion": "Edición clásica en VHS de la película que inició la saga galáctica."
+    "categoria": "cámaras",
+    "descripcion": "Cámara digital de alta resolución, ideal para capturar momentos inolvidables."
   },
   {
     "id": 2,
-    "nombre": "DVD - El Padrino - Edición Especial",
-    "precio": 55890,
+    "nombre": "Trípode - Estable y Ligero",
+    "precio": 35000,
     "imagenes": [
       "/img/06-tienda/tienda2-a.png",
       "/img/06-tienda/tienda2-b.png",
       "/img/06-tienda/tienda2-c.png",
       "/img/06-tienda/tienda2-d.png"
     ],
-    "categoria": "dvd",
-    "descripcion": "Clásico del cine en edición especial con contenido adicional."
+    "categoria": "accesorios",
+    "descripcion": "Trípode estable y ligero, perfecto para fotos y vídeos en cualquier lugar."
   },
   {
     "id": 3,
-    "nombre": "Blu-ray - Interstellar - Edición Coleccionista",
-    "precio": 38250,
+    "nombre": "Lente 50mm - Gran Apertura",
+    "precio": 28000,
     "imagenes": [
       "/img/06-tienda/tienda3-a.png",
       "/img/06-tienda/tienda3-b.png",
       "/img/06-tienda/tienda3-c.png",
       "/img/06-tienda/tienda3-d.png"
     ],
-    "categoria": "bluray",
-    "descripcion": "Epico viaje interestelar en alta definición con escenas extendidas."
+    "categoria": "lentes",
+    "descripcion": "Lente de 50mm con gran apertura, ideal para retratos y fotos en condiciones de poca luz."
   },
   {
     "id": 4,
-    "nombre": "Vinilo - BSO Pulp Fiction",
-    "precio": 67780,
+    "nombre": "Fondo Fotográfico - Chroma",
+    "precio": 30000,
     "imagenes": [
       "/img/06-tienda/tienda4-a.png",
       "/img/06-tienda/tienda4-b.png",
       "/img/06-tienda/tienda4-c.png",
       "/img/06-tienda/tienda4-d.png"
     ],
-    "categoria": "vinilo",
-    "descripcion": "Banda sonora original de la película de Quentin Tarantino en vinilo."
+    "categoria": "fondo",
+    "descripcion": "Fondo fotográfico con textura natural, ideal para sesiones de fotos profesionales."
   },
   {
     "id": 5,
-    "nombre": "Poster - The Dark Knight - Edición Limitada",
-    "precio": 45210,
+    "nombre": "Flash Externo - Alta Potencia",
+    "precio": 90000,
     "imagenes": [
       "/img/06-tienda/tienda5-a.png",
       "/img/06-tienda/tienda5-b.png",
       "/img/06-tienda/tienda5-c.png",
       "/img/06-tienda/tienda5-d.png"
     ],
-    "categoria": "poster",
-    "descripcion": "Póster coleccionable del Caballero de la Noche en tamaño grande."
+    "categoria": "accesorios",
+    "descripcion": "Flash externo de alta potencia, perfecto para iluminar tus fotos en cualquier condición."
   },
   {
     "id": 6,
-    "nombre": "VHS - E.T. El Extraterrestre",
-    "precio": 81900,
+    "nombre": "Obra de Arte - Paisaje Abstracto",
+    "precio": 200000,
     "imagenes": [
       "/img/06-tienda/tienda6-a.png",
       "/img/06-tienda/tienda6-b.png",
       "/img/06-tienda/tienda6-c.png",
       "/img/06-tienda/tienda6-d.png"
     ],
-    "categoria": "vhs",
-    "descripcion": "Edición original en VHS del clásico de Spielberg."
+    "categoria": "arte",
+    "descripcion": "Pintura abstracta de paisaje, una pieza única para decorar cualquier espacio."
   },
   {
     "id": 7,
-    "nombre": "DVD - Titanic - Edición Aniversario",
-    "precio": 73560,
+    "nombre": "Fotografía - Retrato en B&N",
+    "precio": 50000,
     "imagenes": [
       "/img/06-tienda/tienda7-a.png",
       "/img/06-tienda/tienda7-b.png",
       "/img/06-tienda/tienda7-c.png",
       "/img/06-tienda/tienda7-d.png"
     ],
-    "categoria": "dvd",
-    "descripcion": "Edición especial con escenas eliminadas y documental del making-of."
+    "categoria": "fotografía",
+    "descripcion": "Retrato en blanco y negro"
   },
   {
     "id": 8,
-    "nombre": "Blu-ray - Avengers: Endgame - 4K",
-    "precio": 59780,
+    "nombre": "Obra de Arte",
+    "precio": 75000,
     "imagenes": [
       "/img/06-tienda/tienda8-a.png",
       "/img/06-tienda/tienda8-b.png",
       "/img/06-tienda/tienda8-c.png",
       "/img/06-tienda/tienda8-d.png"
     ],
-    "categoria": "bluray",
-    "descripcion": "Epico final de la saga Infinity en resolución 4K Ultra HD."
+    "categoria": "arte",
+    "descripcion": "Pintura de naturaleza muerta, ideal para coleccionistas y amantes del arte."
   },
   {
     "id": 9,
-    "nombre": "Cassette - BSO Top Gun",
-    "precio": 44370,
+    "nombre": "Cámara Instantánea",
+    "precio": 300000,
     "imagenes": [
       "/img/06-tienda/tienda9-a.png",
       "/img/06-tienda/tienda9-b.png",
       "/img/06-tienda/tienda9-c.png",
       "/img/06-tienda/tienda9-d.png"
     ],
-    "categoria": "cassette",
-    "descripcion": "Banda sonora original en cassette con los éxitos de la película."
+    "categoria": "cámaras",
+    "descripcion": "Cámara instantánea que imprime tus fotos al instante, perfecta para eventos y fiestas."
   },
   {
     "id": 10,
-    "nombre": "CD - BSO Guardians of the Galaxy",
-    "precio": 68240,
+    "nombre": "Maleta para Cámaras",
+    "precio": 20000,
     "imagenes": [
       "/img/06-tienda/tienda10-a.png",
       "/img/06-tienda/tienda10-b.png",
       "/img/06-tienda/tienda10-c.png",
       "/img/06-tienda/tienda10-d.png"
     ],
-    "categoria": "cd",
-    "descripcion": "Awesome Mix Vol. 1 con los grandes éxitos de los 70s."
+    "categoria": "accesorios",
+    "descripcion": "Maleta resistente al agua para cámaras, ideal para fotógrafos aventureros."
   },
   {
     "id": 11,
-    "nombre": "VHS - Jurassic Park",
-    "precio": 88900,
+    "nombre": "Obra de Arte - Retrato",
+    "precio": 40000,
     "imagenes": [
       "/img/06-tienda/tienda11-a.png",
       "/img/06-tienda/tienda11-b.png",
       "/img/06-tienda/tienda11-c.png",
       "/img/06-tienda/tienda11-d.png"
     ],
-    "categoria": "vhs",
-    "descripcion": "Edición original del clásico de dinosaurios de Spielberg."
+    "categoria": "arte",
+    "descripcion": "Retrato contemporáneo, una pieza única que destaca la modernidad del arte."
   },
   {
     "id": 12,
-    "nombre": "DVD - El Señor de los Anillos: La Comunidad del Anillo",
-    "precio": 54900,
+    "nombre": "Impresora Fotográfica",
+    "precio": 55000,
     "imagenes": [
       "/img/06-tienda/tienda12-a.png",
       "/img/06-tienda/tienda12-b.png",
       "/img/06-tienda/tienda12-c.png",
       "/img/06-tienda/tienda12-d.png"
     ],
-    "categoria": "dvd",
-    "descripcion": "Primera parte de la trilogía épica en edición extendida."
+    "categoria": "accesorios",
+    "descripcion": "Impresora fotográfica compacta y portátil, perfecta para imprimir tus mejores momentos."
   },
   {
     "id": 13,
-    "nombre": "Blu-ray - Inception - Edición Especial",
-    "precio": 73750,
+    "nombre": "Lente Gran Angular - 18-55mm",
+    "precio": 22000,
     "imagenes": [
       "/img/06-tienda/tienda13-a.png",
       "/img/06-tienda/tienda13-b.png",
       "/img/06-tienda/tienda13-c.png",
       "/img/06-tienda/tienda13-d.png"
     ],
-    "categoria": "bluray",
-    "descripcion": "Mind-bending thriller de Christopher Nolan con escenas exclusivas."
+    "categoria": "lentes",
+    "descripcion": "Lente gran angular de 18-55mm, ideal para paisajes y fotos de grupo."
   },
   {
     "id": 14,
-    "nombre": "Vinilo - BSO La La Land",
-    "precio": 61900,
+    "nombre": "Obra de Arte - Escena Urbana",
+    "precio": 350000,
     "imagenes": [
       "/img/06-tienda/tienda14-a.png",
       "/img/06-tienda/tienda14-b.png",
       "/img/06-tienda/tienda14-c.png",
       "/img/06-tienda/tienda14-d.png"
     ],
-    "categoria": "vinilo",
-    "descripcion": "Premiada banda sonora en edición de vinilo colorido."
+    "categoria": "arte",
+    "descripcion": "Pintura de una escena urbana, ideal para cualquier amante del arte contemporáneo."
   },
   {
     "id": 15,
-    "nombre": "Poster - Star Wars: El Imperio Contraataca",
-    "precio": 41250,
+    "nombre": "Libro de Fotografía - Técnica",
+    "precio": 15000,
     "imagenes": [
       "/img/06-tienda/tienda15-a.png",
       "/img/06-tienda/tienda15-b.png",
       "/img/06-tienda/tienda15-c.png",
       "/img/06-tienda/tienda15-d.png"
     ],
-    "categoria": "poster",
-    "descripcion": "Póster original de la mejor película de la saga Star Wars."
-  },
-  {
-    "id": 16,
-    "nombre": "VHS - Back to the Future",
-    "precio": 28900,
-    "imagenes": [
-        "/img/06-tienda/tienda16-a.png",
-        "/img/06-tienda/tienda16-b.png",
-        "/img/06-tienda/tienda16-c.png",
-        "/img/06-tienda/tienda16-d.png"
-    ],
-    "categoria": "vhs",
-    "descripcion": "Clásico de viajes en el tiempo en su formato VHS original."
-}
+    "categoria": "libros",
+    "descripcion": "Libro sobre técnicas y estilos de fotografía, perfecto para fotógrafos en desarrollo."
+  }
 ]

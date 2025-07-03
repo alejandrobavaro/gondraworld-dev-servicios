@@ -66,9 +66,11 @@ const Header = ({ searchQuery, setSearchQuery }) => {
 
         <nav className={`main-nav ${isMenuOpen ? "open" : ""}`}>
           <div className="nav-links">
-            <Link to="/" className="nav-link">Inicio</Link>
-            <Link to="/tienda" className="nav-link">Tienda</Link>
-            <Link to="/ContactoUnificado" className="nav-link">Contacto</Link>
+          <Link to="/" className="nav-link">Inicio</Link>
+          <Link to="/proyectos" className="nav-link">Proyectos</Link>
+          <Link to="/servicios" className="nav-link">Servicios</Link>
+          <Link to="/tienda" className="nav-link">Tienda</Link>
+          <Link to="/ContactoUnificado" className="nav-link">Contacto</Link>
           </div>
           
           <div className="header-actions">

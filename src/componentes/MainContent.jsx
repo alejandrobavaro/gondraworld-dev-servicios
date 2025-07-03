@@ -1,9 +1,10 @@
 import React from 'react';
 import MainBanner from './MainBanner';
 import MainNovedades from './MainNovedades';
-import MainUltimosProyectos from './MainUltimosProyectos';
-import MainGaleria from './MainGaleria';
-import MainDestacadosSlider from './MainDestacadosSlider';
+import ProyectosDestacadosGaleria from './ProyectosDestacadosGaleria';
+import NuestroEquipoGondraWorld from "./NuestroEquipoGondraWorld";
+import ContactoNewsletter from './ContactoNewsletter';
+import ServiciosDestacadosGaleria from './ServiciosDestacadosGaleria';
 import '../assets/scss/_03-Componentes/_MainContent.scss';
 
 const MainContent = () => {
@@ -11,8 +12,10 @@ const MainContent = () => {
     <div className="main-content-wrapper">
       <MainBanner />
       
-      <div className="content-block">
-        <MainNovedades />
+      <div className="content-section">
+        <div className="content-block">
+          <MainNovedades />
+        </div>
       </div>
       
       <div className="content-separator">
@@ -22,22 +25,48 @@ const MainContent = () => {
         </div>
       </div>
       
-      <div className="content-block">
-        <MainUltimosProyectos />
+      <div className="content-section">
+        <div className="content-block">
+          <ServiciosDestacadosGaleria />
+        </div>
       </div>
-      
+     
       <div className="content-separator">
         <div className="separator-line"></div>
         <div className="separator-icon">
-          <i className="bi bi-images"></i>
+          <i className="bi bi-code-slash"></i>
         </div>
       </div>
       
-      <div className="content-block">
-        <MainGaleria />
+      <div className="content-section team-section">
+        <NuestroEquipoGondraWorld />
       </div>
 
-      <MainDestacadosSlider />
+      <div className="content-separator">
+        <div className="separator-line"></div>
+        <div className="separator-icon">
+          <i className="bi bi-code-slash"></i>
+        </div>
+      </div>
+      
+      <div className="content-section">
+        <div className="content-block">
+          <ProyectosDestacadosGaleria />
+        </div>
+      </div>
+ 
+      <div className="content-separator">
+        <div className="separator-line"></div>
+        <div className="separator-icon">
+          <i className="bi bi-code-slash"></i>
+        </div>
+      </div>
+      
+      <div className="content-section">
+        <div className="content-block">
+          <ContactoNewsletter />
+        </div>
+      </div>
     </div>
   );
 };

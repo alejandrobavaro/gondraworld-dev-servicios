@@ -1,80 +1,75 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import Swal from "sweetalert2";
+import swal from "sweetalert";
 import { BsArrowsCollapse, BsArrowsExpand, BsCart4 } from "react-icons/bs";
 import "../assets/scss/_03-Componentes/_TiendaCarritoMini2.scss";
-import "../assets/scss/_01-General/_SweetAlert.scss";
 
-const TiendaCarritoMini2 = ({ cart, removeFromCart, clearCart }) => {
+const TiendaCarritoMini2 = ({ cart, removeFromCart, clearCart, updateProductQuantity }) => {
   const [isMinimized, setIsMinimized] = useState(false);
   const [localCart, setLocalCart] = useState(cart);
   const location = useLocation();
-  const total = localCart.reduce((sum, product) => sum + product.precio * (product.quantity || 1), 0);
+  const total = localCart.reduce(
+    (sum, product) => sum + product.precio * (product.quantity || 1),
+    0
+  );
 
   useEffect(() => {
     setLocalCart(cart);
   }, [cart]);
 
-  const handlePurchaseClick = () => {
-    if (localCart.length === 0) {
-      Swal.fire({
-        title: "¡CARRITO VACÍO!",
-        text: "AÑADE PELÍCULAS PRIMERO",
-        icon: "error",
-        background: "#0a1a3a",
-        color: "#ffd100",
-        confirmButtonText: "ACEPTAR",
-        customClass: {
-          popup: "blockbuster-swal-popup",
-          title: "blockbuster-swal-title",
-          confirmButton: "blockbuster-swal-button",
-          icon: "blockbuster-swal-icon"
-        },
-        buttonsStyling: false,
-        iconHtml: '✕',
-      });
-      return;
-    }
+  const handleAgregarAlCarritoClick = () => {
+    swal({
+      title: "Producto agregado",
+      text: "El producto ha sido agregado a tu carrito de compras.",
+      icon: "/img/02-logos/logogondrafotografia1.png",
+      button: {
+        text: "Continuar",
+        className: "sweetalert-button",
+      },
+      className: "custom-swal",
+    });
   };
 
   return (
-    <div className={`blockbuster-floating-cart ${isMinimized ? "minimized" : ""}`}>
-      <div className="film-strip"></div>
-      
+    <div className={`mini-carrito2 ${isMinimized ? "minimized" : ""}`}>
       {location.pathname.startsWith("/tienda") && !isMinimized && (
-        <div className="blockbuster-cart-header">
-          <div className="blockbuster-cart-total">
-            <span className="blockbuster-total-label">TOTAL</span>
-            <span className="blockbuster-total-amount">${total.toFixed(2)}</span>
-          </div>
+        <div className="flota-carrito-conteiner">
+          <div className="carrito-header">
+            <div className="header-total">
+              <span className="texto-total">Total</span>
+              <span className="tituloPrecioCarrito">${total.toFixed(2)}</span>
+            </div>
 
-          <div className="blockbuster-cart-count">
-            <BsCart4 className="blockbuster-cart-icon" />
-            <span className="blockbuster-items-count">{localCart.length}</span>
+            <div className="header-text">
+              <BsCart4 className="icono-carrito" />
+              <h6 className="texto-carrito"> {localCart.length}</h6>
+            </div>
           </div>
         </div>
       )}
-      
-      <div className="blockbuster-cart-actions">
-        <Link to="/carrito" className="blockbuster-cart-link">
+      <div className="carrito-acciones">
+        <Link to="/carrito" className="link-carrito">
           <button
-            className={`blockbuster-checkout-btn ${isMinimized ? "minimized" : ""}`}
-            onClick={handlePurchaseClick}
-            disabled={localCart.length === 0}
+            className={`botonComprar1 ${isMinimized ? "minimized" : ""}`}
+            onClick={handleAgregarAlCarritoClick}
+            disabled={localCart.length === 0} // Desactiva el botón si el carrito está vacío
           >
-            {isMinimized ? (
-              <span className="minimized-icon">🎬</span>
-            ) : (
-              "IR A PAGAR"
-            )}
+            <h3
+              className={`tituloImportante1 ${isMinimized ? "minimized" : ""} textoMovimiento`}
+            >
+              <i className="bi bi-shift-fill"></i> Comprar
+            </h3>
           </button>
         </Link>
         <button
-          className="blockbuster-toggle-btn"
+          className="toggle-button"
           onClick={() => setIsMinimized((prevState) => !prevState)}
         >
-          {isMinimized ? <BsArrowsExpand className="toggle-icon" /> : <BsArrowsCollapse className="toggle-icon" />}
+          {isMinimized ? <BsArrowsExpand /> : <BsArrowsCollapse />}
         </button>
+      </div>
+      <div className="tooltip" style={{ display: isMinimized ? 'none' : 'block' }}>
+        <span>Total: ${total.toFixed(2)} | Productos: {localCart.length}</span>
       </div>
     </div>
   );

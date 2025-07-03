@@ -1,201 +1,159 @@
-// Estilos del modal Blockbuster
-.BlockbusterOverlay {
-  position: fixed;
-  top: 80px; /* Ajuste para posición debajo del header */
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(#0a1a3a, 0.9);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-  animation: blockbuster-fadeIn 0.3s ease;
-}
+// src/assets/scss/_03-Componentes/_TiendaModalInicio.scss
 
-.BlockbusterModal {
+body.modal-open {
+  overflow: hidden;
   position: relative;
-  background: transparent;
-  overflow: auto;
-  border-radius: 0;
-  outline: none;
-  padding: 0;
-  border: none;
-  max-width: 90%;
-  margin-top: 20px; /* Espacio adicional */
+  z-index: 1000; /* Ajusta el z-index si es necesario */
 }
 
-.film-strip-overlay {
-  position: absolute;
+// Estilos para el Modal
+.tienda-Modal {
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: 
-    linear-gradient(rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.25) 50%),
-    linear-gradient(90deg, rgba(255, 209, 0, 0.05), rgba(255, 255, 255, 0.02), rgba(255, 209, 0, 0.05));
-  background-size: 100% 4px, 4px 100%;
-  pointer-events: none;
-  opacity: 0.3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000; /* Asegúrate de que esté por encima de otros elementos */
+  overflow: hidden; /* Evita el desbordamiento de elementos */
 }
 
-.film-strip-top {
-  position: absolute;
+.tienda-Overlay {
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 8px;
-  background: repeating-linear-gradient(
-    90deg,
-    #0a1a3a,
-    #0a1a3a 15px,
-    #ffd100 15px,
-    #ffd100 30px
-  );
+  height: 100%;
+  background: rgba(0, 0, 0, 0.877); /* Fondo oscuro más tenue para el overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000; /* Asegúrate de que el overlay esté por encima de otros elementos */
 }
 
-.blockbuster-modal-wrapper {
+.tienda-modal-wrapper {
+  // background: #7a6a2233;
+  padding: 10px;
+  border-radius: 20px;
   position: relative;
-  background-color: #0a1a3a;
-  border: 3px solid #ffd100;
-  border-radius: 20px;
-
-  padding: 25px;
-  max-width: 500px;
-  animation: blockbuster-scaleUp 0.3s ease;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  max-width: 80%;
+  max-height: 80%;
+  overflow: hidden;
+  animation: fadeInUp 0.5s ease-out; /* Animación de entrada */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2001; /* Asegúrate de que el contenedor del modal esté por encima del overlay */
+  /* Elimina cualquier sombra */
+  box-shadow: none;
 }
 
-.blockbuster-modal-close {
+.tienda-modal-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  text-align: center; /* Centrar el texto dentro del contenido del modal */
+}
+
+.tienda-modal-close {
   position: absolute;
-  top: 15px;
-  right: 15px;
-  background-color: #122b5a;
-  color: #ffd100;
-  border: 2px solid #ffd100;
-  border-radius: 20px;
-  width: 36px;
-  height: 36px;
-  font-size: 1.2rem;
-  font-weight: bold;
-  cursor: pointer;
-  transition: all 0.3s ease;
+  top: 10px;
+  right: 10px;
+  background-color: #a0985146; 
+  color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 2;
-  
-  &:hover {
-    background-color: #ffd100;
-    color: #0a1a3a;
-  }
-}
-
-.blockbuster-modal-content {
-  text-align: center;
-  color: #ffffff;
-  font-family: 'Arial Black', sans-serif;
-}
-
-.blockbuster-modal-title {
-  font-size: 1.5rem;
-  color: #ffd100;
-  margin-bottom: 1rem;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}
-
-.blockbuster-modal-subtitle {
-  font-size: 1rem;
-  color: #ffffff;
-  margin-bottom: 1.5rem;
-  letter-spacing: 1px;
-}
-
-.blockbuster-promo-list {
-  margin: 1.5rem 0;
-  
-  .blockbuster-promo-item {
-    background-color: rgba(18, 43, 90, 0.5);
-    color: #ffd100;
-    padding: 12px;
-    margin-bottom: 12px;
-    border-radius: 4px;
-    font-weight: bold;
-    font-size: 0.9rem;
-    letter-spacing: 1px;
-    border-left: 3px solid #ffd100;
-    border-radius: 20px;
-    transition: all 0.3s ease;
-    
-    &:hover {
-      background-color: rgba(255, 209, 0, 0.1);
-    }
-  }
-}
-
-.blockbuster-divider {
-  height: 2px;
-  background: linear-gradient(to right, transparent, #ffd100, transparent);
-  margin: 1.5rem 0;
-}
-
-.blockbuster-primary-btn {
-  background-color: #122b5a;
-  color: #ffd100;
-  border: 2px solid #ffd100;
-  border-radius: 20px;
-
-  padding: 12px 24px;
-  font-size: 1rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 1px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  font-size: 18px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  z-index: 2002; /* Asegúrate de que el botón esté por encima del contenido del modal */
+  /* Elimina cualquier sombra */
+  box-shadow: none;
+}
+
+.tienda-modal-close:hover {
+  background-color: #ffffff; /* Rosa oscuro al pasar el ratón */
+}
+
+.tienda-objetoCentrado1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tienda-tituloImportante {
+  font-size: medium; /* Tamaño de fuente más grande */
+  color: #ffffff; /* Rosa para el texto */
+  margin: 0px;
+}
+
+.tienda-promo-list {
+  margin: 0px;
+
+  .tienda-promo-item {
+    background-color: transparent; /* Fondo transparente para los items de promoción */
+    color: #ffffff; /* Texto rosa */
+    padding: 10px;
+    // border: dotted 2px rgba(189, 0, 247, 0.863);
+    margin-bottom: 10px;
+    border-radius: 50px; /* Bordes redondeados */
+    /* Elimina cualquier sombra */
+    box-shadow: 0 10px 30px rgb(255, 205, 148); // Sombra más intensa
+  }
   
-  &:hover {
-    background-color: #ffd100;
-    color: #0a1a3a;
+  .tienda-detalleBlanco {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
   }
 }
 
-// Animaciones
-@keyframes blockbuster-fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+.tienda-btn-primary {
+  background-color: #fff27d50; /* Rosa vibrante */
+  border: none;
+  color: #fff; /* Color blanco para el texto del botón */
+  padding: 12px 24px; /* Padding más amplio */
+  border-radius: 8px; /* Bordes redondeados */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-size: small; /* Tamaño de fuente para el botón */
+  /* Elimina cualquier sombra */
+  box-shadow: none;
 }
 
-@keyframes blockbuster-scaleUp {
-  from { transform: scale(0.9); }
-  to { transform: scale(1); }
+.tienda-btn-primary:hover {
+  background-color: #ffedb1; /* Rosa oscuro al pasar el ratón */
+  transform: scale(1.05); /* Escala al pasar el ratón */
 }
 
-// Responsive
-@media (max-width: 768px) {
-  .BlockbusterOverlay {
-    top: 70px; /* Ajuste para móvil */
+// Animación para la entrada del modal
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  
-  .blockbuster-modal-wrapper {
-    padding: 20px;
-  }
-  
-  .blockbuster-modal-title {
-    font-size: 1.3rem;
-  }
-  
-  .blockbuster-modal-subtitle {
-    font-size: 0.9rem;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-@media (min-width: 1024px) {
-  .BlockbusterOverlay {
-    top: 90px; /* Ajuste para desktop */
+// Animación para el borde del contenedor
+@keyframes pulse {
+  0% {
+    border-color: #ffe9d4;
   }
-  
-  .blockbuster-modal-wrapper {
-    max-width: 550px;
+  50% {
+    border-color: #bbbcf8;
+  }
+  100% {
+    border-color: #fffff0;
   }
 }

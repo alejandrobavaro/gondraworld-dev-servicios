@@ -7,6 +7,7 @@ import {
 import { MdEmail } from "react-icons/md";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import NuestroEquipoGondraWorld from "./NuestroEquipoGondraWorld";
 import "../assets/scss/_03-Componentes/_ContactoUnificado.scss";
 
 const ContactoUnificado = () => {
@@ -15,27 +16,27 @@ const ContactoUnificado = () => {
     {
       icon: <FaFacebook className="ContactoUnificado-icono" size={24} />,
       text: "Facebook",
-      url: "https://www.facebook.com/gondraworld"
+      url: "https://www.facebook.com/alegondramusic"
     },
     {
       icon: <FaInstagram className="ContactoUnificado-icono" size={24} />,
       text: "Instagram",
-      url: "https://www.instagram.com/gondraworld"
+      url: "https://www.instagram.com/alegondramusic/"
     },
     {
       icon: <FaYoutube className="ContactoUnificado-icono" size={24} />,
       text: "YouTube",
-      url: "https://www.youtube.com/gondraworld"
+      url: "https://www.youtube.com/@almangopopmusic"
     },
-    {
-      icon: <FaSpotify className="ContactoUnificado-icono" size={24} />,
-      text: "Spotify",
-      url: "https://open.spotify.com/gondraworld"
-    },
+    // {
+    //   icon: <FaSpotify className="ContactoUnificado-icono" size={24} />,
+    //   text: "Spotify",
+    //   url: "https://open.spotify.com/gondraworld"
+    // },
     {
       icon: <MdEmail className="ContactoUnificado-icono" size={24} />,
       text: "Email",
-      url: "mailto:ContactoUnificado@gondraworld.com"
+      url: "mailto: bavaroalejandro@gmail.com"
     },
     {
       icon: <FaPaypal className="ContactoUnificado-icono" size={24} />,
@@ -82,7 +83,7 @@ const ContactoUnificado = () => {
           <div className="ContactoUnificado-redes">
             <div className="ContactoUnificado-logo-container">
               <img
-                src="/img/logos/gondra-world-logo.png"
+                src="../../img/05-gif/web 1_1.gif"
                 alt="Gondra World"
                 className="ContactoUnificado-logo"
               />
@@ -185,23 +186,48 @@ const ContactoUnificado = () => {
               <Slider {...settings}>
                 <div className="slider-item">
                   <img 
-                    src="/img/gifs/gondra-world-1.gif" 
+                  src="../../img/05-img-costados-larga/carrusellargo1.jpg"
                     alt="Diseño web Gondra World"
                   />
                 </div>
                 <div className="slider-item">
                   <img 
-                    src="/img/gifs/gondra-world-2.gif" 
+             src="../../img/05-img-costados-larga/carrusellargo2.jpg"
                     alt="Desarrollo web"
                   />
                 </div>
+                <div className="slider-item">
+                  <img 
+             src="../../img/05-img-costados-larga/carrusellargo3.jpg"
+                    alt="Desarrollo web"
+                  />
+                </div>
+                <div className="slider-item">
+                  <img 
+             src="../../img/05-img-costados-larga/carrusellargo4.jpg"
+                    alt="Desarrollo web"
+                  />
+                </div>
+                <div className="slider-item">
+                  <img 
+             src="../../img/05-img-costados-larga/carrusellargo5.jpg"
+                    alt="Desarrollo web"
+                  />
+                </div>
+          
               </Slider>
             </div>
           </div>
         )}
       </div>
-      
+  
       <div className="ContactoUnificado-cinta-bottom"></div>
+    
+     {/* Sección del equipo separada con fondo diferenciado */}
+     <div className="gondra-team-section-wrapper">
+        <NuestroEquipoGondraWorld />
+      </div>
+
     </div>
   );
 };

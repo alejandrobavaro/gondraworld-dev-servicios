@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../assets/scss/_03-Componentes/_TiendaImgAgrandar.scss';
+import '../assets/scss/_03-Componentes/_TiendaImgAgrandar.scss'; 
 
 function TiendaImgAgrandar({ images, isOpen, closeModal }) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -17,35 +17,12 @@ function TiendaImgAgrandar({ images, isOpen, closeModal }) {
   };
 
   return (
-    <div className="blockbuster-modal-overlay" onClick={closeModal}>
-      <div className="film-strip-overlay"></div>
-      
-      <div className="blockbuster-modal-content" onClick={(e) => e.stopPropagation()}>
-        <div className="film-strip-top"></div>
-        
-        <span className="blockbuster-close-button" onClick={closeModal}>
-          ✕
-        </span>
-        
-        <div className="movie-frame">
-          <img 
-            src={images[currentImageIndex]} 
-            className="blockbuster-modal-image" 
-            alt="Película" 
-          />
-          <div className="film-reel"></div>
-        </div>
-        
-        <button className="blockbuster-prev-button" onClick={handlePrevImage}>
-          ◀
-        </button>
-        <button className="blockbuster-next-button" onClick={handleNextImage}>
-          ▶
-        </button>
-        
-        <div className="image-counter">
-          {currentImageIndex + 1} / {images.length}
-        </div>
+    <div className="TiendaImgAgrandar-modal-overlay" onClick={closeModal}>
+      <div className="TiendaImgAgrandar-modal-content" onClick={(e) => e.stopPropagation()}>
+        <span className="TiendaImgAgrandar-close-button" onClick={closeModal}>&times;</span>
+        <img src={images[currentImageIndex]} className="TiendaImgAgrandar-modal-image" alt="Producto" />
+        <button className="TiendaImgAgrandar-prev-button" onClick={handlePrevImage}>&#10094;</button>
+        <button className="TiendaImgAgrandar-next-button" onClick={handleNextImage}>&#10095;</button>
       </div>
     </div>
   );

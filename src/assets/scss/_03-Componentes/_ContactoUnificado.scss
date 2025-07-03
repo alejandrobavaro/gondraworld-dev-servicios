@@ -140,6 +140,7 @@
   
   @media (min-width: 1024px) {
     flex-direction: row;
+    align-items: flex-start;
   }
 }
 
@@ -148,6 +149,7 @@
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
+  min-width: 0;
 }
 
 .formulario-grupo {
@@ -216,21 +218,51 @@
     color: #0a192f;
   }
 }
-
 .ContactoUnificado-slider {
   flex: 1;
   border: 1px solid #64ffda;
   border-radius: 8px;
   overflow: hidden;
-  
+  min-width: 0;
+  align-self: stretch;
+  height: 100%; // Asegura que ocupe toda la altura disponible
+
   .slider-item {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 0; // Eliminamos el padding para maximizar el espacio
+
     img {
       width: 100%;
-      height: auto;
+      height: 100%;
+      object-fit: cover; // Cambiado de 'contain' a 'cover' para llenar el contenedor
+      object-position: center; // Asegura que el centro de la imagen sea el foco
+      border-radius: 7px; // Un poco menos que el contenedor para que no se solape con el borde
+    }
+  }
+
+  @media (min-width: 1024px) {
+    max-width: 50%;
+    height: auto;
+    max-height: 600px; // Puedes ajustar este valor según necesites
+  }
+}
+
+// Ajustes para pantallas pequeñas
+@media (max-width: 1023px) {
+  .ContactoUnificado-slider {
+    width: 100%;
+    height: 300px; // Altura fija para móviles
+    
+    .slider-item {
+      height: 300px;
     }
   }
 }
 
+// Ajustes para los controles del slider
 .slick-prev,
 .slick-next {
   width: 40px;
@@ -249,11 +281,44 @@
 }
 
 .slick-prev {
-  left: 15px;
+  left: 10px;
 }
 
 .slick-next {
-  right: 15px;
+  right: 10px;
+}
+
+@media (max-width: 768px) {
+  .slick-prev,
+  .slick-next {
+    width: 30px;
+    height: 30px;
+    
+    &:before {
+      font-size: 30px;
+    }
+  }
+  
+  .slick-prev {
+    left: 5px;
+  }
+  
+  .slick-next {
+    right: 5px;
+  }
+}
+// Ajustes responsivos
+@media (max-width: 1023px) {
+  .ContactoUnificado-slider {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 1rem;
+    
+    .slider-item {
+      height: 250px;
+      aspect-ratio: unset;
+    }
+  }
 }
 
 @media (max-width: 768px) {
@@ -268,5 +333,45 @@
   .ContactoUnificado-tab {
     padding: 0.6rem 1rem;
     font-size: 0.9rem;
+  }
+
+  .ContactoUnificado-redes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ContactoUnificado-logo-container {
+    .ContactoUnificado-logo {
+      max-width: 200px;
+    }
+  }
+}
+
+/* Contenedor para el equipo */
+.gondra-team-section-wrapper {
+
+  padding: 4rem 2rem;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+  
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .gondra-contacto-tabs {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .gondra-formulario-wrapper {
+    grid-template-columns: 1fr;
   }
 }

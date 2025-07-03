@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import TiendaImgAgrandar from './TiendaImgAgrandar';
-import { useOfertas } from './TiendaDestacadosContext';
+import { useOfertas } from './TiendaOfertasContext';
 import '../assets/scss/_03-Componentes/_TiendaProductos.scss';
 
 function TiendaProductos({ products, addToCart, handleShowDetalle, searchQuery, selectedCategory }) {
@@ -19,47 +19,61 @@ function TiendaProductos({ products, addToCart, handleShowDetalle, searchQuery, 
     setIsModalOpen(false);
   };
 
-  const handleAddToCart = (product) => {
-    addToCart(product);
+  const handlePrevImage = (e) => {
+    e.stopPropagation();
+    setCurrentImageIndex((prevIndex) => (prevIndex === 0 ? selectedImages.length - 1 : prevIndex - 1));
+  };
+
+  const handleNextImage = (e) => {
+    e.stopPropagation();
+    setCurrentImageIndex((prevIndex) => (prevIndex === selectedImages.length - 1 ? 0 : prevIndex + 1));
   };
 
   return (
-    <div className="blockbuster-products-grid">
+    <div className="tienda-productos-container">
       {products.map((product) => (
-        <div key={product.id} className="blockbuster-product-card">
+        <div key={product.id} className="tienda-producto-card">
           {ofertas.includes(product.id) && (
-            <div className="blockbuster-offer-tag">
-              <span className="offer-text">¡OFERTA!</span>
-              <span className="offer-percent">30% OFF</span>
+            <div className="tienda-oferta-tag">
+              <span className="tienda-oferta-text">OFERTA</span>
+              <span className="tienda-oferta-descuento">-30%</span>
             </div>
-          )}
+          )} 
           
-          <div className="movie-product-frame" onClick={() => openImageModal(product.imagenes, 0)}>
+          <div className="tienda-producto-imagen-container">
             <img
-              src={product.imagenes[0] || '/img/default-movie.png'}
+              src={product.imagenes[0]}
               alt={product.nombre}
-              className="blockbuster-product-image"
+              className="tienda-producto-imagen"
+              onClick={() => openImageModal(product.imagenes, 0)}
             />
-            <div className="film-reel-corner"></div>
           </div>
           
-          <h5 className="blockbuster-product-title">{product.nombre}</h5>
-          
-          <div className="blockbuster-price-container">
-            <h4 className="blockbuster-product-price">
-              ${product.precio.toFixed(2)}
-            </h4>
-            {ofertas.includes(product.id) && (
-              <span className="blockbuster-original-price">${(product.precio / 0.7).toFixed(2)}</span>
-            )}
+          <div className="tienda-producto-info">
+            <h3 className="tienda-producto-titulo">{product.nombre}</h3>
+            
+            <div className="tienda-producto-precio-container">
+              {ofertas.includes(product.id) ? (
+                <>
+                  <span className="tienda-producto-precio-original">${product.precio.toFixed(2)}</span>
+                  <span className="tienda-producto-precio-oferta">
+                    ${(product.precio * 0.7).toFixed(2)}
+                  </span>
+                </>
+              ) : (
+                <span className="tienda-producto-precio-normal">${product.precio.toFixed(2)}</span>
+              )}
+            </div>
+            
+            <p className="tienda-producto-descripcion">{product.descripcion}</p>
+            
+            <button
+              className="tienda-producto-boton"
+              onClick={() => addToCart(product)}
+            >
+              <i className="bi bi-cart-plus"></i> Añadir al carrito
+            </button>
           </div>
-          
-          <button
-            className="blockbuster-add-to-cart"
-            onClick={() => handleAddToCart(product)}
-          >
-            AÑADIR AL CARRITO
-          </button>
         </div>
       ))}
       
@@ -68,6 +82,8 @@ function TiendaProductos({ products, addToCart, handleShowDetalle, searchQuery, 
           images={selectedImages}
           isOpen={isModalOpen}
           closeModal={closeImageModal}
+          handlePrevImage={handlePrevImage}
+          handleNextImage={handleNextImage}
         />
       )}
     </div>

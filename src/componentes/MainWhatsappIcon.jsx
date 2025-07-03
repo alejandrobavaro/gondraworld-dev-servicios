@@ -3,10 +3,10 @@ import '../assets/scss/_03-Componentes/_MainWhatsappIcon.scss';
 
 function MainWhatsappIcon() {
   return (
-    <div className='whatsapp-floating-button'>
+    <div className='whatsapp-container'>
       <a
         href="https://api.whatsapp.com/send?phone=+542235455451&text=Hola!,%20en%20que%20puedo%20ayudarte?"
-        className="whatsapp-link"
+        className="whatsapp-button"
         rel="noopener noreferrer"
         target="_blank"
         aria-label="Contactar por WhatsApp"

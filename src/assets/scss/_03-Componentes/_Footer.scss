@@ -1,3 +1,10 @@
+/* Variables */
+$primary-color: #64ffda;
+$secondary-color: #0a192f;
+$text-color: #ccd6f6;
+$dark-bg: #112240;
+$light-text: #e6f1ff;
+
 .site-footer {
   background-color: #0a192f;
   color: #e6f1ff;
@@ -92,21 +99,54 @@
 }
 
 .social-icon {
+  color: $text-color;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 36px;
-  height: 36px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
-  background: rgba(100, 255, 218, 0.1);
-  color: #64ffda;
-  font-size: 1rem;
-  border: 1px solid #64ffda;
+  background: rgba($dark-bg, 0.5);
   
   &:hover {
-    background: #64ffda;
-    color: #0a192f;
+    color: $primary-color;
+    transform: translateY(-5px);
+    background: rgba($primary-color, 0.1);
+    
+    .social-tooltip {
+      visibility: visible;
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    .footer-social-icon {
+      transform: scale(1.2);
+    }
   }
+  
+  .footer-social-icon {
+    transition: transform 0.3s ease;
+  }
+}
+
+.social-tooltip {
+  position: absolute;
+  bottom: -35px;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  background-color: $dark-bg;
+  color: $primary-color;
+  padding: 0.3rem 0.8rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  border: 1px solid $primary-color;
 }
 
 .footer-bottom {

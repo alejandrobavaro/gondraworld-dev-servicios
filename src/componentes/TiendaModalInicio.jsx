@@ -1,47 +1,34 @@
 import React from "react";
 import Modal from "react-modal";
-import '../assets/scss/_03-Componentes/_TiendaModalInicio.scss';
+import '../assets/scss/_03-Componentes/_TiendaModalInicio.scss'; 
 
-Modal.setAppElement("#root");
+Modal.setAppElement("#root"); // Asegúrate de que el ID 'root' esté presente en tu index.html
 
 const TiendaModalInicio = ({ showModal, closeModal }) => {
-  const handleClose = () => {
-    closeModal();
-  };
-
   return (
     <Modal
       isOpen={showModal}
-      onRequestClose={handleClose}
+      onRequestClose={closeModal}
       contentLabel="Promoción"
-      className="BlockbusterModal"
-      overlayClassName="BlockbusterOverlay"
-      closeTimeoutMS={300}
+      className="tienda-Modal"
+      overlayClassName="tienda-Overlay"
     >
-      <div className="film-strip-overlay"></div>
-      
-      <div className="film-strip-top"></div>
-      
-      <div className="blockbuster-modal-wrapper">
-        <button onClick={handleClose} className="blockbuster-modal-close">
-          ✕
+      <div className="tienda-modal-wrapper">
+        <button onClick={closeModal} className="tienda-modal-close">
+          &times; {/* Carácter '×' para cerrar */}
         </button>
-        
-        <div className="blockbuster-modal-content">
-          <h2 className="blockbuster-modal-title">¡OFERTAS EXCLUSIVAS!</h2>
-          <p className="blockbuster-modal-subtitle">DESCUENTOS ESPECIALES EN PELÍCULAS</p>
-          
-          <div className="blockbuster-promo-list">
-            <div className="blockbuster-promo-item">SUPER OFERTAS!</div>
-            <div className="blockbuster-promo-item">BLU-RAYS 20% OFF!</div>
-            <div className="blockbuster-promo-item">ENVÍOS A TODO EL PAÍS!</div>
-            <div className="blockbuster-promo-item">PROMOCIONES ESPECIALES!</div>
+        <div className="tienda-modal-content">
+          {/* <h2>Personalizate!</h2> */}
+          <p className="tienda-tituloImportante">Aprovechá estos beneficios!</p>
+          <div className="tienda-promo-list">
+            <div className="tienda-promo-item tienda-detalleBlanco">Super Ofertas!</div>
+            <div className="tienda-promo-item">Productos 20% Off!</div>
+            <div className="tienda-promo-item">Envios a todo el país!</div>
+            <div className="tienda-promo-item tienda-detalleBlanco">Super Ahorro!!</div>
           </div>
-          
-          <div className="blockbuster-divider"></div>
-          
-          <button onClick={handleClose} className="blockbuster-primary-btn">
-            ¡VER CATÁLOGO!
+          <hr />
+          <button onClick={closeModal} className="tienda-btn-primary">
+            Ver más!
           </button>
         </div>
       </div>

@@ -3,11 +3,24 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #0a192f;
   
   > .main-banner {
     width: 100%;
     max-width: 100%;
     margin-bottom: 2rem;
+  }
+}
+
+.content-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0 1rem;
+  
+  &.team-section {
+    background: linear-gradient(to bottom, #0a192f, #020c1b);
+    padding: 4rem 1rem;
   }
 }
 
@@ -52,7 +65,16 @@
   }
 }
 
+/* Tablet (768px) */
 @media (min-width: 768px) {
+  .content-section {
+    padding: 0 2rem;
+    
+    &.team-section {
+      padding: 4rem 2rem;
+    }
+  }
+  
   .content-block {
     padding: 2.5rem 0;
   }
@@ -72,7 +94,16 @@
   }
 }
 
+/* Desktop (1024px) */
 @media (min-width: 1024px) {
+  .content-section {
+    padding: 0 3rem;
+    
+    &.team-section {
+      padding: 5rem 3rem;
+    }
+  }
+  
   .content-block {
     padding: 3rem 0;
   }

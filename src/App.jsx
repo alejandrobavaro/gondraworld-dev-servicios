@@ -6,21 +6,31 @@ import MainContent from './componentes/MainContent';
 import CurriculumCv from './componentes/CurriculumCv';
 import ContactoUnificado from './componentes/ContactoUnificado';
 import Footer from './componentes/Footer';
-import Tienda from './componentes/Tienda';
-import CarritoCompleto from './componentes/TiendaCarritoCompra';
-import { DestacadosProvider } from './componentes/TiendaDestacadosContext';
+
 import { AuthProvider } from './componentes/SesionAuthContext';
 import Login from './componentes/SesionLogin';
 import Register from './componentes/SesionRegistrate';
 import Logout from './componentes/SesionLogout';
 import MainWhatsappIcon from './componentes/MainWhatsappIcon';
+
+import Proyectos from './componentes/Proyectos';
+import Servicios from './componentes/Servicios';
+
+//------------------TIENDA---------------------//
+import Tienda from './componentes/Tienda';
+import TiendaCarritoCompra from './componentes/TiendaCarritoCompra';
+import { OfertasProvider } from './componentes/TiendaOfertasContext';
+import { DestacadosProvider } from './componentes/TiendaDestacadosContext';
+
 import '../src/assets/scss/_01-General/_App.scss';
 
 function App() {
+  // Estados del componente
+  const [activeEffect, setActiveEffect] = useState(false);
   const [productCart, setProductCart] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
-  const [activeEffect, setActiveEffect] = useState(false);
 
+  // Funciones para manejar el carrito
   const addProductToCart = (product) => {
     setProductCart([...productCart, product]);
     triggerEffect();
@@ -30,11 +40,13 @@ function App() {
     setProductCart(productCart.filter((product) => product.id !== id));
   };
 
+  // Efecto visual para feedback al usuario
   const triggerEffect = () => {
     setActiveEffect(true);
     setTimeout(() => setActiveEffect(false), 300);
   };
 
+  // Función para mostrar alertas personalizadas
   const showCustomAlert = (title, html, confirmText, cancelText) => {
     return Swal.fire({
       title: `<div class="alert-title">${title}</div>`,
@@ -52,6 +64,7 @@ function App() {
     });
   };
 
+  // Función para manejar el pago
   const handlePayment = () => {
     showCustomAlert(
       'Confirmación',
@@ -69,46 +82,61 @@ function App() {
     <Router>
       <AuthProvider>
         <DestacadosProvider>
-          <div className={`app-wrapper ${activeEffect ? 'active-effect' : ''}`}>
-            <Header searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
-            
-            <div className="content-divider"></div>
-            
-            <main>
-              <Routes>
-                <Route path="/" element={<MainContent />} />
-                <Route path="/CurriculumCv" element={<CurriculumCv />} />
-                <Route path="/ContactoUnificado" element={<><ContactoUnificado /></>} />
-                <Route path="/tienda" element={
-                  <Tienda 
-                    setCart={setProductCart} 
-                    cart={productCart} 
-                    addToCart={addProductToCart} 
-                    removeFromCart={removeProductFromCart} 
-                    searchQuery={searchQuery} 
-                    setSearchQuery={setSearchQuery} 
+          <OfertasProvider>
+            <div className={`app-wrapper ${activeEffect ? 'active-effect' : ''}`}>
+              <Header searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
+              
+              <div className="content-divider"></div>
+              
+              <main>
+                <Routes>
+                  <Route path="/" element={<MainContent />} />
+                  <Route path="/CurriculumCv" element={<CurriculumCv />} />
+                  <Route path="/proyectos" element={<Proyectos />} />
+                  <Route path="/servicios" element={<Servicios />} />
+                  <Route path="/ContactoUnificado" element={<ContactoUnificado />} />
+                  
+                  {/* Rutas para la tienda */}
+                  <Route 
+                    path="/tienda" 
+                    element={
+                      <Tienda 
+                        setCart={setProductCart} 
+                        cart={productCart} 
+                        addToCart={addProductToCart} 
+                        removeFromCart={removeProductFromCart} 
+                        searchQuery={searchQuery} 
+                        setSearchQuery={setSearchQuery} 
+                      />
+                    } 
                   />
-                } />
-                <Route path="/carrito" element={
-                  <CarritoCompleto 
-                    cart={productCart} 
-                    removeFromCart={removeProductFromCart} 
-                    handlePayment={handlePayment} 
+                  
+                  <Route 
+                    path="/carrito" 
+                    element={
+                      <TiendaCarritoCompra  
+                        cart={productCart} 
+                        removeFromCart={removeProductFromCart} 
+                        handlePagar={handlePayment} 
+                      />
+                    } 
                   />
-                } />
-                <Route path="/login" element={<Login />} />
-                <Route path="/register" element={<Register />} />
-                <Route path="/logout" element={<Logout />} />
-              </Routes>
-            </main>
-            
-            <div className="content-divider with-icon">
-              <div className="divider-element"></div>
+                  
+                  {/* Rutas de autenticación */}
+                  <Route path="/login" element={<Login />} />
+                  <Route path="/register" element={<Register />} />
+                  <Route path="/logout" element={<Logout />} />
+                </Routes>
+              </main>
+              
+              <div className="content-divider with-icon">
+                <div className="divider-element"></div>
+              </div>
+              
+              <Footer />
+              <MainWhatsappIcon />
             </div>
-            
-            <Footer />
-            <MainWhatsappIcon />
-          </div>
+          </OfertasProvider>
         </DestacadosProvider>
       </AuthProvider>
     </Router>

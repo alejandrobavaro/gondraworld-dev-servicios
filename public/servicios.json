@@ -3,7 +3,7 @@
       "id": 1,
       "nombre": "Desarrollo Web Personalizado",
       "precio": 1200,
-      "imagenes": ["/img/servicios/web-personalizado.jpg"],
+      "imagenes": ["/img/01-galeria1/galeria2.jpg"],
       "categoria": "desarrollo",
       "descripcion": "Sitios web a medida con diseño responsive y tecnologías modernas"
     },
@@ -11,7 +11,7 @@
       "id": 2,
       "nombre": "Tienda Online",
       "precio": 2500,
-      "imagenes": ["/img/servicios/tienda-online.jpg"],
+      "imagenes": ["/img/01-galeria1/galeria1.jpg"],
       "categoria": "ecommerce",
       "descripcion": "Solución completa de e-commerce con pasarela de pagos integrada"
     },
@@ -19,7 +19,7 @@
       "id": 3,
       "nombre": "SEO Avanzado",
       "precio": 800,
-      "imagenes": ["/img/servicios/seo.jpg"],
+      "imagenes": ["/img/01-galeria1/galeria3.jpg"],
       "categoria": "marketing",
       "descripcion": "Optimización para motores de búsqueda y estrategia de contenidos"
     },
@@ -27,7 +27,7 @@
       "id": 4,
       "nombre": "Mantenimiento Web",
       "precio": 300,
-      "imagenes": ["/img/servicios/mantenimiento.jpg"],
+      "imagenes": ["/img/01-galeria1/galeria4.jpg"],
       "categoria": "soporte",
       "descripcion": "Actualizaciones, backups y monitoreo constante de tu sitio web"
     },
@@ -35,7 +35,7 @@
       "id": 5,
       "nombre": "Diseño UX/UI",
       "precio": 1500,
-      "imagenes": ["/img/servicios/ux-ui.jpg"],
+      "imagenes": ["/img/01-galeria1/galeria5.jpg"],
       "categoria": "diseño",
       "descripcion": "Diseño de interfaces centrado en la experiencia de usuario"
     }
