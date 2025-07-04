@@ -11,21 +11,21 @@ const Proyectos = () => {
       id: 1,
       title: "Portfolio Web",
       description: "Diseño y desarrollo de portfolio profesional",
-      image: "../../public/img/05-gif/web 1_4.gif",
+      image: "../../img/05-gif/web 1_4.gif",
       tags: ["React", "Sass", "Responsive"]
     },
     {
       id: 2,
       title: "E-commerce",
       description: "Tienda online con carrito de compras",
-      image: "../../public/img/06-tienda/tienda1-.png",
+      image: "../../img/06-tienda/tienda1-.png",
       tags: ["React", "Node.js", "MongoDB"]
     },
     {
       id: 3,
       title: "Aplicación Móvil",
       description: "App para gestión de proyectos",
-      image: "../../public/img/05-img-costados-larga/carrusellargo1.jpg",
+      image: "../../img/05-img-costados-larga/carrusellargo1.jpg",
       tags: ["React Native", "Firebase"]
     }
   ];

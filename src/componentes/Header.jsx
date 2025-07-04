@@ -56,7 +56,7 @@ const Header = ({ searchQuery, setSearchQuery }) => {
             <input
               type="search"
               className="search-input"
-              placeholder={location.pathname === "/tienda" ? "Buscar proyectos..." : "Buscar servicios..."}
+              placeholder={location.pathname === "/tienda" ? "Buscar..." : "Buscar servicios..."}
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               aria-label="Buscar"

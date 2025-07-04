@@ -27,54 +27,54 @@ const Register = () => {
   };
 
   return (
-    <div className="blockbuster-auth-container">
+    <div className="bb-auth-container">
       {loading ? (
         <LoadingSpinner />
       ) : (
-        <div className="blockbuster-register-card">
-          <div className="card-header">
+        <div className="bb-register-card">
+          <div className="bb-card-header">
             <h2>ÚNETE AL CLUB</h2>
-            <div className="film-strip-decoration"></div>
+            <div className="bb-film-strip-decoration"></div>
           </div>
-          <div className="card-image">
-            <img src="/img/blockbuster-logo.png" alt="Blockbuster Logo" />
+          <div className="bb-card-image">
+            <img src="../../public/img/02-logos/logogondraworld.png" alt="Logo Gondra World" />
           </div>
-          <form onSubmit={handleRegister} className="blockbuster-auth-form">
-            <div className="form-group">
+          <form onSubmit={handleRegister} className="bb-auth-form">
+            <div className="bb-form-group">
               <label>CORREO ELECTRÓNICO</label>
               <input
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="blockbuster-input"
+                className="bb-input"
                 required
               />
             </div>
-            <div className="form-group">
+            <div className="bb-form-group">
               <label>CREA TU CONTRASEÑA</label>
               <input
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="blockbuster-input"
+                className="bb-input"
                 required
               />
             </div>
-            <div className="form-group">
+            <div className="bb-form-group">
               <label>CONFIRMA TU CONTRASEÑA</label>
               <input
                 type="password"
                 value={confirmPassword}
                 onChange={(e) => setConfirmPassword(e.target.value)}
-                className="blockbuster-input"
+                className="bb-input"
                 required
               />
             </div>
-            <button type="submit" className="blockbuster-button">
+            <button type="submit" className="bb-button">
               REGISTRARSE
             </button>
           </form>
-          <div className="card-footer">
+          <div className="bb-card-footer">
             ¡RECIBE OFERTAS EXCLUSIVAS!
           </div>
         </div>

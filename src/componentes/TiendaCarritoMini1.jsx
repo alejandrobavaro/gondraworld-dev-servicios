@@ -1,50 +1,35 @@
-import React from 'react';
-import '../assets/scss/_03-Componentes/_TiendaCarritoMini1.scss';
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import { BsCart4, BsArrowRight } from "react-icons/bs";
+import "../assets/scss/_03-Componentes/_TiendaCarritoMini2.scss";
 
-function TiendaCarritoMini1({ items, total }) {
+const TiendaCarritoMini2 = ({ cart }) => {
+  const [isHovered, setIsHovered] = useState(false);
+  const navigate = useNavigate();
+  const total = cart.reduce((sum, product) => sum + (product.precio * (product.quantity || 1)), 0);
+
   return (
-    <div className="blockbuster-mini-cart">
-      <div className="film-strip-top"></div>
+    <div 
+      className="tech-floating-cart"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      onClick={() => navigate('/carrito')}
+    >
+      <div className="cart-icon-badge">
+        <BsCart4 className="cart-icon" />
+        {cart.length > 0 && <span className="badge">{cart.length}</span>}
+      </div>
       
-      <h2 className="blockbuster-cart-title">
-        <span className="film-icon">🎬</span> CARRITO <span className="film-icon">🎬</span>
-      </h2>
-      
-      {items.length === 0 ? (
-        <p className="blockbuster-empty-cart">¡VACÍO! AÑADE PELÍCULAS</p>
-      ) : (
-        <>
-          <ul className="blockbuster-mini-list">
-            {items.slice(0, 3).map((item, index) => {
-              const price = typeof item.precio === 'number' ? item.precio.toFixed(2) : '0.00';
-              
-              return (
-                <li key={index} className="blockbuster-mini-item">
-                  <div className="product-image-container">
-                    <img
-                      src={item.imagen || '/img/default-movie.png'}
-                      alt={item.nombre || 'Película'}
-                      className="blockbuster-product-image"
-                    />
-                  </div>
-                  <span className="blockbuster-product-name">{item.nombre || 'Película'}</span>
-                  <span className="blockbuster-product-price">${price}</span>
-                </li>
-              );
-            })}
-          </ul>
-          <p className="blockbuster-total">
-            TOTAL: <span className="blockbuster-neon">${typeof total === 'number' ? total.toFixed(2) : '0.00'}</span>
-          </p>
-          <button className="blockbuster-view-more">
-            VER MÁS <span className="blockbuster-blink">»</span>
+      {isHovered && (
+        <div className="cart-preview">
+          <p className="cart-total">Total: ${total.toFixed(2)}</p>
+          <button className="view-cart-btn">
+            Ver carrito <BsArrowRight />
           </button>
-        </>
+        </div>
       )}
-      
-      <div className="film-strip-bottom"></div>
     </div>
   );
-}
+};
 
-export default TiendaCarritoMini1;
+export default TiendaCarritoMini2;

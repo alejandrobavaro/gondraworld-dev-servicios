@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { FaExternalLinkAlt, FaArrowRight } from 'react-icons/fa';
 import '../assets/scss/_03-Componentes/_MainNovedades.scss';
 
-const MainNovedades = () => {
+const MainNovedades = ({ darkMode = false }) => {
   const [expandedArticle, setExpandedArticle] = useState(null);
 
   const toggleArticle = (id) => {
@@ -40,7 +40,7 @@ Ya hemos trabajado con más de 15 clientes en proyectos freelance y estamos list
 "En Gondra World Dev no solo construimos sitios web, creamos experiencias digitales que ayudan a nuestros clientes a crecer"
 
 Alejandro Gondra, Fundador`,
-      image: "../../public/img/00-fondos/banner2.jpg",
+      image: "../../img/00-fondos/banner2.jpg",
       date: "01/06/2025",
       destacado: true,
       links: [
@@ -64,7 +64,7 @@ Alejandro Gondra, Fundador`,
       title: "Nuevo Curso: React Avanzado para Desarrollo Profesional",
       excerpt: "Lanzamos nuestro curso más completo con proyectos reales",
       content: "Hemos creado un curso intensivo de React Avanzado que cubre desde hooks personalizados hasta integración con backends. Incluye 3 proyectos reales y mentorías personalizadas. Más de 50 estudiantes ya se han inscrito en la primera semana. Próxima edición comienza el 15 de julio.",
-      image: "../../public/img/01-galeria1/galeria1.jpg",
+      image: "../../img/01-galeria1/galeria1.jpg",
       date: "20/05/2024",
       links: [
         { url: "#", text: "Inscribirse al curso" }
@@ -86,7 +86,7 @@ Alejandro Gondra, Fundador`,
       title: "Taller Gratuito: Diseño de Interfaces con Figma",
       excerpt: "Aprende las bases del diseño UI/UX en nuestro próximo taller",
       content: "El 25 de mayo realizaremos un taller gratuito de introducción al diseño UI/UX con Figma. Cubriremos desde los fundamentos del diseño de interfaces hasta la creación de prototipos interactivos. Este taller forma parte de nuestra iniciativa para compartir conocimiento con la comunidad de desarrolladores.",
-      image: "../../public/img/01-galeria1/galeria5.jpg",
+      image: "../../img/01-galeria1/galeria5.jpg",
       date: "15/05/2024",
       links: [
         { url: "#", text: "Inscribirse al taller" }
@@ -108,7 +108,7 @@ Alejandro Gondra, Fundador`,
       title: "Certificación en React 18 para Todo el Equipo",
       excerpt: "Actualizamos nuestros conocimientos con las últimas features de React",
       content: "Todo el equipo de desarrollo frontend ha completado con éxito la certificación en React 18, aprendiendo sobre Suspense, Transiciones y el nuevo hook useId. Mantenemos nuestro compromiso de estar a la vanguardia tecnológica para ofrecer las mejores soluciones a nuestros clientes.",
-      image: "../../public/img/01-galeria1/galeria9.jpg",
+      image: "../../img/01-galeria1/galeria9.jpg",
       date: "28/04/2024",
       links: [
         { url: "#", text: "Ver certificados" }

@@ -1,121 +1,126 @@
-import React, { useState, useEffect } from "react";
-import { toast } from "react-toastify"; // Importa Toastify
+ import React, { useState, useEffect } from "react";
+import { toast } from "react-toastify";
+import { BsCartCheck, BsTrash, BsPlus, BsDash, BsArrowLeft } from "react-icons/bs";
 import "../assets/scss/_03-Componentes/_TiendaCarritoCompra.scss";
 
 const TiendaCarritoCompra = ({ cart = [], removeFromCart, handlePagar, updateProductQuantity }) => {
   const [localCart, setLocalCart] = useState(cart);
+  const total = localCart.reduce((sum, product) => sum + (product.precio * (product.quantity || 1)), 0);
 
   useEffect(() => {
     setLocalCart(cart);
   }, [cart]);
 
-  const total = localCart.reduce((sum, product) => sum + (product.precio * (product.quantity || 1)), 0);
-
   const handleComprar = () => {
-    handlePagar(); // Llama a la función que maneja el pago
-
-    // Muestra la notificación de éxito con Toastify
-    toast.success("¡Compra realizada! Tu compra ha sido procesada exitosamente.", {
-      position: toast.POSITION.TOP_CENTER,
+    handlePagar();
+    toast.success("¡Compra realizada con éxito!", {
+      position: "top-center",
+      className: "tech-toast"
     });
   };
 
   const handleQuantityChange = (id, delta) => {
-    setLocalCart(prevCart => {
-      return prevCart.map(product => 
-        product.id === id
-          ? { ...product, quantity: Math.max(1, (product.quantity || 1) + delta) }
-          : product
-      );
-    });
-    updateProductQuantity(id, (localCart.find(product => product.id === id)?.quantity || 1) + delta);
+    const newQuantity = Math.max(1, (localCart.find(p => p.id === id)?.quantity || 1) + delta);
+    updateProductQuantity(id, newQuantity);
   };
 
+
   return (
-    <div className="tienda-carrito-container">
-      <section className="tienda-titulo-container">
-        <h1 className="tienda-titulo">
-          <i className="bi bi-cart" /> CARRITO DE COMPRAS <i className="bi bi-cart" />
+    <div className="tech-cart-container">
+      <header className="tech-cart-header">
+        <button className="tech-back-button" onClick={() => window.history.back()}>
+          <BsArrowLeft />
+        </button>
+        <h1 className="tech-cart-title">
+          <BsCartCheck className="tech-cart-icon" /> 
+          Tu Carrito de Servicios
         </h1>
-      </section>
+      </header>
 
-      <div className="tienda-carrito-content">
-        <div className="tienda-resumen-compra">
-          <h3 className="tienda-resumen-titulo">RESUMEN DE LA COMPRA:</h3>
-          <section className="tienda-pago-section">
-            <h3 className="tienda-pago-titulo">
-              <i className="bi bi-activity" /> REALIZA TU PAGO <i className="bi bi-activity" />
-            </h3>
-          </section>
-
-          <div className="tienda-carrito-detalle">
-            <div className="tienda-resumen-info">
-              <p className="tienda-total-text">Total: ${total.toFixed(2)}</p>
-              <p className="tienda-cantidad-text">Cantidad de Productos: {localCart.length}</p>
+      <div className="tech-cart-content">
+        {localCart.length === 0 ? (
+          <div className="tech-empty-cart">
+            <p>No hay servicios en tu carrito</p>
+            <button className="tech-browse-btn" onClick={() => window.location.href = '/tienda'}>
+              Explorar Servicios
+            </button>
+          </div>
+        ) : (
+          <>
+            <div className="tech-cart-summary">
+              <div className="tech-summary-item">
+                <span>Productos:</span>
+                <span>{localCart.length}</span>
+              </div>
+              <div className="tech-summary-item tech-total">
+                <span>Total:</span>
+                <span>${total.toFixed(2)}</span>
+              </div>
             </div>
 
-            <ul className="tienda-producto-list">
+            <ul className="tech-cart-items">
               {localCart.map((product) => (
-                <li key={product.id} className="tienda-producto-item">
-                  <img
-                    src={product.imagenes[0]}
-                    alt={product.nombre}
-                    className="tienda-producto-imagen"
-                    onError={(e) => {
-                      e.target.onerror = null;
-                      e.target.src = "/img/02-logos/logolinatiendabazar2.png"; 
-                    }}
-                  />
-                  <div className="tienda-producto-info">
-                    <span className="tienda-producto-nombre">{product.nombre}</span>
-                    <div className="tienda-contenedorPrecioCantidad">
-                      <span className="tienda-producto-precio">${(product.precio || 0).toFixed(2)}</span>
-                      <div className="tienda-producto-cantidad">
-                        <button
-                          className="tienda-btn-quantity"
+                <li key={product.id} className="tech-cart-item">
+                  <div className="tech-item-image">
+                    <img 
+                      src={product.imagenes?.[0] || '/img/default-service.png'} 
+                      alt={product.nombre}
+                      onError={(e) => {
+                        e.target.onerror = null;
+                        e.target.src = '/img/default-service.png';
+                      }}
+                    />
+                  </div>
+                  
+                  <div className="tech-item-details">
+                    <h3 className="tech-item-name">{product.nombre}</h3>
+                    <p className="tech-item-desc">{product.descripcion}</p>
+                    
+                    <div className="tech-item-controls">
+                      <div className="tech-quantity-selector">
+                        <button 
+                          className="tech-qty-btn"
                           onClick={() => handleQuantityChange(product.id, -1)}
+                          aria-label="Reducir cantidad"
                         >
-                          -
+                          <BsDash />
                         </button>
-                        <span className="tienda-quantity-display">
-                          {product.quantity || 1}
-                        </span>
-                        <button
-                          className="tienda-btn-quantity"
+                        <span className="tech-qty-display">{product.quantity || 1}</span>
+                        <button 
+                          className="tech-qty-btn"
                           onClick={() => handleQuantityChange(product.id, 1)}
+                          aria-label="Aumentar cantidad"
                         >
-                          +
+                          <BsPlus />
                         </button>
                       </div>
-                    </div>
-                    <div className="tienda-producto-descripcion">
-                      {product.descripcion}
+                      
+                      <span className="tech-item-price">${product.precio.toFixed(2)}</span>
                     </div>
                   </div>
-                  <button
-                    className="tienda-btn-eliminar"
-                    onClick={() => {
-                      console.log("Eliminando producto con id:", product.id);
-                      removeFromCart(product.id);
-                    }}
+                  
+                  <button 
+                    className="tech-remove-btn"
+                    onClick={() => removeFromCart(product.id)}
+                    aria-label="Eliminar servicio"
                   >
-                    <i className="bi bi-trash"></i>
+                    <BsTrash />
                   </button>
                 </li>
               ))}
             </ul>
 
-            <hr className="tienda-transparent-hr" />
-            
-            <section className="tienda-acciones">
-              <button onClick={handleComprar} className="tienda-botonComprar">
-                <h3 className="tienda-compra-text">
-                  <i className="bi bi-shift-fill" /> Comprar
-                </h3>
+            <div className="tech-cart-actions">
+              <button 
+                className="tech-checkout-btn"
+                onClick={handleComprar}
+                disabled={localCart.length === 0}
+              >
+                Finalizar Compra - ${total.toFixed(2)}
               </button>
-            </section>
-          </div>
-        </div>
+            </div>
+          </>
+        )}
       </div>
     </div>
   );

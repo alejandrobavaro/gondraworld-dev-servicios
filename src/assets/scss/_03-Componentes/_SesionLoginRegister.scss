@@ -1,32 +1,18 @@
-// Variables de estilo Blockbuster
-$bb-blue-dark: #0a1a3a;
-$bb-blue-medium: #122b5a;
-$bb-yellow: #ffd100;
-$bb-white: #ffffff;
-$bb-black: #000000;
-
-// Estilos generales
-.blockbuster-auth-system {
-  font-family: 'Arial', sans-serif;
-  background-color: $bb-blue-dark;
-  min-height: 100vh;
-}
-
-.blockbuster-auth-container {
+/* Estilos Mobile First - Tema Oscuro */
+.bb-auth-container {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   padding: 20px;
-  background-color: $bb-blue-dark;
+  background-color: #0a192f;
 }
 
-// Tarjeta de Login/Register
-.blockbuster-login-card,
-.blockbuster-register-card {
-  background-color: $bb-blue-medium;
-  border: 2px solid $bb-yellow;
-  border-radius: 4px;
+.bb-login-card,
+.bb-register-card {
+  background-color: #112240;
+  border: 2px solid #64ffda;
+  border-radius: 20px;
   padding: 25px;
   width: 100%;
   max-width: 500px;
@@ -35,13 +21,14 @@ $bb-black: #000000;
   overflow: hidden;
 }
 
-.film-strip-border {
-  border: 1px dashed $bb-yellow;
+.bb-film-strip-border {
+  border: 1px dashed #64ffda;
+  border-radius: 20px;
   padding: 20px;
 }
 
-.card-title, .card-header h2 {
-  color: $bb-yellow;
+.bb-card-title, .bb-card-header h2 {
+  color: #64ffda;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -49,64 +36,66 @@ $bb-black: #000000;
   font-size: 1.5rem;
 }
 
-.card-image {
+.bb-card-image {
   text-align: center;
   margin: 20px 0;
   
   img {
-    max-width: 150px;
-    filter: drop-shadow(0 0 5px rgba($bb-yellow, 0.5));
+    max-width: 350px;
+    filter: drop-shadow(0 0 5px rgba(100, 255, 218, 0.5));
   }
 }
 
-.film-strip-decoration {
+.bb-film-strip-decoration {
   height: 6px;
   background: repeating-linear-gradient(
     90deg,
-    $bb-blue-dark,
-    $bb-blue-dark 15px,
-    $bb-yellow 15px,
-    $bb-yellow 30px
+    #0a192f,
+    #0a192f 15px,
+    #64ffda 15px,
+    #64ffda 30px
   );
   margin: 10px auto;
   width: 80%;
 }
 
-// Formularios
-.blockbuster-auth-form {
-  .form-group {
+/* Formularios */
+.bb-auth-form {
+  .bb-form-group {
     margin-bottom: 20px;
 
     label {
       display: block;
-      color: $bb-yellow;
+      color: #64ffda;
       margin-bottom: 8px;
       font-size: 0.9rem;
       text-transform: uppercase;
     }
   }
 
-  .blockbuster-input {
+  .bb-input {
     width: 100%;
     padding: 10px;
-    background-color: rgba($bb-black, 0.5);
-    border: 1px solid $bb-yellow;
-    color: $bb-white;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid #64ffda;
+    border-radius: 20px;
+    color: #e6f1ff;
     font-family: 'Arial', sans-serif;
     
     &:focus {
       outline: none;
-      border-color: $bb-white;
-      box-shadow: 0 0 5px $bb-yellow;
+      border-color: #e6f1ff;
+      box-shadow: 0 0 5px #64ffda;
     }
   }
 
-  .blockbuster-button {
+  .bb-button {
     width: 100%;
     padding: 12px;
-    background-color: $bb-blue-dark;
-    color: $bb-yellow;
-    border: 2px solid $bb-yellow;
+    background-color: #0a192f;
+    color: #64ffda;
+    border: 2px solid #64ffda;
+    border-radius: 20px;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -115,100 +104,78 @@ $bb-black: #000000;
     margin-top: 10px;
     
     &:hover {
-      background-color: $bb-yellow;
-      color: $bb-blue-dark;
+      background-color: rgba(100, 255, 218, 0.1);
     }
   }
 }
 
-.card-footer {
-  color: $bb-white;
+.bb-card-footer {
+  color: #e6f1ff;
   text-align: center;
   margin-top: 20px;
   font-size: 0.9rem;
   font-style: italic;
 }
 
-// Spinner
-.blockbuster-loading-spinner {
+/* Spinner */
+.bb-loading-spinner {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  background-color: rgba($bb-blue-dark, 0.9);
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-
-  .film-reel-spinner {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    background-color: $bb-blue-medium;
-    border: 3px solid $bb-yellow;
+  min-height: 100vh;
+  background-color: rgba(10, 25, 47, 0.9);
+  
+  .bb-spinner-animation {
+    width: 60px;
+    height: 60px;
     position: relative;
-    animation: blockbuster-spin 1s linear infinite;
-    
-    .film-strip {
-      position: absolute;
-      width: 60px;
-      height: 60px;
-      background: 
-        linear-gradient(to right, $bb-yellow, $bb-yellow) 0 0 / 100% 2px,
-        linear-gradient(to bottom, $bb-yellow, $bb-yellow) 0 0 / 2px 100%;
-      background-repeat: no-repeat;
-      border-radius: 50%;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-    
-    .reel-center {
-      position: absolute;
-      width: 20px;
-      height: 20px;
-      background-color: $bb-yellow;
-      border-radius: 50%;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      border: 2px solid $bb-blue-dark;
-    }
   }
-
-  .loading-text {
-    color: $bb-yellow;
+  
+  .bb-spinner-circle {
+    width: 100%;
+    height: 100%;
+    border: 4px solid rgba(100, 255, 218, 0.2);
+    border-top-color: #64ffda;
+    border-radius: 50%;
+    animation: bb-spin 1s linear infinite;
+  }
+  
+  .bb-loading-text {
     margin-top: 20px;
-    font-size: 1.1rem;
+    color: #64ffda;
+    font-size: 1rem;
+    font-weight: 500;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    animation: blockbuster-pulse 1.5s ease-in-out infinite;
   }
 }
 
-// Animaciones
-@keyframes blockbuster-spin {
+@keyframes bb-spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
 
-@keyframes blockbuster-pulse {
-  0%, 100% { opacity: 0.7; }
-  50% { opacity: 1; }
-}
-
-// Responsive
-@media (max-width: 768px) {
-  .blockbuster-login-card,
-  .blockbuster-register-card {
-    padding: 15px;
-    max-width: 95%;
+/* Tablet (768px) */
+@media (min-width: 768px) {
+  .bb-login-card,
+  .bb-register-card {
+    padding: 30px;
+    max-width: 550px;
   }
 
-  .card-title, .card-header h2 {
-    font-size: 1.3rem;
+  .bb-card-title, .bb-card-header h2 {
+    font-size: 1.8rem;
+  }
+}
+
+/* Desktop (1024px) */
+@media (min-width: 1024px) {
+  .bb-auth-container {
+    padding: 40px;
+  }
+  
+  .bb-login-card,
+  .bb-register-card {
+    max-width: 600px;
   }
 }

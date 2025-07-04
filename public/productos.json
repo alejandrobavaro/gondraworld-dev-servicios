@@ -1,197 +1,322 @@
 [
   {
     "id": 1,
-    "nombre": "Cámara - Alta Resolución",
-    "precio": 45000,
-    "imagenes": [
-      "/img/06-tienda/tienda1-a.png",
-      "/img/06-tienda/tienda1-b.png",
-      "/img/06-tienda/tienda1-c.png",
-      "/img/06-tienda/tienda1-d.png"
-    ],
-    "categoria": "cámaras",
-    "descripcion": "Cámara digital de alta resolución, ideal para capturar momentos inolvidables."
+    "nombre": "Web Básica para Restaurantes",
+    "precio": 75000,
+    "imagenes": ["/img/06-tienda/tienda1-a.png", "/img/06-tienda/tienda1-b.png"],
+    "categoria": "desarrollo-web",
+    "descripcion": "Web completa para restaurantes con menú digital, horarios, ubicación y formulario de reservas."
   },
   {
     "id": 2,
-    "nombre": "Trípode - Estable y Ligero",
+    "nombre": "Menú Digital + QR para Restaurantes",
     "precio": 35000,
-    "imagenes": [
-      "/img/06-tienda/tienda2-a.png",
-      "/img/06-tienda/tienda2-b.png",
-      "/img/06-tienda/tienda2-c.png",
-      "/img/06-tienda/tienda2-d.png"
-    ],
-    "categoria": "accesorios",
-    "descripcion": "Trípode estable y ligero, perfecto para fotos y vídeos en cualquier lugar."
+    "imagenes": ["/img/06-tienda/tienda2-a.png", "/img/06-tienda/tienda2-b.png"],
+    "categoria": "digitalizacion",
+    "descripcion": "Diseño de menú digital interactivo con generación de códigos QR para tu restaurante o bar."
   },
   {
     "id": 3,
-    "nombre": "Lente 50mm - Gran Apertura",
-    "precio": 28000,
-    "imagenes": [
-      "/img/06-tienda/tienda3-a.png",
-      "/img/06-tienda/tienda3-b.png",
-      "/img/06-tienda/tienda3-c.png",
-      "/img/06-tienda/tienda3-d.png"
-    ],
-    "categoria": "lentes",
-    "descripcion": "Lente de 50mm con gran apertura, ideal para retratos y fotos en condiciones de poca luz."
+    "nombre": "E-commerce para Heladerías",
+    "precio": 120000,
+    "imagenes": ["/img/06-tienda/tienda3-a.png", "/img/06-tienda/tienda3-b.png"],
+    "categoria": "ecommerce",
+    "descripcion": "Tienda online para heladerías con pedidos, sabores destacados y promociones especiales."
   },
   {
     "id": 4,
-    "nombre": "Fondo Fotográfico - Chroma",
-    "precio": 30000,
-    "imagenes": [
-      "/img/06-tienda/tienda4-a.png",
-      "/img/06-tienda/tienda4-b.png",
-      "/img/06-tienda/tienda4-c.png",
-      "/img/06-tienda/tienda4-d.png"
-    ],
-    "categoria": "fondo",
-    "descripcion": "Fondo fotográfico con textura natural, ideal para sesiones de fotos profesionales."
+    "nombre": "Web Express para Quioscos",
+    "precio": 45000,
+    "imagenes": ["/img/06-tienda/tienda4-a.png", "/img/06-tienda/tienda4-b.png"],
+    "categoria": "desarrollo-web",
+    "descripcion": "Web sencilla para quioscos con productos destacados, horarios y contacto."
   },
   {
     "id": 5,
-    "nombre": "Flash Externo - Alta Potencia",
-    "precio": 90000,
-    "imagenes": [
-      "/img/06-tienda/tienda5-a.png",
-      "/img/06-tienda/tienda5-b.png",
-      "/img/06-tienda/tienda5-c.png",
-      "/img/06-tienda/tienda5-d.png"
-    ],
-    "categoria": "accesorios",
-    "descripcion": "Flash externo de alta potencia, perfecto para iluminar tus fotos en cualquier condición."
+    "nombre": "Paquete Tienda Online Básica",
+    "precio": 89900,
+    "imagenes": ["/img/06-tienda/tienda5-a.png", "/img/06-tienda/tienda5-b.png"],
+    "categoria": "ecommerce",
+    "descripcion": "Tienda online con hasta 50 productos, carrito de compras y pasarela de pago básica."
   },
   {
     "id": 6,
-    "nombre": "Obra de Arte - Paisaje Abstracto",
-    "precio": 200000,
-    "imagenes": [
-      "/img/06-tienda/tienda6-a.png",
-      "/img/06-tienda/tienda6-b.png",
-      "/img/06-tienda/tienda6-c.png",
-      "/img/06-tienda/tienda6-d.png"
-    ],
-    "categoria": "arte",
-    "descripcion": "Pintura abstracta de paisaje, una pieza única para decorar cualquier espacio."
+    "nombre": "Web + Menú Digital para Pizzerías",
+    "precio": 95000,
+    "imagenes": ["/img/06-tienda/tienda6-a.png", "/img/06-tienda/tienda6-b.png"],
+    "categoria": "desarrollo-web",
+    "descripcion": "Web especializada para pizzerías con menú interactivo, opciones de personalización y pedidos online."
   },
   {
     "id": 7,
-    "nombre": "Fotografía - Retrato en B&N",
-    "precio": 50000,
-    "imagenes": [
-      "/img/06-tienda/tienda7-a.png",
-      "/img/06-tienda/tienda7-b.png",
-      "/img/06-tienda/tienda7-c.png",
-      "/img/06-tienda/tienda7-d.png"
-    ],
-    "categoria": "fotografía",
-    "descripcion": "Retrato en blanco y negro"
+    "nombre": "Landing Page Promocional",
+    "precio": 55000,
+    "imagenes": ["/img/06-tienda/tienda7-a.png", "/img/06-tienda/tienda7-b.png"],
+    "categoria": "desarrollo-web",
+    "descripcion": "Página de aterrizaje para promociones especiales con formulario de contacto y llamadas a la acción."
   },
   {
     "id": 8,
-    "nombre": "Obra de Arte",
-    "precio": 75000,
-    "imagenes": [
-      "/img/06-tienda/tienda8-a.png",
-      "/img/06-tienda/tienda8-b.png",
-      "/img/06-tienda/tienda8-c.png",
-      "/img/06-tienda/tienda8-d.png"
-    ],
-    "categoria": "arte",
-    "descripcion": "Pintura de naturaleza muerta, ideal para coleccionistas y amantes del arte."
+    "nombre": "Web para Servicios Profesionales",
+    "precio": 65000,
+    "imagenes": ["/img/06-tienda/tienda8-a.png", "/img/06-tienda/tienda8-b.png"],
+    "categoria": "desarrollo-web",
+    "descripcion": "Web profesional para abogados, contadores o consultores con blog integrado."
   },
   {
     "id": 9,
-    "nombre": "Cámara Instantánea",
-    "precio": 300000,
-    "imagenes": [
-      "/img/06-tienda/tienda9-a.png",
-      "/img/06-tienda/tienda9-b.png",
-      "/img/06-tienda/tienda9-c.png",
-      "/img/06-tienda/tienda9-d.png"
-    ],
-    "categoria": "cámaras",
-    "descripcion": "Cámara instantánea que imprime tus fotos al instante, perfecta para eventos y fiestas."
+    "nombre": "E-commerce Premium",
+    "precio": 150000,
+    "imagenes": ["/img/06-tienda/tienda9-a.png", "/img/06-tienda/tienda9-b.png"],
+    "categoria": "ecommerce",
+    "descripcion": "Tienda online avanzada con catálogo ilimitado, múltiples métodos de pago y sistema de envíos."
   },
   {
     "id": 10,
-    "nombre": "Maleta para Cámaras",
-    "precio": 20000,
-    "imagenes": [
-      "/img/06-tienda/tienda10-a.png",
-      "/img/06-tienda/tienda10-b.png",
-      "/img/06-tienda/tienda10-c.png",
-      "/img/06-tienda/tienda10-d.png"
-    ],
-    "categoria": "accesorios",
-    "descripcion": "Maleta resistente al agua para cámaras, ideal para fotógrafos aventureros."
+    "nombre": "Web + Reservas para Salón de Eventos",
+    "precio": 110000,
+    "imagenes": ["/img/06-tienda/tienda10-a.png", "/img/06-tienda/tienda10-b.png"],
+    "categoria": "desarrollo-web",
+    "descripcion": "Web con sistema de reservas online, galería de fotos y paquetes de eventos para salones."
   },
   {
     "id": 11,
-    "nombre": "Obra de Arte - Retrato",
-    "precio": 40000,
-    "imagenes": [
-      "/img/06-tienda/tienda11-a.png",
-      "/img/06-tienda/tienda11-b.png",
-      "/img/06-tienda/tienda11-c.png",
-      "/img/06-tienda/tienda11-d.png"
-    ],
-    "categoria": "arte",
-    "descripcion": "Retrato contemporáneo, una pieza única que destaca la modernidad del arte."
+    "nombre": "Digitalización de Menú + Tablet",
+    "precio": 68000,
+    "imagenes": ["/img/06-tienda/tienda11-a.png", "/img/06-tienda/tienda11-b.png"],
+    "categoria": "digitalizacion",
+    "descripcion": "Conversión de menú físico a digital + tablet con sistema de gestión para mostrador."
   },
   {
     "id": 12,
-    "nombre": "Impresora Fotográfica",
-    "precio": 55000,
-    "imagenes": [
-      "/img/06-tienda/tienda12-a.png",
-      "/img/06-tienda/tienda12-b.png",
-      "/img/06-tienda/tienda12-c.png",
-      "/img/06-tienda/tienda12-d.png"
-    ],
-    "categoria": "accesorios",
-    "descripcion": "Impresora fotográfica compacta y portátil, perfecta para imprimir tus mejores momentos."
+    "nombre": "Web para Delivery de Comida",
+    "precio": 125000,
+    "imagenes": ["/img/06-tienda/tienda12-a.png", "/img/06-tienda/tienda12-b.png"],
+    "categoria": "desarrollo-web",
+    "descripcion": "Plataforma de pedidos online integrada con WhatsApp y sistemas de delivery populares."
   },
   {
     "id": 13,
-    "nombre": "Lente Gran Angular - 18-55mm",
-    "precio": 22000,
-    "imagenes": [
-      "/img/06-tienda/tienda13-a.png",
-      "/img/06-tienda/tienda13-b.png",
-      "/img/06-tienda/tienda13-c.png",
-      "/img/06-tienda/tienda13-d.png"
-    ],
-    "categoria": "lentes",
-    "descripcion": "Lente gran angular de 18-55mm, ideal para paisajes y fotos de grupo."
+    "nombre": "Paquete Redes Sociales + Web Básica",
+    "precio": 85000,
+    "imagenes": ["/img/06-tienda/tienda13-a.png", "/img/06-tienda/tienda13-b.png"],
+    "categoria": "desarrollo-web",
+    "descripcion": "Web sencilla + configuración profesional de redes sociales (Instagram, Facebook) para tu negocio."
   },
   {
     "id": 14,
-    "nombre": "Obra de Arte - Escena Urbana",
-    "precio": 350000,
-    "imagenes": [
-      "/img/06-tienda/tienda14-a.png",
-      "/img/06-tienda/tienda14-b.png",
-      "/img/06-tienda/tienda14-c.png",
-      "/img/06-tienda/tienda14-d.png"
-    ],
-    "categoria": "arte",
-    "descripcion": "Pintura de una escena urbana, ideal para cualquier amante del arte contemporáneo."
+    "nombre": "Web para Gimnasios",
+    "precio": 90000,
+    "imagenes": ["/img/06-tienda/tienda14-a.png", "/img/06-tienda/tienda14-b.png"],
+    "categoria": "desarrollo-web",
+    "descripcion": "Web especializada para gimnasios con horarios de clases, profesores y sistema de inscripción."
   },
   {
     "id": 15,
-    "nombre": "Libro de Fotografía - Técnica",
+    "nombre": "QR + Sistema de Pedidos para Bares",
+    "precio": 78000,
+    "imagenes": ["/img/06-tienda/tienda15-a.png", "/img/06-tienda/tienda15-b.png"],
+    "categoria": "digitalizacion",
+    "descripcion": "Sistema completo de pedidos mediante QR para bares con gestión de mesas y cuenta."
+  },
+  {
+    "id": 16,
+    "nombre": "Web para Tiendas de Ropa",
+    "precio": 110000,
+    "imagenes": ["/img/06-tienda/tienda16-a.png", "/img/06-tienda/tienda16-b.png"],
+    "categoria": "ecommerce",
+    "descripcion": "Catálogo online para tiendas de ropa con filtros por talles, colores y categorías."
+  },
+  {
+    "id": 17,
+    "nombre": "Web para Consultorios Médicos",
+    "precio": 95000,
+    "imagenes": ["/img/06-tienda/tienda17-a.png", "/img/06-tienda/tienda17-b.png"],
+    "categoria": "desarrollo-web",
+    "descripcion": "Web profesional para consultorios con turnos online, especialidades y datos de contacto."
+  },
+  {
+    "id": 18,
+    "nombre": "E-commerce para Artesanos",
+    "precio": 105000,
+    "imagenes": ["/img/06-tienda/tienda18-a.png", "/img/06-tienda/tienda18-b.png"],
+    "categoria": "ecommerce",
+    "descripcion": "Tienda online especializada para productos artesanales con historias del creador."
+  },
+  {
+    "id": 19,
+    "nombre": "Web para Peluquerías/Barberías",
+    "precio": 82000,
+    "imagenes": ["/img/06-tienda/tienda19-a.png", "/img/06-tienda/tienda19-b.png"],
+    "categoria": "desarrollo-web",
+    "descripcion": "Web con portafolio de trabajos, sistema de turnos online y promociones destacadas."
+  },
+  {
+    "id": 20,
+    "nombre": "Paquete Completo Digital para Negocios",
+    "precio": 180000,
+    "imagenes": ["/img/06-tienda/tienda20-a.png", "/img/06-tienda/tienda20-b.png"],
+    "categoria": "desarrollo-web",
+    "descripcion": "Web profesional + menú digital + redes sociales + Google My Business para tu negocio."
+  },
+  {
+    "id": 21,
+    "nombre": "Servicio Técnico Remoto - 1 Hora",
+    "precio": 35000,
+    "imagenes": ["/img/06-tienda/tienda21-a.png"],
+    "categoria": "servicio-tecnico",
+    "descripcion": "Asistencia remota para resolver problemas de software y configuración."
+  },
+  {
+    "id": 22,
+    "nombre": "Reparación de PC/Laptop - Diagnóstico",
+    "precio": 25000,
+    "imagenes": ["/img/06-tienda/tienda22-a.png"],
+    "categoria": "reparacion",
+    "descripcion": "Diagnóstico profesional de fallas en equipos informáticos."
+  },
+  {
+    "id": 23,
+    "nombre": "Instalación de Redes WiFi Hogar",
+    "precio": 60000,
+    "imagenes": ["/img/06-tienda/tienda23-a.png"],
+    "categoria": "redes",
+    "descripcion": "Instalación y configuración de red inalámbrica para hogar."
+  },
+  {
+    "id": 24,
+    "nombre": "Memoria RAM 8GB DDR4",
+    "precio": 38000,
+    "imagenes": ["/img/06-tienda/tienda24-a.png"],
+    "categoria": "hardware",
+    "descripcion": "Memoria RAM para mejorar rendimiento de tu computadora."
+  },
+  {
+    "id": 25,
+    "nombre": "SSD 256GB",
+    "precio": 45000,
+    "imagenes": ["/img/06-tienda/tienda25-a.png"],
+    "categoria": "hardware",
+    "descripcion": "Disco sólido para mayor velocidad en tu equipo."
+  },
+  {
+    "id": 26,
+    "nombre": "Mantenimiento Preventivo PC",
+    "precio": 40000,
+    "imagenes": ["/img/06-tienda/tienda26-a.png"],
+    "categoria": "servicio-tecnico",
+    "descripcion": "Limpieza física y optimización de sistema."
+  },
+  {
+    "id": 27,
+    "nombre": "Kit Teclado + Mouse Inalámbrico",
+    "precio": 28000,
+    "imagenes": ["/img/06-tienda/tienda27-a.png"],
+    "categoria": "perifericos",
+    "descripcion": "Combo teclado y mouse inalámbrico básico."
+  },
+  {
+    "id": 28,
+    "nombre": "Instalación de Cámaras Seguridad",
+    "precio": 120000,
+    "imagenes": ["/img/06-tienda/tienda28-a.png"],
+    "categoria": "redes",
+    "descripcion": "Instalación de 2 cámaras IP con almacenamiento local."
+  },
+  {
+    "id": 29,
+    "nombre": "Backup y Recuperación de Datos",
+    "precio": 55000,
+    "imagenes": ["/img/06-tienda/tienda29-a.png"],
+    "categoria": "servicio-tecnico",
+    "descripcion": "Rescate de información y copia de seguridad."
+  },
+  {
+    "id": 30,
+    "nombre": "Monitor 22\" Full HD",
+    "precio": 85000,
+    "imagenes": ["/img/06-tienda/tienda30-a.png"],
+    "categoria": "hardware",
+    "descripcion": "Monitor básico para oficina o hogar."
+  },
+  {
+    "id": 31,
+    "nombre": "Webcam HD con Micrófono",
+    "precio": 32000,
+    "imagenes": ["/img/06-tienda/tienda31-a.png"],
+    "categoria": "perifericos",
+    "descripcion": "Para videollamadas y reuniones online."
+  },
+  {
+    "id": 32,
+    "nombre": "Disco Duro Externo 1TB",
+    "precio": 65000,
+    "imagenes": ["/img/06-tienda/tienda32-a.png"],
+    "categoria": "almacenamiento",
+    "descripcion": "Almacenamiento portátil para backups."
+  },
+  {
+    "id": 33,
+    "nombre": "Instalación de Software Oficina",
+    "precio": 20000,
+    "imagenes": ["/img/06-tienda/tienda33-a.png"],
+    "categoria": "servicio-tecnico",
+    "descripcion": "Paquete Office + Antivirus básico."
+  },
+  {
+    "id": 34,
+    "nombre": "Router WiFi Doble Banda",
+    "precio": 55000,
+    "imagenes": ["/img/06-tienda/tienda34-a.png"],
+    "categoria": "redes",
+    "descripcion": "Para mejor cobertura inalámbrica."
+  },
+  {
+    "id": 35,
+    "nombre": "Reparación de Pantalla Laptop",
+    "precio": 45000,
+    "imagenes": ["/img/06-tienda/tienda35-a.png"],
+    "categoria": "reparacion",
+    "descripcion": "Mano de obra (no incluye pantalla)."
+  },
+  {
+    "id": 36,
+    "nombre": "Impresora Multifunción",
+    "precio": 90000,
+    "imagenes": ["/img/06-tienda/tienda36-a.png"],
+    "categoria": "perifericos",
+    "descripcion": "Impresión, escaneo y copiado básico."
+  },
+  {
+    "id": 37,
+    "nombre": "Soporte Técnico Mensual",
+    "precio": 50000,
+    "imagenes": ["/img/06-tienda/tienda37-a.png"],
+    "categoria": "servicio-tecnico",
+    "descripcion": "3 horas mensuales de soporte remoto."
+  },
+  {
+    "id": 38,
+    "nombre": "Adaptador USB a Ethernet",
     "precio": 15000,
-    "imagenes": [
-      "/img/06-tienda/tienda15-a.png",
-      "/img/06-tienda/tienda15-b.png",
-      "/img/06-tienda/tienda15-c.png",
-      "/img/06-tienda/tienda15-d.png"
-    ],
-    "categoria": "libros",
-    "descripcion": "Libro sobre técnicas y estilos de fotografía, perfecto para fotógrafos en desarrollo."
+    "imagenes": ["/img/06-tienda/tienda38-a.png"],
+    "categoria": "redes",
+    "descripcion": "Para conexión cableada en dispositivos sin puerto LAN."
+  },
+  {
+    "id": 39,
+    "nombre": "Limpieza Profunda de PC",
+    "precio": 35000,
+    "imagenes": ["/img/06-tienda/tienda39-a.png"],
+    "categoria": "servicio-tecnico",
+    "descripcion": "Limpieza física completa de torre/laptop."
+  },
+  {
+    "id": 40,
+    "nombre": "Paquete Inicio Digital",
+    "precio": 80000,
+    "imagenes": ["/img/06-tienda/tienda40-a.png"],
+    "categoria": "servicio-tecnico",
+    "descripcion": "Configuración inicial de PC + software esencial + capacitación básica."
   }
 ]
