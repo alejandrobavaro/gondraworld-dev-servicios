@@ -1,10 +1,10 @@
 import React from 'react';
 import MainBanner from './MainBanner';
 import MainNovedades from './MainNovedades';
-import ProyectosDestacadosGaleria from './ProyectosDestacadosGaleria';
+import ProyectosSlider from './ProyectosSlider';
 import NuestroEquipoGondraWorld from "./NuestroEquipoGondraWorld";
 import ContactoNewsletter from './ContactoNewsletter';
-import ServiciosDestacadosGaleria from './ServiciosDestacadosGaleria';
+import ServiciosSlider from './ServiciosSlider';
 import '../assets/scss/_03-Componentes/_MainContent.scss';
 
 const MainContent = () => {
@@ -27,7 +27,7 @@ const MainContent = () => {
       
       <div className="content-section">
         <div className="content-block">
-          <ServiciosDestacadosGaleria />
+          <ServiciosSlider />
         </div>
       </div>
      
@@ -51,7 +51,7 @@ const MainContent = () => {
       
       <div className="content-section">
         <div className="content-block">
-          <ProyectosDestacadosGaleria />
+          <ProyectosSlider />
         </div>
       </div>
  

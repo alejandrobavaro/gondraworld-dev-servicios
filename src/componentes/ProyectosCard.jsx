@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../assets/scss/_03-Componentes/_ProyectosCard.scss';
 
-const ProyectosCard = ({ proyecto }) => {
+const ProyectosCard = ({ proyecto, isDestacado = false }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   if (!proyecto) {
@@ -16,7 +16,7 @@ const ProyectosCard = ({ proyecto }) => {
 
   return (
     <div 
-      className={`project-card ${isHovered ? 'hovered' : ''}`}
+      className={`project-card ${isHovered ? 'hovered' : ''} ${isDestacado ? 'destacado' : ''}`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -31,6 +31,7 @@ const ProyectosCard = ({ proyecto }) => {
               e.target.src = '/img/placeholder-project.jpg';
             }}
           />
+          {isDestacado && <div className="project-badge">DESTACADO</div>}
         </div>
         <div className="project-overlay">
           <div className="project-info">

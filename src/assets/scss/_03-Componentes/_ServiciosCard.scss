@@ -1,0 +1,129 @@
+.servicio-card {
+    background: #112240;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(100, 255, 218, 0.1);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  
+    &:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 20px rgba(100, 255, 218, 0.1);
+      border-color: #64ffda;
+    }
+  }
+  
+  .card-header {
+    position: relative;
+    height: 180px;
+    overflow: hidden;
+  }
+  
+  .card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  
+  .servicio-card:hover .card-image {
+    transform: scale(1.05);
+  }
+  
+  .destacado-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: #0a192f;
+    color: #64ffda;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border: 1px solid #64ffda;
+    text-transform: uppercase;
+  }
+  
+  .card-body {
+    padding: 1.5rem;
+    flex-grow: 1;
+  }
+  
+  .card-title {
+    color: #e6f1ff;
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+    font-family: 'Space Grotesk', sans-serif;
+  }
+  
+  .card-description {
+    color: #8892b0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+  }
+  
+  .card-precio {
+    margin: 1.5rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+  
+  .precio-anterior {
+    color: #8892b0;
+    text-decoration: line-through;
+    font-size: 1rem;
+  }
+  
+  .precio-actual {
+    color: #64ffda;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .card-promo {
+    display: inline-block;
+    background: rgba(100, 255, 218, 0.1);
+    color: #64ffda;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+    border: 1px dashed #64ffda;
+  }
+  
+  .card-footer {
+    padding: 0 1.5rem 1.5rem;
+    margin-top: auto;
+  }
+  
+  .card-link {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    background: transparent;
+    color: #64ffda;
+    border: 1px solid #64ffda;
+    padding: 0.6rem;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+  
+    &:hover {
+      background: rgba(100, 255, 218, 0.1);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .card-header {
+      height: 150px;
+    }
+    
+    .card-title {
+      font-size: 1.2rem;
+    }
+  }

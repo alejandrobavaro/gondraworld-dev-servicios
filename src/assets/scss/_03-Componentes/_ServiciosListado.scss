@@ -1,0 +1,350 @@
+.servicios-listado {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    font-family: 'Space Grotesk', sans-serif;
+  }
+  
+  .listado-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    
+    h2 {
+      color: #64ffda;
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+    }
+    
+    p {
+      color: #8892b0;
+      font-size: 1rem;
+    }
+  }
+  
+  .lista-servicios {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  
+  .servicio-item {
+    background: #112240;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid rgba(100, 255, 218, 0.1);
+    transition: all 0.3s ease;
+    
+    &:hover {
+      border-color: rgba(100, 255, 218, 0.3);
+    }
+    
+    &.expanded {
+      box-shadow: 0 5px 15px rgba(100, 255, 218, 0.1);
+      border-color: #64ffda;
+    }
+  }
+  
+  .servicio-resumen {
+    display: flex;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    gap: 1.2rem;
+    
+    &:hover {
+      background: rgba(100, 255, 218, 0.03);
+    }
+  }
+  
+  .servicio-icono {
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid rgba(100, 255, 218, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(10, 25, 47, 0.7);
+    
+    .icono-img {
+      width: 70%;
+      height: 70%;
+      object-fit: contain;
+    }
+  }
+  
+  .servicio-info {
+    flex: 1;
+    min-width: 0;
+    
+    h3 {
+      color: #e6f1ff;
+      font-size: 1.2rem;
+      margin-bottom: 0.4rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+  
+  .servicio-meta {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.85rem;
+    color: #8892b0;
+    flex-wrap: wrap;
+    
+    span {
+      display: flex;
+      align-items: center;
+      
+      &::before {
+        content: '•';
+        margin-right: 0.5rem;
+        color: #64ffda;
+      }
+      
+      &:first-child::before {
+        display: none;
+      }
+    }
+    
+    .servicio-precio {
+      color: #64ffda;
+      font-weight: bold;
+    }
+    
+    .servicio-precio-anterior {
+      text-decoration: line-through;
+      opacity: 0.7;
+    }
+  }
+  
+  .servicio-tech {
+    display: flex;
+    gap: 0.5rem;
+    margin: 0 1rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    min-width: 150px;
+    
+    .tech-tag {
+      background: rgba(100, 255, 218, 0.1);
+      color: #64ffda;
+      padding: 0.3rem 0.6rem;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      white-space: nowrap;
+    }
+  }
+  
+  .servicio-toggle {
+    background: transparent;
+    border: none;
+    color: #64ffda;
+    font-size: 1.3rem;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+    
+    &:hover {
+      background: rgba(100, 255, 218, 0.1);
+    }
+  }
+  
+  .servicio-detalle {
+    background: rgba(10, 25, 47, 0.5);
+    border-top: 1px solid rgba(100, 255, 218, 0.1);
+    padding: 1.5rem;
+  }
+  
+  .detalle-contenido {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    
+    @media (min-width: 768px) {
+      flex-direction: row;
+    }
+  }
+  
+  .detalle-columna {
+    flex: 1;
+    
+    @media (min-width: 768px) {
+      &:first-child {
+        padding-right: 1.5rem;
+      }
+    }
+  }
+  
+  .detalle-seccion {
+    margin-bottom: 1.5rem;
+    
+    h4 {
+      color: #64ffda;
+      font-size: 1.1rem;
+      margin-bottom: 0.8rem;
+      display: flex;
+      align-items: center;
+      
+      &::before {
+        content: '';
+        display: inline-block;
+        width: 12px;
+        height: 2px;
+        background: #64ffda;
+        margin-right: 0.8rem;
+      }
+    }
+    
+    p {
+      color: #a8b2d1;
+      line-height: 1.6;
+      font-size: 0.95rem;
+    }
+    
+    ul {
+      padding-left: 1.2rem;
+    }
+    
+    li {
+      color: #ccd6f6;
+      margin-bottom: 0.6rem;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+  }
+  
+  .beneficios-list {
+    li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+      
+      .beneficio-icon {
+        color: #64ffda;
+        font-weight: bold;
+      }
+    }
+  }
+  
+  .tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    
+    .tech-item {
+      background: rgba(100, 255, 218, 0.1);
+      color: #64ffda;
+      padding: 0.4rem 0.8rem;
+      border-radius: 4px;
+      font-size: 0.85rem;
+    }
+  }
+  
+  .promo-badge {
+    display: inline-block;
+    background: rgba(100, 255, 218, 0.2);
+    color: #64ffda;
+    padding: 0.6rem 1rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin: 1rem 0;
+    border: 1px dashed #64ffda;
+    text-align: center;
+  }
+  
+  .servicio-contacto {
+    display: block;
+    width: 100%;
+    padding: 0.8rem;
+    background: rgba(100, 255, 218, 0.1);
+    color: #64ffda;
+    border: 1px solid #64ffda;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+    
+    &:hover {
+      background: rgba(100, 255, 218, 0.2);
+    }
+  }
+  
+  .servicio-galeria {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 1.5rem;
+    
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    
+    @media (min-width: 992px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .galeria-item {
+      aspect-ratio: 16/9;
+      overflow: hidden;
+      border-radius: 4px;
+      border: 1px solid rgba(100, 255, 218, 0.1);
+      
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+        
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .servicio-resumen {
+      padding: 0.8rem 1rem;
+      gap: 0.8rem;
+    }
+    
+    .servicio-tech {
+      display: none;
+    }
+    
+    .servicio-icono {
+      width: 42px;
+      height: 42px;
+      min-width: 42px;
+    }
+    
+    .servicio-info h3 {
+      font-size: 1rem;
+    }
+    
+    .servicio-meta {
+      font-size: 0.8rem;
+      gap: 0.6rem;
+    }
+    
+    .servicio-toggle {
+      width: 28px;
+      height: 28px;
+      font-size: 1.1rem;
+    }
+  }

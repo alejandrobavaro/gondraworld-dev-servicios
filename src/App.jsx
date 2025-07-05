@@ -14,6 +14,8 @@ import Logout from './componentes/SesionLogout';
 import MainWhatsappIcon from './componentes/MainWhatsappIcon';
 
 import Proyectos from './componentes/Proyectos';
+
+
 import Servicios from './componentes/Servicios';
 
 //------------------TIENDA---------------------//

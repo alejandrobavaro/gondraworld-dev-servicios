@@ -3,9 +3,9 @@ import Slider from "react-slick";
 import { useDestacados } from "./TiendaDestacadosContext";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import '../assets/scss/_03-Componentes/_ServiciosDestacadosGaleria.scss';
+import '../assets/scss/_03-Componentes/_ServiciosSlider.scss';
 
-const ServiciosDestacadosGaleria = () => {
+const ServiciosSlider = () => {
   const { destacados } = useDestacados();
   const [servicios, setServicios] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -18,24 +18,23 @@ const ServiciosDestacadosGaleria = () => {
         if (!response.ok) throw new Error("Error al cargar servicios");
         const data = await response.json();
         
-        // Filtrar servicios destacados o seleccionar aleatorios
         const serviciosDestacados = data.filter(servicio => 
-          destacados.includes(servicio.id)
-        ).length > 0 
-          ? data.filter(servicio => destacados.includes(servicio.id))
-          : [...data].sort(() => 0.5 - Math.random()).slice(0, 4);
+          servicio.destacado || destacados.includes(servicio.id)
+        ).slice(0, 6); // Limitar a 6 servicios
         
         setServicios(serviciosDestacados);
       } catch (err) {
         setError(err.message);
-        // Servicio por defecto en caso de error
         setServicios([{
           id: 1,
           nombre: "Servicio Destacado",
-          precio: 999,
+          precio: 250000,
+          precioAnterior: 320000,
+          promocion: "15% OFF en pago contado",
           imagenes: ["/img/default-service.png"],
           categoria: "web",
-          descripcion: "Nuestro servicio más popular este mes"
+          resumen: "Nuestro servicio más popular este mes",
+          destacado: true
         }]);
       } finally {
         setLoading(false);
@@ -52,7 +51,7 @@ const ServiciosDestacadosGaleria = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 5000,
+    autoplaySpeed: 6000,
     arrows: true,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
@@ -94,8 +93,9 @@ const ServiciosDestacadosGaleria = () => {
     <section className="gwd-destacados-container">
       <div className="gwd-destacados" aria-labelledby="servicios-destacados">
         <div className="gwd-destacados-header">
-          <h2 className="gwd-destacados-title" id="servicios-destacados">SERVICIOS DESTACADOS</h2>
+          <h2 className="gwd-destacados-title" id="servicios-destacados">NUESTROS SERVICIOS ESTRELLA</h2>
           <div className="gwd-divider"></div>
+          <p className="gwd-destacados-subtitle">Soluciones profesionales para impulsar tu negocio</p>
         </div>
         
         <div className="gwd-slider-wrapper">
@@ -115,13 +115,25 @@ const ServiciosDestacadosGaleria = () => {
                     />
                     <div className="gwd-slide-info">
                       <h3 className="gwd-slide-name">{servicio.nombre}</h3>
-                      <p className="gwd-slide-desc">{servicio.descripcion}</p>
-                      <div className="gwd-slide-price">
-                        ${servicio.precio.toLocaleString()}
-                        <span className="gwd-price-month">/proyecto</span>
+                      <p className="gwd-slide-desc">{servicio.resumen}</p>
+                      
+                      <div className="gwd-price-container">
+                        {servicio.precioAnterior && (
+                          <span className="gwd-old-price">${servicio.precioAnterior.toLocaleString('es-AR')}</span>
+                        )}
+                        <div className="gwd-slide-price">
+                          ${servicio.precio.toLocaleString('es-AR')}
+                          <span className="gwd-price-month">/proyecto</span>
+                        </div>
                       </div>
+                      
+                      {servicio.promocion && (
+                        <div className="gwd-promo-badge">
+                          <span>{servicio.promocion}</span>
+                        </div>
+                      )}
                     </div>
-                    <div className="gwd-slide-badge">POPULAR</div>
+                    <div className="gwd-slide-badge">DESTACADO</div>
                   </div>
                 </div>
               ))}
@@ -130,7 +142,6 @@ const ServiciosDestacadosGaleria = () => {
         </div>
 
         <div className="gwd-thumbnails-wrapper">
-       
           <div className="gwd-thumbnails-grid">
             {servicios.map((servicio) => (
               <div key={`thumb-${servicio.id}`} className="gwd-thumbnail-item">
@@ -143,7 +154,10 @@ const ServiciosDestacadosGaleria = () => {
                     e.target.src = '/img/default-service.png';
                   }}
                 />
-                <span className="gwd-thumbnail-label">{servicio.nombre}</span>
+                <div className="gwd-thumbnail-overlay">
+                  <span className="gwd-thumbnail-label">{servicio.nombre}</span>
+                  <span className="gwd-thumbnail-price">${servicio.precio.toLocaleString('es-AR')}</span>
+                </div>
               </div>
             ))}
           </div>
@@ -153,4 +167,4 @@ const ServiciosDestacadosGaleria = () => {
   );
 };
 
-export default ServiciosDestacadosGaleria;
+export default ServiciosSlider;

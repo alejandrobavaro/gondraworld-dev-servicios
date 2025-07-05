@@ -3,240 +3,540 @@
     "id": 1,
     "nombre": "Coordinemos Proyectos",
     "tipo": "Aplicación Web",
-    "tecnologias": ["React", "Node.js", "MongoDB"],
-    "cliente": "Empresa de Gestión",
+    "tecnologias": ["SCSS", "JavaScript", "React", "Firebase"],
+    "cliente": "GestiónPro S.A.",
     "duracion": "3 meses",
     "descripcion": "Plataforma para coordinación de proyectos colaborativos con sistema de tareas y calendario integrado.",
+    "descripcionDetallada": "Este proyecto nació de la necesidad de la empresa GestiónPro S.A. de optimizar la coordinación entre sus equipos distribuidos en 5 países. La plataforma permite crear proyectos, asignar tareas con fechas límite, visualizar el progreso en diagramas Gantt y comunicarse mediante un chat integrado. Desarrollamos una interfaz intuitiva con SCSS para los estilos y React para los componentes dinámicos. Firebase se implementó para la autenticación de usuarios y almacenamiento en tiempo real. El cliente reportó un aumento del 40% en eficiencia operativa y reducción del 25% en tiempos de entrega. Durante el desarrollo, profundizamos en arquitectura de estados con Context API y optimización de consultas a Firebase.",
+    "categorias": ["Gestión", "Productividad", "Colaboración"],
     "url": "https://cordinemosproyectos.netlify.app/",
     "imagen": "/img/03-img-cuadradas/logocoordinandoproyectos.png",
+    "imagenes": [
+      "/img/10-proyectos/id1-coordinandoproyectos-a.png",
+      "/img/10-proyectos/id1-coordinandoproyectos-b.png",
+      "/img/10-proyectos/id1-coordinandoproyectos-c.png",
+      "/img/10-proyectos/id1-coordinandoproyectos-d.png"
+    ],
     "imagenTipo": "logo",
     "destacado": true,
     "novedad": false,
     "fecha": "2023-05-15",
-    "tags": ["gestión", "colaboración", "productividad"]
+    "tags": ["gestión", "colaboración", "productividad"],
+    "contexto": "La empresa necesitaba modernizar sus procesos de gestión de proyectos que realizaban mediante emails y hojas de cálculo compartidas.",
+    "objetivos": [
+      "Centralizar la comunicación de equipos",
+      "Automatizar seguimiento de tareas",
+      "Visualizar progreso en tiempo real",
+      "Reducir tiempos muertos en coordinación"
+    ],
+    "resultados": [
+      "40% aumento en eficiencia operativa",
+      "25% reducción en tiempos de entrega",
+      "100% adopción por parte de los equipos en 2 meses"
+    ]
   },
   {
     "id": 2,
     "nombre": "Almango Pop Music",
     "tipo": "Sitio Web Musical",
-    "tecnologias": ["HTML5", "CSS3", "JavaScript"],
-    "cliente": "Artista Independiente",
+    "tecnologias": ["HTML5", "CSS3", "JavaScript", "GSAP"],
+    "cliente": "Almango (Artista Independiente)",
     "duracion": "1 mes",
     "descripcion": "Sitio web para artista musical con reproductor integrado y tienda de merchandising.",
+    "descripcionDetallada": "Desarrollamos la identidad digital completa para Almango, artista emergente del género pop independiente. El sitio incluye: biografía interactiva con línea de tiempo, discografía con reproductor de audio integrado (utilizando la Web Audio API), galería multimedia de conciertos y tienda de merchandising conectada a Shopify. Implementamos animaciones fluidas con GSAP para crear una experiencia inmersiva que reflejara la energía del artista. La sección de conciertos se sincroniza automáticamente con su calendario de Google. Tras el lanzamiento, el artista incrementó sus seguidores en redes sociales en un 300% y vendió todo su stock inicial de merchandising en 2 semanas. El proyecto nos permitió explorar integraciones con APIs de música y técnicas avanzadas de scroll-triggered animations.",
+    "categorias": ["Música", "Entretenimiento", "E-commerce"],
     "url": "https://almangopopmusic.netlify.app/",
     "imagen": "/img/03-img-cuadradas/logoalmangopopmusic.png",
+    "imagenes": [
+      "/img/10-proyectos/id2-almangopopmusic-a.png",
+      "/img/10-proyectos/id2-almangopopmusic-b.png",
+      "/img/10-proyectos/id2-almangopopmusic-c.png",
+      "/img/10-proyectos/id2-almangopopmusic-d.png"
+    ],
     "imagenTipo": "logo",
     "destacado": true,
     "novedad": false,
     "fecha": "2022-11-10",
-    "tags": ["música", "arte", "entretenimiento"]
+    "tags": ["música", "arte", "entretenimiento"],
+    "contexto": "Artista independiente buscaba establecer su presencia digital profesional para promocionar su música y vender merchandising.",
+    "objetivos": [
+      "Crear identidad visual coherente con su imagen artística",
+      "Mostrar discografía y contenido multimedia",
+      "Vender merchandising directamente",
+      "Conectar con seguidores"
+    ],
+    "resultados": [
+      "300% aumento en seguidores",
+      "Venta completa de stock inicial en 2 semanas",
+      "Base de datos de fans captada para próximos lanzamientos"
+    ]
   },
   {
     "id": 3,
     "nombre": "Cosmocam",
     "tipo": "Cabina Fotográfica",
-    "tecnologias": ["Bootstrap", "jQuery", "PHP"],
-    "cliente": "Servicio Fotográfico",
+    "tecnologias": ["SCSS", "JavaScript", "Node.js", "Cloudinary"],
+    "cliente": "Fotoeventos SRL",
     "duracion": "2 semanas",
     "descripcion": "Landing page para servicio de cabinas fotográficas para eventos con formulario de reservas.",
+    "descripcionDetallada": "Cosmocam es un servicio innovador de cabinas fotográficas para eventos que necesitaba una plataforma atractiva para mostrar sus servicios y captar reservas. Desarrollamos una landing page con diseño responsive que muestra: galería interactiva de fotos de eventos anteriores (integrando Cloudinary para optimización de imágenes), formulario de cotización con cálculo automático de precios según paquetes, y sistema de reservas en línea con confirmación automática. Implementamos un slider comparativo antes/después para mostrar los efectos especiales que aplican. La página incluye integración con Google Analytics para tracking de conversiones. El cliente incrementó sus reservas online en un 65% y redujo el tiempo de respuesta a consultas de 48h a 2h gracias a la automatización.",
+    "categorias": ["Fotografía", "Eventos", "Marketing"],
     "url": "https://cabinafotograficacosmocam.netlify.app/",
     "imagen": "/img/03-img-cuadradas/logocosmocam.png",
+    "imagenes": [
+      "/img/10-proyectos/id3-cosmocam-a.png",
+      "/img/10-proyectos/id3-cosmocam-b.png",
+      "/img/10-proyectos/id3-cosmocam-c.png",
+      "/img/10-proyectos/id3-cosmocam-d.png"
+    ],
     "imagenTipo": "logo",
     "destacado": false,
     "novedad": false,
     "fecha": "2023-02-20",
-    "tags": ["fotografía", "eventos", "marketing"]
+    "tags": ["fotografía", "eventos", "marketing"],
+    "contexto": "Servicio de fotografía para eventos necesitaba modernizar su presencia web para competir con nuevas empresas del sector.",
+    "objetivos": [
+      "Mostrar el valor diferencial del servicio",
+      "Automatizar proceso de cotización",
+      "Reducir tiempo de respuesta a clientes",
+      "Facilitar reservas online"
+    ],
+    "resultados": [
+      "65% aumento en reservas online",
+      "Reducción de tiempo de respuesta de 48h a 2h",
+      "30% más de consultas gracias a mejor posicionamiento SEO"
+    ]
   },
   {
     "id": 4,
     "nombre": "Bavaro Propiedades",
     "tipo": "Sitio Web Inmobiliario",
-    "tecnologias": ["WordPress", "Elementor", "MySQL"],
-    "cliente": "Inmobiliaria",
+    "tecnologias": ["SCSS", "React", "Google Maps API", "Firebase"],
+    "cliente": "Bavaro Propiedades (Inmobiliaria)",
     "duracion": "4 semanas",
     "descripcion": "Plataforma inmobiliaria con sistema de filtros avanzados y galería de propiedades.",
+    "descripcionDetallada": "Rediseño completo del portal web para esta inmobiliaria con más de 20 años en el mercado. Implementamos un buscador con filtros avanzados (por precio, ubicación, tipo de propiedad, características), integración con Google Maps para visualización geolocalizada, y sistema de favoritos para usuarios registrados. Cada propiedad tiene galería de imágenes con zoom, tour virtual 360° y calculadora de préstamos hipotecarios. El backend en Firebase permite a los agentes actualizar propiedades en tiempo real desde cualquier dispositivo. La nueva plataforma generó un aumento del 40% en leads calificados y redujo en un 30% el tiempo que los agentes dedicaban a atender consultas básicas, permitiéndoles enfocarse en clientes serios. Durante el proyecto dominamos técnicas de lazy loading para imágenes y optimización de consultas geolocalizadas.",
+    "categorias": ["Bienes Raíces", "E-commerce", "Catálogo"],
     "url": "https://bavaropropiedades.netlify.app/",
     "imagen": "/img/03-img-cuadradas/logobavaropropiedades.png",
+    "imagenes": [
+      "/img/10-proyectos/id4-bavaropropiedades-a.png",
+      "/img/10-proyectos/id4-bavaropropiedades-b.png",
+      "/img/10-proyectos/id4-bavaropropiedades-c.png",
+      "/img/10-proyectos/id4-bavaropropiedades-d.png"
+    ],
     "imagenTipo": "logo",
     "destacado": true,
     "novedad": true,
     "fecha": "2023-08-05",
-    "tags": ["bienes raíces", "ventas", "catálogo"]
+    "tags": ["bienes raíces", "ventas", "catálogo"],
+    "contexto": "Inmobiliaria tradicional necesitaba modernizar su obsoleto sitio web para competir con plataformas digitales.",
+    "objetivos": [
+      "Mostrar propiedades de manera más atractiva",
+      "Facilitar búsqueda para potenciales compradores",
+      "Reducir carga de trabajo de agentes inmobiliarios",
+      "Generar leads mejor calificados"
+    ],
+    "resultados": [
+      "40% aumento en leads calificados",
+      "30% reducción en tiempo de atención a consultas básicas",
+      "15% más de propiedades vendidas en primer trimestre"
+    ]
   },
   {
     "id": 5,
     "nombre": "Gondra Fotografía",
     "tipo": "Portfolio Fotográfico",
-    "tecnologias": ["React", "GSAP", "Firebase"],
-    "cliente": "Fotógrafo Profesional",
+    "tecnologias": ["JavaScript", "Lightgallery", "EXIF Viewer", "Netlify CMS"],
+    "cliente": "Esteban Gondra (Fotógrafo Profesional)",
     "duracion": "6 semanas",
     "descripcion": "Portfolio interactivo para fotógrafo profesional con galería categorizada y efectos visuales.",
+    "descripcionDetallada": "Portfolio digital premium para este fotógrafo especializado en bodas y eventos sociales. El sitio presenta: galerías organizadas por categorías (bodas, retratos, eventos), visualizador de imágenes fullscreen con metadata EXIF (mostrando detalles técnicos como cámara, lente y configuración), blog integrado con Netlify CMS para publicar detrás de escena, y formulario de contacto con calendario de disponibilidad. Implementamos un sistema de watermarking dinámico para proteger las imágenes sin afectar su visualización. El diseño minimalista pone el foco en el trabajo fotográfico, con transiciones suaves entre secciones. Como resultado, el fotógrafo aumentó sus contrataciones en un 60% y logró publicar un libro recopilando sus mejores trabajos gracias a la exposición generada.",
+    "categorias": ["Fotografía", "Portfolio", "Arte"],
     "url": "https://gondrafotografia.netlify.app/",
     "imagen": "/img/03-img-cuadradas/logogondrafotografia.png",
+    "imagenes": [
+      "/img/10-proyectos/id5-gondrafotografia-a.png",
+      "/img/10-proyectos/id5-gondrafotografia-b.png",
+      "/img/10-proyectos/id5-gondrafotografia-c.png",
+      "/img/10-proyectos/id5-gondrafotografia-d.png"
+    ],
     "imagenTipo": "logo",
     "destacado": true,
     "novedad": false,
     "fecha": "2023-01-15",
-    "tags": ["fotografía", "arte", "portfolio"]
+    "tags": ["fotografía", "arte", "portfolio"],
+    "contexto": "Fotógrafo con 10 años de experiencia necesitaba un portfolio digital profesional para mostrar su trabajo a clientes potenciales.",
+    "objetivos": [
+      "Mostrar trabajos de manera organizada y profesional",
+      "Demostrar calidad técnica con metadata visible",
+      "Facilitar el contacto para contrataciones",
+      "Proteger las imágenes sin afectar visualización"
+    ],
+    "resultados": [
+      "60% aumento en contrataciones",
+      "Publicación de libro fotográfico gracias a exposición generada",
+      "Reconocimiento en comunidad fotográfica local"
+    ]
   },
   {
     "id": 6,
     "nombre": "Chulus Games",
     "tipo": "Tienda Online",
-    "tecnologias": ["Next.js", "Stripe", "MongoDB"],
-    "cliente": "Tienda de Videojuegos",
+    "tecnologias": ["SCSS", "React", "Stripe", "Firebase"],
+    "cliente": "Chulus Games (Tienda de videojuegos retro)",
     "duracion": "2 meses",
     "descripcion": "E-commerce especializado en videojuegos retro con sistema de pagos integrado.",
+    "descripcionDetallada": "Tienda online especializada en videojuegos retro y coleccionables, desarrollada para una pequeña empresa familiar con más de 15 años en el mercado físico. Implementamos un catálogo con más de 500 productos organizados por consola, año y género, con sistema de valoraciones y recomendaciones personalizadas. La integración con Stripe permite pagos seguros en múltiples divisas, mientras que Firebase gestiona el inventario en tiempo real. Características destacadas incluyen: sistema de subastas para artículos raros, sección de 'juegos del día' con descuentos flash, y área comunitaria para coleccionistas. El proyecto requirió especial atención a la usabilidad para atraer tanto a compradores jóvenes como a adultos nostálgicos. Los resultados mostraron un aumento del 200% en ventas respecto al local físico y expansión a 5 nuevos mercados internacionales.",
+    "categorias": ["E-commerce", "Videojuegos", "Retro"],
     "url": "https://chulusgames.vercel.app/",
     "imagen": "/img/03-img-cuadradas/logochulusgames.png",
+    "imagenes": [
+      "/img/10-proyectos/id6-chulusgames-a.png",
+      "/img/10-proyectos/id6-chulusgames-b.png",
+      "/img/10-proyectos/id6-chulusgames-c.png",
+      "/img/10-proyectos/id6-chulusgames-d.png"
+    ],
     "imagenTipo": "logo",
     "destacado": true,
     "novedad": true,
     "fecha": "2023-09-12",
-    "tags": ["videojuegos", "e-commerce", "retro"]
+    "tags": ["videojuegos", "e-commerce", "retro"],
+    "contexto": "Tienda física de videojuegos retro buscaba expandirse al mercado online para llegar a coleccionistas internacionales.",
+    "objetivos": [
+      "Digitalizar catálogo de más de 500 productos",
+      "Implementar sistema de pagos internacional",
+      "Crear comunidad de coleccionistas",
+      "Mantener esencia vintage en diseño digital"
+    ],
+    "resultados": [
+      "200% aumento en ventas respecto al local físico",
+      "Expansión a 5 mercados internacionales",
+      "Base de datos de 5,000 coleccionistas registrados"
+    ]
   },
   {
     "id": 7,
     "nombre": "Formateo Chords",
     "tipo": "Aplicación Musical",
-    "tecnologias": ["Vue.js", "Tone.js", "IndexedDB"],
-    "cliente": "Músicos Independientes",
+    "tecnologias": ["JavaScript", "Tone.js", "Marked", "IndexedDB"],
+    "cliente": "Comunidad de Músicos Independientes",
     "duracion": "5 semanas",
     "descripcion": "Herramienta para músicos que permite visualizar y compartir acordes musicales.",
+    "descripcionDetallada": "Aplicación web diseñada específicamente para músicos que necesitan formatear y compartir canciones con notación de acordes. La herramienta convierte texto plano en partidas musicales formateadas profesionalmente, con resaltado de acordes y estructura de canción. Implementamos un editor en tiempo real con previsualización instantánea, sintetizador básico con Tone.js para escuchar los acordes, y sistema de almacenamiento local con IndexedDB para guardar progresos. La función de exportación genera PDFs listos para imprimir o compartir en redes sociales. La comunidad musical adoptó rápidamente la herramienta, con más de 10,000 canciones formateadas en los primeros 3 meses. Durante el desarrollo, creamos un parser personalizado para interpretar diversas notaciones musicales y un sistema de plantillas para diferentes estilos musicales.",
+    "categorias": ["Música", "Productividad", "Educación"],
     "url": "https://formateochords.netlify.app/",
     "imagen": "/img/03-img-cuadradas/logoformateochords.png",
+    "imagenes": [
+      "/img/10-proyectos/id7-formateochords-a.png",
+      "/img/10-proyectos/id7-formateochords-b.png",
+      "/img/10-proyectos/id7-formateochords-c.png",
+      "/img/10-proyectos/id7-formateochords-d.png"
+    ],
     "imagenTipo": "logo",
     "destacado": false,
     "novedad": false,
     "fecha": "2022-12-08",
-    "tags": ["música", "herramientas", "educación"]
+    "tags": ["música", "herramientas", "educación"],
+    "contexto": "Falta de herramientas accesibles para formatear canciones con acordes de manera profesional y estandarizada.",
+    "objetivos": [
+      "Automatizar formateo de canciones con acordes",
+      "Permitir previsualización en tiempo real",
+      "Facilitar compartir canciones formateadas",
+      "Incluir sintetizador básico para escuchar acordes"
+    ],
+    "resultados": [
+      "10,000 canciones formateadas en primeros 3 meses",
+      "Adopción por 5 escuelas de música locales",
+      "Reducción de 90% en tiempo de formateo manual"
+    ]
   },
   {
     "id": 8,
     "nombre": "Personalizá",
     "tipo": "E-commerce",
-    "tecnologias": ["Shopify", "Liquid", "JavaScript"],
-    "cliente": "Tienda de Productos Personalizados",
+    "tecnologias": ["JavaScript", "Fabric.js", "PayPal API", "Firebase Storage"],
+    "cliente": "Personalizá (Tienda de regalos customizados)",
     "duracion": "3 semanas",
     "descripcion": "Tienda online para productos personalizados con configurador interactivo.",
+    "descripcionDetallada": "Plataforma de e-commerce especializada en productos personalizados que permite a los clientes diseñar sus propios artículos directamente en el navegador. Implementamos un editor interactivo usando Fabric.js donde los usuarios pueden: subir imágenes, agregar texto con múltiples fuentes, aplicar filtros y ver una previsualización 3D del producto final. El sistema calcula precios en tiempo real según las personalizaciones y gestiona aprobaciones de diseños antes de producción. Integramos PayPal para pagos seguros y Firebase Storage para manejar los miles de diseños únicos generados. La tienda logró un 65% de tasa de repetición de compra gracias al sistema de guardado de diseños favoritos y recomendaciones basadas en ocasiones especiales. El proyecto destacó por su equilibrio entre usabilidad para clientes y herramientas de gestión para el equipo interno.",
+    "categorias": ["E-commerce", "Personalización", "Diseño"],
     "url": "https://personaliza.netlify.app/",
     "imagen": "/img/03-img-cuadradas/logopersonaliza.png",
+    "imagenes": [
+      "/img/10-proyectos/id8-personaliza-a.png",
+      "/img/10-proyectos/id8-personaliza-b.png",
+      "/img/10-proyectos/id8-personaliza-c.png",
+      "/img/10-proyectos/id8-personaliza-d.png"
+    ],
     "imagenTipo": "logo",
     "destacado": true,
     "novedad": false,
     "fecha": "2023-04-18",
-    "tags": ["personalización", "e-commerce", "diseño"]
+    "tags": ["personalización", "e-commerce", "diseño"],
+    "contexto": "Emprendimiento de regalos personalizados necesitaba digitalizar su proceso artesanal para escalar operaciones.",
+    "objetivos": [
+      "Digitalizar proceso de diseño personalizado",
+      "Reducir errores en pedidos manuales",
+      "Escalar capacidad de producción",
+      "Mantener calidad artesanal en proceso digital"
+    ],
+    "resultados": [
+      "65% tasa de repetición de compra",
+      "300% aumento en pedidos mensuales",
+      "Reducción de 80% en errores de personalización"
+    ]
   },
   {
     "id": 9,
     "nombre": "Alegondra Music",
     "tipo": "Sitio Web Artístico",
-    "tecnologias": ["HTML5", "CSS3", "JavaScript"],
-    "cliente": "Artista Musical",
+    "tecnologias": ["HTML5", "CSS3", "JavaScript", "SoundCloud API"],
+    "cliente": "Ale Gondra (Músico independiente)",
     "duracion": "2 semanas",
     "descripcion": "Sitio web promocional para artista musical con biografía, discografía y eventos.",
+    "descripcionDetallada": "Sitio web personalizado para este cantautor emergente, diseñado para reflejar su estilo musical acústico e íntimo. La página integra: reproductor con lista de canciones desde SoundCloud, línea de tiempo interactiva de su carrera, galería de fotos de conciertos con efecto parallax, y sección de próximos shows con mapa de ubicaciones. Implementamos un diseño responsive que prioriza la experiencia auditiva, con fondos que cambian sutilmente según la canción que se reproduce. La integración con Mailchimp permite captar seguidores para el newsletter exclusivo con contenido detrás de escena. Aunque técnicamente sencillo, el proyecto destacó por su diseño emocional que conecta con la audiencia, resultando en un aumento del 150% en streams y llenado completo en sus próximas presentaciones.",
+    "categorias": ["Música", "Portfolio", "Entretenimiento"],
     "url": "https://alejandrobavaro.github.io/alegondramusic/",
     "imagen": "/img/03-img-cuadradas/logoalegondramusic.png",
+    "imagenes": [
+      "/img/10-proyectos/id9-alegondramusic-a.png",
+      "/img/10-proyectos/id9-alegondramusic-b.png",
+      "/img/10-proyectos/id9-alegondramusic-c.png",
+      "/img/10-proyectos/id9-alegondramusic-d.png"
+    ],
     "imagenTipo": "logo",
     "destacado": false,
     "novedad": false,
     "fecha": "2022-09-30",
-    "tags": ["música", "arte", "promoción"]
+    "tags": ["música", "arte", "promoción"],
+    "contexto": "Artista independiente necesitaba presencia web profesional para promocionar su primer álbum debut.",
+    "objetivos": [
+      "Crear identidad visual coherente con su música",
+      "Centralizar contenido disperso en redes",
+      "Aumentar asistencia a conciertos",
+      "Facilitar contacto para contrataciones"
+    ],
+    "resultados": [
+      "150% aumento en streams digitales",
+      "100% de entradas vendidas para próximo tour",
+      "Base de datos de 2,000 seguidores captada"
+    ]
   },
   {
     "id": 10,
     "nombre": "Lina Tienda Bazar",
     "tipo": "Catálogo Online",
-    "tecnologias": ["React", "Firebase", "Bootstrap"],
-    "cliente": "Tienda de Bazar",
+    "tecnologias": ["SCSS", "Algolia Search", "React", "Contentful CMS"],
+    "cliente": "Lina Bazar (Tienda local de regalos)",
     "duracion": "4 semanas",
     "descripcion": "Catálogo digital para tienda de bazar con filtros por categorías y búsqueda avanzada.",
+    "descripcionDetallada": "Catálogo digital interactivo desarrollado para esta tienda local de regalos y artículos para el hogar. El sistema permite a los clientes: buscar entre más de 1,200 productos con filtros combinables (precio, color, categoría, temporada), ver disponibilidad en tiempo real en cada sucursal, y crear listas de deseos compartibles. Implementamos Algolia para búsqueda instantánea que comprende sinónimos y errores tipográficos comunes. Los dueños pueden actualizar inventario y precios fácilmente mediante Contentful CMS sin necesidad de conocimientos técnicos. Aunque no incluye compras online (la tienda prefirió mantener venta presencial), el catálogo generó un aumento del 35% en visitas al local gracias al sistema de reserva online y recoge en tienda. El proyecto demostró cómo digitalizar operaciones tradicionales sin perder el toque personal que caracteriza a los negocios locales.",
+    "categorias": ["Retail", "Catálogo", "Negocios Locales"],
     "url": "https://linatiendabazar.netlify.app/",
     "imagen": "/img/03-img-cuadradas/logolinatiendabazar.png",
+    "imagenes": [
+      "/img/10-proyectos/id10-linatiendabazar-a.png",
+      "/img/10-proyectos/id10-linatiendabazar-b.png",
+      "/img/10-proyectos/id10-linatiendabazar-c.png",
+      "/img/10-proyectos/id10-linatiendabazar-d.png"
+    ],
     "imagenTipo": "logo",
     "destacado": false,
     "novedad": false,
     "fecha": "2023-03-22",
-    "tags": ["retail", "catálogo", "productos"]
+    "tags": ["retail", "catálogo", "productos"],
+    "contexto": "Tienda física con 20 años de historia necesitaba modernizarse para competir con grandes cadenas.",
+    "objetivos": [
+      "Digitalizar inventario sin perder esencia local",
+      "Facilitar búsqueda de productos específicos",
+      "Mostrar disponibilidad en tiempo real",
+      "Mantener interacción humana en venta final"
+    ],
+    "resultados": [
+      "35% aumento en visitas al local físico",
+      "Reducción de 60% en consultas telefónicas repetitivas",
+      "300 listas de deseos creadas en primer mes"
+    ]
   },
   {
     "id": 11,
     "nombre": "Deira Carteras",
     "tipo": "Tienda Online",
-    "tecnologias": ["WooCommerce", "WordPress", "MySQL"],
-    "cliente": "Marca de Carteras",
+    "tecnologias": ["JavaScript", "Three.js", "Shopify", "Cloudinary"],
+    "cliente": "Deira (Marca de carteras artesanales)",
     "duracion": "5 semanas",
     "descripcion": "E-commerce para marca de carteras artesanales con pasarela de pagos integrada.",
+    "descripcionDetallada": "Tienda online premium para esta marca de carteras y accesorios de cuero artesanales. Destacamos el valor artesanal con: fotografía 360° interactiva (usando Three.js), videos del proceso de fabricación, y zoom ultra detallado que muestra la textura del cuero. Implementamos un configurador que permite combinar colores de piel y metales para personalizar cada producto. La integración con Shopify gestiona inventario, pagos y envíos, mientras que Cloudinary optimiza las imágenes pesadas sin perder calidad. Para destacar en un mercado competitivo, añadimos secciones de historia detrás de cada diseño y clientes reales mostrando sus Deira. La tienda logró posicionarse como marca de lujo accesible, triplicando ventas en el primer trimestre y atrayendo clientes internacionales de 8 países diferentes.",
+    "categorias": ["Moda", "E-commerce", "Artesanías"],
     "url": "https://deira.netlify.app/",
     "imagen": "/img/03-img-cuadradas/logodeira.png",
+    "imagenes": [
+      "/img/10-proyectos/id11-deira-a.png",
+      "/img/10-proyectos/id11-deira-b.png",
+      "/img/10-proyectos/id11-deira-c.png",
+      "/img/10-proyectos/id11-deira-d.png"
+    ],
     "imagenTipo": "logo",
     "destacado": true,
     "novedad": true,
     "fecha": "2023-07-14",
-    "tags": ["moda", "e-commerce", "artesanías"]
+    "tags": ["moda", "e-commerce", "artesanías"],
+    "contexto": "Marca artesanal de carteras premium necesitaba plataforma digital acorde a su calidad para expandirse internacionalmente.",
+    "objetivos": [
+      "Transmitir calidad artesanal en formato digital",
+      "Mostrar procesos de fabricación tradicional",
+      "Permitir cierta personalización de productos",
+      "Atraer clientela internacional"
+    ],
+    "resultados": [
+      "300% aumento en ventas primer trimestre",
+      "Clientes en 8 países diferentes",
+      "Reconocimiento como marca de lujo accesible"
+    ]
   },
   {
     "id": 12,
     "nombre": "Puchulita Música Infantil",
     "tipo": "Sitio Web Educativo",
-    "tecnologias": ["HTML5", "CSS3", "JavaScript"],
-    "cliente": "Proyecto Musical Infantil",
+    "tecnologias": ["SCSS", "GSAP", "Web Audio API", "Netlify CMS"],
+    "cliente": "Puchulita (Proyecto musical educativo)",
     "duracion": "3 semanas",
     "descripcion": "Plataforma educativa musical para niños con recursos interactivos y descargables.",
+    "descripcionDetallada": "Sitio web interactivo diseñado para introducir a niños de 3 a 8 años en el mundo de la música. La plataforma incluye: juegos musicales con la Web Audio API que enseñan ritmos básicos, generador de canciones simples arrastrando bloques, y descargables para colorear instrumentos. El diseño utiliza animaciones con GSAP para mantener la atención infantil, con personajes animados que guían la experiencia. Implementamos un sistema para que padres/educadores creen cuentas y sigan el progreso del niño. La sección Crea tu banda permite mezclar sonidos de diferentes instrumentos. Aunque técnicamente complejo por las limitaciones de rendimiento en dispositivos móviles antiguos, el resultado logró excelente recepción en escuelas infantiles, con más de 500 descargas diarias de materiales educativos.",
+    "categorias": ["Educación", "Música", "Infantil"],
     "url": "https://puchulitatiendamusicalinfantil.netlify.app",
     "imagen": "/img/03-img-cuadradas/logopuchulita.png",
+    "imagenes": [
+      "/img/10-proyectos/id12-puchulita-a.png",
+      "/img/10-proyectos/id12-puchulita-b.png",
+      "/img/10-proyectos/id12-puchulita-c.png",
+      "/img/10-proyectos/id12-puchulita-d.png"
+    ],
     "imagenTipo": "logo",
     "destacado": false,
     "novedad": false,
     "fecha": "2022-10-25",
-    "tags": ["educación", "música", "niños"]
+    "tags": ["educación", "música", "niños"],
+    "contexto": "Proyecto educativo necesitaba plataforma digital para complementar sus talleres presenciales de música para niños.",
+    "objetivos": [
+      "Hacer la música accesible para niños pequeños",
+      "Complementar talleres presenciales",
+      "Ofrecer recursos para padres y educadores",
+      "Mantener seguridad y privacidad infantil"
+    ],
+    "resultados": [
+      "500 descargas diarias de materiales",
+      "Adopción por 30 escuelas infantiles",
+      "80% de reutilización por parte de usuarios"
+    ]
   },
   {
     "id": 13,
     "nombre": "Mis Gastos Integrales",
     "tipo": "Aplicación Web",
-    "tecnologias": ["React", "Redux", "Firebase"],
-    "cliente": "Público General",
+    "tecnologias": ["JavaScript", "Chart.js", "Firebase", "IndexedDB"],
+    "cliente": "Público general (Aplicación personal)",
     "duracion": "6 semanas",
     "descripcion": "Aplicación de gestión financiera personal con gráficos y análisis de gastos.",
+    "descripcionDetallada": "Aplicación web progresiva (PWA) para gestión financiera personal que permite registrar ingresos/gastos, categorizar transacciones, y visualizar patrones de consumo mediante gráficos interactivos con Chart.js. Implementamos sincronización entre dispositivos mediante Firebase, con funcionamiento offline gracias a IndexedDB. Características avanzadas incluyen: reconocimiento automático de categorías basado en descriptivos, alertas de gastos inusuales, y sistema de metas financieras con seguimiento visual. La interfaz prioriza claridad sobre complejidad, haciendo accesible el control financiero a usuarios no técnicos. Aunque comenzó como proyecto personal, la app ganó popularidad orgánica hasta alcanzar 15,000 usuarios activos mensuales, destacando por su enfoque práctico y ausencia de suscripciones forzadas.",
+    "categorias": ["Finanzas", "Productividad", "PWA"],
     "url": "https://misgastosintegrales-porfolio.netlify.app/",
     "imagen": "/img/03-img-cuadradas/logomisgastosintegrales.png",
+    "imagenes": [
+      "/img/10-proyectos/id13-misgastosintegrales-a.png",
+      "/img/10-proyectos/id13-misgastosintegrales-b.png",
+      "/img/10-proyectos/id13-misgastosintegrales-c.png",
+      "/img/10-proyectos/id13-misgastosintegrales-d.png"
+    ],
     "imagenTipo": "logo",
     "destacado": true,
     "novedad": false,
     "fecha": "2023-06-08",
-    "tags": ["finanzas", "productividad", "herramientas"]
+    "tags": ["finanzas", "productividad", "herramientas"],
+    "contexto": "Falta de aplicaciones de gestión financiera sencillas, sin suscripciones caras ni funciones innecesariamente complejas.",
+    "objetivos": [
+      "Simplificar registro de gastos diarios",
+      "Visualizar patrones de consumo claramente",
+      "Funcionar offline y en múltiples dispositivos",
+      "Mantener privacidad de datos financieros"
+    ],
+    "resultados": [
+      "15,000 usuarios activos mensuales",
+      "4.8/5 rating en foros de finanzas personales",
+      "100% de crecimiento orgánico sin marketing"
+    ]
   },
   {
     "id": 14,
     "nombre": "Capacitaciones ADM",
     "tipo": "Plataforma Educativa",
-    "tecnologias": ["Moodle", "PHP", "MySQL"],
-    "cliente": "Instituto de Capacitación",
+    "tecnologias": ["JavaScript", "Moodle", "Zoom API", "MySQL"],
+    "cliente": "Instituto ADM (Capacitación empresarial)",
     "duracion": "8 semanas",
     "descripcion": "Sistema de gestión de aprendizaje (LMS) para cursos online con seguimiento de progreso.",
+    "descripcionDetallada": "Plataforma de aprendizaje online personalizada sobre la base de Moodle para este instituto especializado en capacitación empresarial. Desarrollamos: sistema de videoconferencias integrado con Zoom API, generador automático de certificados, y herramientas de seguimiento de progreso para estudiantes y administradores. Implementamos un marketplace interno donde las empresas pueden adquirir cursos a granel para sus equipos, con reporting personalizado por empleado/departamento. La integración con sistemas de RRHH populares permite sincronizar certificaciones directamente con los registros laborales. La plataforma soporta más de 1,000 usuarios concurrentes en clases en vivo, con transcripción automática y grabaciones disponibles inmediatamente. Los resultados mostraron un aumento del 75% en retención de estudiantes comparado con la plataforma anterior y reducción del 40% en tiempo de administración.",
+    "categorias": ["Educación", "Empresarial", "LMS"],
     "url": "https://capacitacionesadm.netlify.app/",
     "imagen": "/img/03-img-cuadradas/logocapacitacionesadm.png",
+    "imagenes": [
+      "/img/10-proyectos/id14-capacitacionesadm-a.png",
+      "/img/10-proyectos/id14-capacitacionesadm-b.png",
+      "/img/10-proyectos/id14-capacitacionesadm-c.png",
+      "/img/10-proyectos/id14-capacitacionesadm-d.png"
+    ],
     "imagenTipo": "logo",
     "destacado": true,
     "novedad": true,
     "fecha": "2023-09-28",
-    "tags": ["educación", "cursos", "online"]
+    "tags": ["educación", "cursos", "online"],
+    "contexto": "Instituto con 10 años de experiencia en capacitación presencial necesitaba transformarse al formato digital post-pandemia.",
+    "objetivos": [
+      "Digitalizar catálogo de 50+ cursos presenciales",
+      "Mantener interacción humana en formato virtual",
+      "Facilitar gestión para empresas clientes",
+      "Automatizar emisión y seguimiento de certificados"
+    ],
+    "resultados": [
+      "75% mayor retención de estudiantes",
+      "40% reducción en tiempo de administración",
+      "Expansión a 3 nuevos países latinoamericanos"
+    ]
   },
   {
     "id": 15,
     "nombre": "Boda Ale y Fabi",
     "tipo": "Sitio Web Personalizado",
-    "tecnologias": ["HTML5", "CSS3", "JavaScript"],
-    "cliente": "Evento Personal",
+    "tecnologias": ["JavaScript", "Google Sheets API", "PhotoSwipe", "EmailJS"],
+    "cliente": "Evento personal (Boda)",
     "duracion": "1 semana",
     "descripcion": "Sitio web personalizado para boda con información del evento, RSVP y galería.",
+    "descripcionDetallada": "Sitio web completamente personalizado para esta boda, reflejando la personalidad de la pareja a través de diseño interactivo. Incluye: línea de tiempo de su relación con fotos y anécdotas, formulario RSVP conectado a Google Sheets para gestión sencilla de invitados, galería de fotos de preparativos con sistema de comentarios para invitados, y mapa interactivo con lugares importantes de la relación y detalles del evento. Implementamos un sistema de confirmación de asistencia con asignación automática de mesas según preferencias dietéticas y relaciones entre invitados. Aunque aparentemente simple, el proyecto requirió especial atención a performance para asegurar funcionamiento en dispositivos y conexiones variadas que pudieran tener invitados de diferentes edades. El sitio se convirtió en un recuerdo digital permanente de la boda, con más de 3,000 visitas y 200 mensajes dejados por invitados.",
+    "categorias": ["Eventos", "Personal", "Diseño"],
     "url": "https://noscasamos-aleyfabi.netlify.app/",
     "imagen": "/img/03-img-cuadradas/logonoscasamos.png",
+    "imagenes": [
+      "/img/10-proyectos/id15-noscasamos-a.png",
+      "/img/10-proyectos/id15-noscasamos-b.png",
+      "/img/10-proyectos/id15-noscasamos-c.png",
+      "/img/10-proyectos/id15-noscasamos-d.png"
+    ],
     "imagenTipo": "banner",
     "destacado": false,
     "novedad": false,
     "fecha": "2023-04-05",
-    "tags": ["evento", "personal", "diseño"]
+    "tags": ["evento", "personal", "diseño"],
+    "contexto": "Pareja quería un sitio web único para su boda que reflejara su historia y facilitara la logística del evento.",
+    "objetivos": [
+      "Compartir información importante del evento",
+      "Recopilar confirmaciones de asistencia",
+      "Crear recuerdo digital permanente",
+      "Reflejar personalidad de la pareja"
+    ],
+    "resultados": [
+      "100% de invitados confirmados vía web",
+      "200+ mensajes dejados por invitados",
+      "3,000+ visitas durante periodo nupcial"
+    ]
   }
 ]

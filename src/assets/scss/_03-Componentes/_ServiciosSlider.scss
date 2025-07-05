@@ -1,0 +1,351 @@
+.gwd-destacados-container {
+  width: 100%;
+  padding: 3rem 0;
+  background: #0a192f;
+  color: #e6f1ff;
+  
+  .gwd-destacados {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+}
+
+.gwd-loading-container,
+.gwd-error-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  
+  .gwd-loading,
+  .gwd-error {
+    max-width: 1200px;
+    width: 100%;
+    padding: 2rem;
+    margin: 0 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    font-family: 'Space Grotesk', sans-serif;
+  }
+}
+
+.gwd-loading {
+  color: #64ffda;
+  background: rgba(17, 34, 64, 0.8);
+  border: 1px dashed #64ffda;
+  font-size: 1.2rem;
+}
+
+.gwd-error {
+  color: #ff5555;
+  background: rgba(17, 34, 64, 0.8);
+  border: 1px dashed #ff5555;
+}
+
+.gwd-destacados-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  
+  .gwd-destacados-title {
+    color: #64ffda;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+  }
+  
+  .gwd-destacados-subtitle {
+    color: #ccd6f6;
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+.gwd-divider {
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #64ffda, transparent);
+  margin: 1rem auto;
+  width: 60%;
+  max-width: 400px;
+}
+
+.gwd-slider-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.gwd-slider-container {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  margin-bottom: 3rem;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.gwd-slide-item {
+  outline: none;
+}
+
+.gwd-slide-content {
+  position: relative;
+  height: 400px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.gwd-slide-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s ease;
+}
+
+.gwd-slide-item:hover .gwd-slide-img {
+  transform: scale(1.05);
+}
+
+.gwd-slide-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem;
+  background: linear-gradient(to top, rgba(10, 25, 47, 0.95), transparent);
+  color: #e6f1ff;
+  
+  .gwd-slide-name {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.8rem;
+    margin-bottom: 0.8rem;
+    color: #64ffda;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .gwd-slide-desc {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    margin-bottom: 1.2rem;
+    max-width: 80%;
+    line-height: 1.5;
+  }
+}
+
+.gwd-price-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  
+  .gwd-old-price {
+    color: #8892b0;
+    text-decoration: line-through;
+    font-size: 1.2rem;
+  }
+  
+  .gwd-slide-price {
+    color: #64ffda;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    
+    .gwd-price-month {
+      font-size: 1rem;
+      color: #ccd6f6;
+      margin-left: 0.5rem;
+      font-weight: normal;
+    }
+  }
+}
+
+.gwd-promo-badge {
+  display: inline-block;
+  background: rgba(100, 255, 218, 0.2);
+  color: #64ffda;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-top: 0.5rem;
+  border: 1px solid #64ffda;
+}
+
+.gwd-slide-badge {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: rgba(10, 25, 47, 0.9);
+  color: #64ffda;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border: 2px solid #64ffda;
+  border-radius: 20px;
+  font-family: 'Space Grotesk', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  z-index: 2;
+}
+
+.gwd-slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  background: rgba(10, 25, 47, 0.8);
+  color: #64ffda;
+  border: 2px solid #64ffda;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s ease;
+  opacity: 0.8;
+  
+  &:hover {
+    background: rgba(100, 255, 218, 0.2);
+    opacity: 1;
+  }
+  
+  &.next {
+    right: 1.5rem;
+  }
+  
+  &.prev {
+    left: 1.5rem;
+  }
+  
+  i {
+    font-size: 1.5rem;
+  }
+}
+
+.gwd-thumbnails-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.gwd-thumbnails-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+}
+
+.gwd-thumbnail-item {
+  position: relative;
+  width: 100%;
+  height: 120px;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(100, 255, 218, 0.3);
+    
+    .gwd-thumbnail-overlay {
+      opacity: 1;
+    }
+  }
+}
+
+.gwd-thumbnail-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gwd-thumbnail-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(10, 25, 47, 0.85);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  padding: 1rem;
+  text-align: center;
+  
+  .gwd-thumbnail-label {
+    color: #64ffda;
+    font-size: 0.9rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .gwd-thumbnail-price {
+    color: #e6f1ff;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .gwd-destacados-container {
+    padding: 2rem 0;
+  }
+  
+  .gwd-destacados-title {
+    font-size: 1.5rem;
+  }
+  
+  .gwd-slide-content {
+    height: 300px;
+  }
+  
+  .gwd-slide-info {
+    padding: 1.5rem;
+    
+    .gwd-slide-name {
+      font-size: 1.4rem;
+    }
+    
+    .gwd-slide-desc {
+      font-size: 0.9rem;
+      max-width: 100%;
+    }
+  }
+  
+  .gwd-slider-arrow {
+    width: 40px;
+    height: 40px;
+    
+    i {
+      font-size: 1.2rem;
+    }
+  }
+  
+  .gwd-thumbnails-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .gwd-destacados-title {
+    font-size: 2.5rem;
+  }
+  
+  .gwd-slide-content {
+    height: 500px;
+  }
+  
+  .gwd-thumbnail-item {
+    height: 150px;
+  }
+}

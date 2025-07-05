@@ -1,42 +1,1056 @@
 [
-    {
-      "id": 1,
-      "nombre": "Desarrollo Web Personalizado",
-      "precio": 1200,
-      "imagenes": ["/img/01-galeria1/galeria2.jpg"],
-      "categoria": "desarrollo",
-      "descripcion": "Sitios web a medida con diseño responsive y tecnologías modernas"
-    },
-    {
-      "id": 2,
-      "nombre": "Tienda Online",
-      "precio": 2500,
-      "imagenes": ["/img/01-galeria1/galeria1.jpg"],
-      "categoria": "ecommerce",
-      "descripcion": "Solución completa de e-commerce con pasarela de pagos integrada"
-    },
-    {
-      "id": 3,
-      "nombre": "SEO Avanzado",
-      "precio": 800,
-      "imagenes": ["/img/01-galeria1/galeria3.jpg"],
-      "categoria": "marketing",
-      "descripcion": "Optimización para motores de búsqueda y estrategia de contenidos"
-    },
-    {
-      "id": 4,
-      "nombre": "Mantenimiento Web",
-      "precio": 300,
-      "imagenes": ["/img/01-galeria1/galeria4.jpg"],
-      "categoria": "soporte",
-      "descripcion": "Actualizaciones, backups y monitoreo constante de tu sitio web"
-    },
-    {
-      "id": 5,
-      "nombre": "Diseño UX/UI",
-      "precio": 1500,
-      "imagenes": ["/img/01-galeria1/galeria5.jpg"],
-      "categoria": "diseño",
-      "descripcion": "Diseño de interfaces centrado en la experiencia de usuario"
-    }
-  ]
+  {
+    "id": 1,
+    "nombre": "Desarrollo Web Corporativo Premium",
+    "precio": 250000,
+    "precioAnterior": 320000,
+    "promocion": "15% OFF en pago contado",
+    "imagenes": [
+      "/img/11-servicios/servicio-1a.jpg",
+      "/img/11-servicios/servicio-1b.jpg"
+    ],
+    "categoria": "desarrollo",
+    "destacado": true,
+    "resumen": "Sitio web institucional de alto impacto para empresas que buscan posicionamiento digital",
+    "descripcionCompleta": "Desarrollamos tu sitio web corporativo con tecnología de punta, diseño exclusivo y arquitectura optimizada para conversiones. Incluye: Diseño UX/UI personalizado, desarrollo con React o WordPress según necesidades, integración con CRM, formularios avanzados, galería multimedia, blog corporativo integrado, certificado SSL premium, optimización SEO técnica básica y capacitación para el equipo. Ideal para empresas que necesitan transmitir profesionalismo y generar confianza online las 24 horas.",
+    "incluye": [
+      "Diseño 100% exclusivo (no plantillas)",
+      "Hasta 10 secciones personalizadas",
+      "Integración con redes sociales",
+      "Formularios avanzados con validación",
+      "Optimización SEO básica",
+      "3 propuestas de diseño inicial",
+      "Soporte técnico por 60 días"
+    ],
+    "beneficios": [
+      "Aumenta tu credibilidad profesional en un 300%",
+      "Atrae clientes calificados las 24 horas",
+      "Diferénciate de la competencia con diseño premium",
+      "Mayor tasa de conversión de visitantes a clientes"
+    ],
+    "casoExito": "Bavaro Propiedades generó 40% más leads calificados",
+    "tiempoEntrega": "6-8 semanas",
+    "tecnologias": ["React", "SCSS", "Firebase", "GSAP"],
+    "packs": [
+      {
+        "nombre": "Pack Empresa + Marketing",
+        "precio": 380000,
+        "incluye": "Web Corporativa + Landing Page promocional + Configuración Google My Business"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "nombre": "E-Commerce Elite",
+    "precio": 450000,
+    "precioAnterior": 520000,
+    "promocion": "3 cuotas sin interés",
+    "imagenes": [
+      "/img/11-servicios/servicio-2a.jpg",
+      "/img/11-servicios/servicio-2b.jpg"
+    ],
+    "categoria": "ecommerce",
+    "destacado": true,
+    "resumen": "Tienda online de alto rendimiento con todas las herramientas para vender profesionalmente",
+    "descripcionCompleta": "Solución completa de e-commerce para vender sin límites. Plataforma escalable con: Catálogo ilimitado de productos con variantes (talles, colores), carrito de compras persistente, checkout optimizado (MercadoPago, Stripe), sistema de envíos integrado (Andreani, Correo Argentino), gestión de pedidos avanzada, clientes recurrentes, cupones de descuento, integración con WhatsApp Business, análisis de ventas, modo oscuro, wishlist y comparador de productos. Incluye configuración inicial de 50 productos y capacitación completa.",
+    "incluye": [
+      "Hasta 1,000 productos con variantes",
+      "4 métodos de pago integrados",
+      "Sistema de envíos automatizado",
+      "Panel de administración intuitivo",
+      "Blog incorporado para SEO",
+      "Certificado SSL premium",
+      "Backups diarios por 6 meses"
+    ],
+    "beneficios": [
+      "Vende las 24 horas en todo el país",
+      "Reduce costos operativos hasta un 60%",
+      "Sistema antifraude integrado",
+      "Escalable para temporadas altas"
+    ],
+    "casoExito": "Chulus Games aumentó ventas 200% y se expandió a 5 países",
+    "tiempoEntrega": "8-10 semanas",
+    "tecnologias": ["React", "Node.js", "Stripe API", "Firebase"],
+    "packs": [
+      {
+        "nombre": "Pack Vendedor Profesional",
+        "precio": 620000,
+        "incluye": "E-Commerce + App Móvil Básica + Gestión de Redes Sociales por 3 meses"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "nombre": "Sitio Web para Artistas (Premium)",
+    "precio": 180000,
+    "precioAnterior": 220000,
+    "promocion": "10% OFF por pago transferencia",
+    "imagenes": [
+      "/img/11-servicios/servicio-3a.jpg",
+      "/img/11-servicios/servicio-3b.jpg"
+    ],
+    "categoria": "portfolio",
+    "destacado": false,
+    "resumen": "Plataforma profesional para músicos, fotógrafos y artistas que quieren destacar su trabajo",
+    "descripcionCompleta": "Portfolio digital premium diseñado para mostrar tu trabajo artístico como se merece. Incluye: Galería multimedia profesional con lightbox, reproductor de audio/video integrado (SoundCloud, Vimeo, YouTube), biografía interactiva, sistema de eventos/shows con mapa, tienda de merchandising (hasta 20 productos), blog integrado, área privada para prensa (press kit descargable), formulario profesional para contrataciones y sistema de newsletter. Diseño adaptable a tu identidad artística con animaciones sutiles que mejoran la experiencia sin distraer de tu obra.",
+    "incluye": [
+      "Galería con hasta 100 obras/proyectos",
+      "Sistema de eventos con calendario",
+      "Tienda básica (20 productos max)",
+      "Área de prensa profesional",
+      "Integración con redes sociales",
+      "Formulario de contacto avanzado",
+      "Optimización para móviles"
+    ],
+    "beneficios": [
+      "Muestra tu trabajo como un profesional",
+      "Centraliza tu presencia digital en un solo lugar",
+      "Vende directamente a tus seguidores",
+      "Atrae oportunidades laborales serias"
+    ],
+    "casoExito": "Almango Pop Music aumentó seguidores 300% y vendió todo su merchandising en 2 semanas",
+    "tiempoEntrega": "4-5 semanas",
+    "tecnologias": ["GSAP", "SoundCloud API", "EmailJS", "Three.js"],
+    "packs": [
+      {
+        "nombre": "Pack Artista Digital Completo",
+        "precio": 280000,
+        "incluye": "Sitio Web + Producción de 3 videos profesionales + Fotografía de obra"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "nombre": "Landing Page de Conversión Ultra",
+    "precio": 120000,
+    "precioAnterior": 150000,
+    "promocion": "2 Landing Pages por $200.000",
+    "imagenes": [
+      "/img/11-servicios/servicio-4a.jpg",
+      "/img/11-servicios/servicio-4b.jpg"
+    ],
+    "categoria": "marketing",
+    "destacado": true,
+    "resumen": "Página de alta conversión para promociones, lanzamientos o campañas publicitarias",
+    "descripcionCompleta": "Landing page científicamente diseñada para maximizar conversiones en tus campañas de marketing. Desarrollada con principios de neuromarketing y UX avanzado: Estructura persuasiva (AIDA), headlines que captan atención, formulario multi-etapa optimizado, testimonios interactivos, contador de stock/tiempo (FOMO), botones de CTA estratégicos, versión mobile perfecta, integración con Meta Pixel/Google Analytics, pruebas A/B incluidas y velocidad de carga optimizada para no perder leads. Ideal para promociones especiales, cursos digitales o lanzamientos de producto.",
+    "incluye": [
+      "Diseño basado en datos de conversión",
+      "Formulario inteligente de leads",
+      "Integración con CRM/Mailchimp",
+      "Animaciones de scroll personalizadas",
+      "2 versiones para pruebas A/B",
+      "Optimización para ads (Facebook/Google)",
+      "Capacitación para analítica"
+    ],
+    "beneficios": [
+      "Hasta 3x más conversiones que una web normal",
+      "Retorno medible de tu inversión en publicidad",
+      "Cierre más ventas con el mismo tráfico",
+      "Fácil de actualizar para nuevas campañas"
+    ],
+    "casoExito": "Cosmocam aumentó reservas online 65% y redujo tiempo de respuesta de 48h a 2h",
+    "tiempoEntrega": "3-4 semanas",
+    "tecnologias": ["GSAP", "CSS3", "Google Analytics", "Hotjar"],
+    "packs": [
+      {
+        "nombre": "Pack Campaña Completa",
+        "precio": 350000,
+        "incluye": "2 Landing Pages + Configuración de Meta Ads + Seguimiento por 3 meses"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "nombre": "Aplicación Web Progresiva (PWA) Empresarial",
+    "precio": 680000,
+    "precioAnterior": 750000,
+    "promocion": "Financiación a 6 cuotas",
+    "imagenes": [
+      "/img/11-servicios/servicio-5a.jpg",
+      "/img/11-servicios/servicio-5b.jpg"
+    ],
+    "categoria": "desarrollo",
+    "destacado": true,
+    "resumen": "Aplicación instalable que funciona offline con rendimiento nativo para tu negocio",
+    "descripcionCompleta": "Desarrollamos tu Progressive Web App (PWA) para que tus clientes puedan instalar tu aplicación directamente desde el navegador, sin pasar por App Store/Play Store. Funciona offline, envía notificaciones push y tiene rendimiento similar a app nativa. Ideal para: Sistemas de pedidos, herramientas internas, catálogos de productos, programas de fidelización o cualquier servicio que se beneficie de acceso rápido desde la pantalla de inicio. Incluye: Funcionalidad offline completa, sincronización en segundo plano, actualizaciones automáticas, pantalla de splash personalizada y análisis de uso avanzado.",
+    "incluye": [
+      "Experiencia app-like nativa",
+      "Funcionamiento offline completo",
+      "Notificaciones push personalizables",
+      "Sincronización entre dispositivos",
+      "Icono personalizado en pantalla de inicio",
+      "Analítica de uso avanzada",
+      "Mantenimiento por 3 meses"
+    ],
+    "beneficios": [
+      "Evita costos y complicaciones de app stores",
+      "Actualizaciones instantáneas sin aprobaciones",
+      "Funciona en cualquier dispositivo",
+      "Hasta 10x más económico que app nativa"
+    ],
+    "casoExito": "Mis Gastos Integrales alcanzó 15,000 usuarios activos con crecimiento 100% orgánico",
+    "tiempoEntrega": "10-12 semanas",
+    "tecnologias": ["React", "Firebase", "IndexedDB", "Service Workers"],
+    "packs": [
+      {
+        "nombre": "Transformación Digital Total",
+        "precio": 950000,
+        "incluye": "PWA + Sitio Web Corporativo + Migración de datos"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "nombre": "Sitio Web para Bodas y Eventos Exclusivos",
+    "precio": 150000,
+    "precioAnterior": 180000,
+    "promocion": "$130.000 para bodas en temporada baja",
+    "imagenes": [
+      "/img/11-servicios/servicio-6a.jpg",
+      "/img/11-servicios/servicio-6b.jpg"
+    ],
+    "categoria": "eventos",
+    "destacado": false,
+    "resumen": "Web elegante y personalizada para tu evento especial con RSVP inteligente y galería privada",
+    "descripcionCompleta": "Sitio web completamente personalizado para tu boda o evento importante. Más que una simple página, creamos una experiencia digital memorable que refleja la esencia de tu celebración. Incluye: Diseño temático exclusivo, formulario RSVP conectado a Google Sheets, galería de fotos con acceso privado (para invitados), mapa interactivo con ubicaciones clave, línea de tiempo de tu relación, sección de regalos/lista de bodas, countdown para el gran día, recomendaciones para invitados y espacio para anécdotas. También ofrecemos opción premium con dominio personalizado y alojamiento por 1 año incluido.",
+    "incluye": [
+      "Diseño exclusivo para tu evento",
+      "RSVP inteligente con confirmación automática",
+      "Galería privada para invitados",
+      "Mapa interactivo con ubicaciones",
+      "Sección de regalos/lista de bodas",
+      "Countdown animado",
+      "Soporte hasta el día del evento"
+    ],
+    "beneficios": [
+      "Centraliza toda la información importante",
+      "Facilita la organización y logística",
+      "Crea un recuerdo digital permanente",
+      "Interactúa con tus invitados pre-evento"
+    ],
+    "casoExito": "Boda Ale y Fabi logró 100% confirmaciones online y 200+ mensajes de invitados",
+    "tiempoEntrega": "2-3 semanas",
+    "tecnologias": ["PhotoSwipe", "Google Sheets API", "EmailJS", "CSS3"],
+    "packs": [
+      {
+        "nombre": "Experiencia Nupcial Digital",
+        "precio": 220000,
+        "incluye": "Sitio Web + Aplicación para invitados + Fotógrafo digital para 1 evento"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "nombre": "Herramientas de Productividad a Medida",
+    "precio": 520000,
+    "precioAnterior": 600000,
+    "promocion": "1 mes de soporte gratuito",
+    "imagenes": [
+      "/img/11-servicios/servicio-7a.jpg",
+      "/img/11-servicios/servicio-7b.jpg"
+    ],
+    "categoria": "productividad",
+    "destacado": true,
+    "resumen": "Software personalizado para automatizar procesos únicos de tu empresa o proyecto",
+    "descripcionCompleta": "Desarrollamos herramientas web personalizadas que resuelven problemas específicos de tu negocio. Desde sistemas de gestión interna hasta aplicaciones especializadas para tu industria. Proceso completo: Análisis de necesidades, propuesta técnica, desarrollo iterativo con feedback constante, implementación y capacitación. Ejemplos: Sistemas de reservas complejos, calculadoras especializadas, generadores de reportes automáticos, dashboards de datos en tiempo real, herramientas de colaboración para equipos remotos o cualquier proceso que actualmente hagas manualmente y quieras optimizar con tecnología.",
+    "incluye": [
+      "Análisis profundo de tus procesos",
+      "Interfaz intuitiva y accesible",
+      "Sistema de usuarios y permisos",
+      "Exportación de datos (PDF, CSV, Excel)",
+      "Integración con herramientas existentes",
+      "Panel de administración completo",
+      "Documentación técnica y de usuario"
+    ],
+    "beneficios": [
+      "Automatiza tareas repetitivas y tediosas",
+      "Reduce errores humanos hasta en 80%",
+      "Ahorra cientos de horas anuales",
+      "Solución exacta a tus necesidades"
+    ],
+    "casoExito": "Formateo Chords fue adoptado por 5 escuelas de música y procesó 10,000 canciones en 3 meses",
+    "tiempoEntrega": "8-12 semanas",
+    "tecnologias": ["React", "Node.js", "Tone.js", "IndexedDB"],
+    "packs": [
+      {
+        "nombre": "Automatización Empresarial",
+        "precio": 850000,
+        "incluye": "Herramienta Personalizada + Migración de Datos + Capacitación Extendida"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "nombre": "Rediseño Web con Estrategia Digital",
+    "precio": 320000,
+    "precioAnterior": 380000,
+    "promocion": "Análisis SEO gratuito",
+    "imagenes": [
+      "/img/11-servicios/servicio-8a.jpg",
+      "/img/11-servicios/servicio-8b.jpg"
+    ],
+    "categoria": "desarrollo",
+    "destacado": true,
+    "resumen": "Transformación digital completa para sitios obsoletos con enfoque en resultados",
+    "descripcionCompleta": "No solo rediseñamos tu sitio web, lo reinventamos con una estrategia digital integral. Proceso profesional: 1) Auditoría técnica y de contenido, 2) Investigación de competencia y usuarios, 3) Propuesta de arquitectura de información, 4) Diseño UI/UX moderno y accesible, 5) Desarrollo con tecnologías actuales, 6) Migración segura de contenido, 7) Optimización SEO técnica y 8) Plan de mantenimiento. Ideal para empresas con sitios antiguos que ya no representan su nivel actual de calidad o no están generando negocio como deberían.",
+    "incluye": [
+      "Auditoría completa del sitio actual",
+      "Benchmarking competitivo",
+      "Arquitectura de información mejorada",
+      "Diseño responsive y accesible",
+      "Migración segura de contenido",
+      "Optimización SEO técnica avanzada",
+      "Capacitación para equipo interno"
+    ],
+    "beneficios": [
+      "Moderniza tu imagen digital",
+      "Mejora la experiencia de usuario",
+      "Aumenta la conversión de visitantes",
+      "Posicionamiento en buscadores"
+    ],
+    "casoExito": "Bavaro Propiedades logró 40% más leads calificados y redujo tiempos de gestión",
+    "tiempoEntrega": "6-8 semanas",
+    "tecnologias": ["React", "SCSS", "Google Maps API", "Firebase"],
+    "packs": [
+      {
+        "nombre": "Transformación Digital Plus",
+        "precio": 480000,
+        "incluye": "Rediseño Web + Estrategia de Contenidos por 3 meses + Reporte SEM"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "nombre": "Portfolio Digital Premium para Creativos",
+    "precio": 220000,
+    "precioAnterior": 280000,
+    "promocion": "Video presentación incluido",
+    "imagenes": [
+      "/img/11-servicios/servicio-9a.jpg",
+      "/img/11-servicios/servicio-9b.jpg"
+    ],
+    "categoria": "portfolio",
+    "destacado": false,
+    "resumen": "Exhibición profesional interactiva para mostrar tu trabajo de manera impactante",
+    "descripcionCompleta": "Portfolio digital de alto nivel para fotógrafos, diseñadores, artistas y creativos que quieren presentar su trabajo con la máxima calidad. Características destacadas: Galería fullscreen con zoom de alta resolución, visualización de metadata técnica (EXIF para fotógrafos), organización por proyectos/categorías, modo oscuro/light, blog integrado para detrás de escena, sistema de filtrado avanzado, protección de imágenes con watermark dinámico y área de contacto profesional. Diseño minimalista que pone el foco en tu trabajo, con animaciones sutiles que mejoran la experiencia sin distraer.",
+    "incluye": [
+      "Galería multimedia de alta resolución",
+      "Visualización de metadata técnica",
+      "Organización por proyectos/categorías",
+      "Blog integrado con CMS fácil de usar",
+      "Protección de imágenes inteligente",
+      "Formulario de contacto profesional",
+      "Optimización para móviles y tablets"
+    ],
+    "beneficios": [
+      "Muestra tu trabajo como un profesional",
+      "Atrae clientes de mayor nivel",
+      "Control total sobre tu presentación",
+      "Diferénciate de la competencia"
+    ],
+    "casoExito": "Gondra Fotografía aumentó contrataciones en 60% y publicó un libro con su trabajo",
+    "tiempoEntrega": "5-6 semanas",
+    "tecnologias": ["Lightgallery", "EXIF Viewer", "Netlify CMS", "Three.js"],
+    "packs": [
+      {
+        "nombre": "Pack Creativo Profesional",
+        "precio": 350000,
+        "incluye": "Portfolio Digital + Book Digital Interactivo + Tarjeta Digital NFC"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "nombre": "Sistema de Gestión Educativo (LMS)",
+    "precio": 750000,
+    "precioAnterior": 850000,
+    "promocion": "Hasta 12 cuotas",
+    "imagenes": [
+      "/img/11-servicios/servicio-10a.jpg",
+      "/img/11-servicios/servicio-10b.jpg"
+    ],
+    "categoria": "educacion",
+    "destacado": true,
+    "resumen": "Plataforma de aprendizaje online completa para instituciones educativas o capacitaciones corporativas",
+    "descripcionCompleta": "Sistema de gestión de aprendizaje (LMS) personalizado para academias, universidades o empresas con necesidades de capacitación. Plataforma robusta que incluye: Creación y gestión de cursos ilimitados, sistema de videoconferencias integrado (Zoom, Jitsi), evaluaciones automatizadas, generación de certificados, seguimiento de progreso, marketplace interno, reporting avanzado, gamificación (badges, puntos), foros de discusión, y integración con sistemas de RRHH. Adaptable a diferentes modelos pedagógicos con capacidad para cientos de usuarios concurrentes. Incluye capacitación para administradores y documentación completa.",
+    "incluye": [
+      "Hasta 50 cursos iniciales",
+      "Videoconferencias integradas",
+      "Sistema de evaluaciones automatizado",
+      "Generación de certificados",
+      "Marketplace interno",
+      "Reporting y analíticas avanzadas",
+      "Soporte prioritario por 6 meses"
+    ],
+    "beneficios": [
+      "Digitaliza tus contenidos educativos",
+      "Llega a estudiantes en cualquier ubicación",
+      "Reduce costos de capacitación presencial",
+      "Mide el progreso real de los alumnos"
+    ],
+    "casoExito": "Capacitaciones ADM logró 75% mayor retención de estudiantes y se expandió a 3 países",
+    "tiempoEntrega": "12-16 semanas",
+    "tecnologias": ["Moodle", "Zoom API", "MySQL", "Node.js"],
+    "packs": [
+      {
+        "nombre": "Solución Educativa Integral",
+        "precio": 1100000,
+        "incluye": "LMS Personalizado + 3 Cursos Piloto Desarrollados + Marketing de Lanzamiento"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "nombre": "Configurador de Productos Interactivo",
+    "precio": 380000,
+    "precioAnterior": 450000,
+    "promocion": "2 meses de mantenimiento incluido",
+    "imagenes": [
+      "/img/11-servicios/servicio-11a.jpg",
+      "/img/11-servicios/servicio-11b.jpg"
+    ],
+    "categoria": "ecommerce",
+    "destacado": false,
+    "resumen": "Herramienta interactiva que permite a clientes personalizar productos antes de comprar",
+    "descripcionCompleta": "Revoluciona tu e-commerce con un configurador de productos que permite a los clientes personalizar sus compras en tiempo real. Características avanzadas: Interfaz visual intuitiva, vista previa 3D/360°, selección de materiales/colores, cálculo automático de precio según personalizaciones, guardado de diseños favoritos, compartir en redes sociales, integración perfecta con carrito de compras y sistema de aprobaciones para diseños complejos. Ideal para muebles a medida, ropa personalizada, artículos promocionales, productos gourmet o cualquier item que se beneficie de opciones de personalización.",
+    "incluye": [
+      "Interfaz de personalización visual",
+      "Vista previa en tiempo real",
+      "Hasta 10 opciones de personalización",
+      "Cálculo automático de precios",
+      "Guardado de diseños favoritos",
+      "Integración con carrito de compras",
+      "Panel de aprobación de diseños"
+    ],
+    "beneficios": [
+      "Aumenta el valor promedio de compra",
+      "Reduce devoluciones por expectativas no cumplidas",
+      "Experiencia de compra memorable",
+      "Diferencia tu marca de la competencia"
+    ],
+    "casoExito": "Personalizá logró 65% tasa de repetición de compra y redujo errores en 80%",
+    "tiempoEntrega": "8-10 semanas",
+    "tecnologias": ["Fabric.js", "Three.js", "PayPal API", "Cloudinary"],
+    "packs": [
+      {
+        "nombre": "E-Commerce + Configurador",
+        "precio": 750000,
+        "incluye": "Tienda Online Completa + Configurador de Productos Avanzado"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "nombre": "Mantenimiento Web VIP",
+    "precio": 90000,
+    "precioAnterior": 120000,
+    "promocion": "1 año de dominio gratis",
+    "imagenes": [
+      "/img/11-servicios/servicio-12a.jpg",
+      "/img/11-servicios/servicio-12b.jpg"
+    ],
+    "categoria": "soporte",
+    "destacado": true,
+    "resumen": "Protección y optimización continua para que tu sitio web funcione perfectamente siempre",
+    "descripcionCompleta": "Servicio de mantenimiento web premium para garantizar que tu sitio esté siempre actualizado, seguro y funcionando al máximo rendimiento. Incluye: Actualizaciones semanales de plugins/core, backups diarios con almacenamiento externo, monitoreo 24/7 de uptime y performance, escaneo diario de malware/vulnerabilidades, firewall aplicativo, optimización continua de velocidad, informe mensual de desempeño, soporte técnico prioritario y garantía de recuperación ante desastres. Ideal para empresas que dependen de su presencia web y no pueden permitirse tiempos muertos o problemas de seguridad.",
+    "incluye": [
+      "Actualizaciones semanales",
+      "Backups diarios externos",
+      "Monitoreo 24/7 (uptime, performance)",
+      "Protección avanzada contra malware",
+      "Firewall aplicativo",
+      "Optimización continua de velocidad",
+      "Informes mensuales detallados"
+    ],
+    "beneficios": [
+      "Evita costosas caídas de tu sitio",
+      "Protege los datos de tus clientes",
+      "Mantén tu sitio actualizado y seguro",
+      "Enfócate en tu negocio sin preocupaciones"
+    ],
+    "casoExito": "Todos nuestros clientes VIP mantienen sus sitios con 99.9% uptime y cero incidentes de seguridad",
+    "tiempoEntrega": "Continuo",
+    "tecnologias": ["Backups automatizados", "Monitoreo Uptime", "SSL", "CDN"],
+    "packs": [
+      {
+        "nombre": "Seguridad Total Web",
+        "precio": 150000,
+        "incluye": "Mantenimiento VIP + Auditoría de Seguridad Profesional + Certificado SSL Premium"
+      }
+    ]
+  },
+
+  {
+    "id": 13,
+    "nombre": "Community Management Premium",
+    "precio": 120000,
+    "precioAnterior": 150000,
+    "promocion": "3 meses por $300.000",
+    "imagenes": [
+      "/img/11-servicios/servicio-13a.jpg",
+      "/img/11-servicios/servicio-13b.jpg"
+    ],
+    "categoria": "marketing",
+    "destacado": true,
+    "resumen": "Gestión profesional de redes sociales con estrategia de contenido y crecimiento orgánico",
+    "descripcionCompleta": "Administramos tus redes sociales (Instagram, Facebook, LinkedIn) con contenido estratégico diseñado para aumentar engagement y conversiones. Incluye: Creación de calendario editorial, diseño de posts/videos/stories, copywriting persuasivo, interacción con seguidores, análisis de métricas, informes mensuales y estrategia de hashtags. Ideal para marcas que quieren posicionarse sin depender únicamente de publicidad paga.",
+    "incluye": [
+      "12 posts/mes",
+      "20 stories/mes",
+      "Respuesta a mensajes",
+      "Informe mensual"
+    ],
+    "beneficios": ["Aumenta tu autoridad digital", "Genera leads calificados"],
+    "casoExito": "Deira Carteras logró 15K seguidores en 6 meses",
+    "tiempoEntrega": "Continuo",
+    "tecnologias": ["Canva", "Meta Business", "Google Analytics"]
+  },
+  {
+    "id": 14,
+    "nombre": "Realidad Aumentada para E-Commerce",
+    "precio": 350000,
+    "precioAnterior": 420000,
+    "promocion": "Demo interactiva incluida",
+    "imagenes": [
+      "/img/11-servicios/servicio-14a.jpg",
+      "/img/11-servicios/servicio-14b.jpg"
+    ],
+    "categoria": "tecnologia",
+    "destacado": true,
+    "resumen": "Permite a tus clientes visualizar productos en su espacio antes de comprar",
+    "descripcionCompleta": "Integramos realidad aumentada en tu tienda online para que los clientes puedan ver cómo quedan los productos en su hogar/espacio. Ideal para muebles, decoración, arte, moda o electrónicos. Tecnología WebAR que funciona directamente desde el navegador sin necesidad de apps adicionales. Incluye: Desarrollo de 5 modelos 3D interactivos, integración con tu e-commerce, y tutoriales para el equipo.",
+    "incluye": [
+      "5 modelos 3D interactivos",
+      "Integración con sitio web",
+      "Soporte técnico 3 meses"
+    ],
+    "beneficios": ["Reduce devoluciones hasta 40%", "Aumenta conversiones"],
+    "casoExito": "Deira Carteras aumentó ventas 25% con AR",
+    "tiempoEntrega": "6-8 semanas",
+    "tecnologias": ["WebAR", "Three.js", "GLTF"]
+  },
+  {
+    "id": 15,
+    "nombre": "Chatbot Inteligente para WhatsApp",
+    "precio": 150000,
+    "precioAnterior": 190000,
+    "promocion": "2 flujos gratuitos",
+    "imagenes": [
+      "/img/11-servicios/servicio-15a.jpg",
+      "/img/11-servicios/servicio-15b.jpg"
+    ],
+    "categoria": "automatizacion",
+    "destacado": false,
+    "resumen": "Automatiza consultas frecuentes y ventas por WhatsApp Business",
+    "descripcionCompleta": "Chatbot para WhatsApp con inteligencia artificial que responde consultas, agenda citas, procesa pedidos y deriva a agentes humanos cuando es necesario. Flujos conversacionales personalizados para tu negocio con integración a CRM. Reduce hasta 70% el tiempo de atención manual.",
+    "incluye": [
+      "10 flujos conversacionales",
+      "Integración con CRM",
+      "Capacitación"
+    ],
+    "beneficios": ["Atiende clientes 24/7", "Reduce costos de soporte"],
+    "casoExito": "Lina Bazar automatizó 60% de consultas",
+    "tiempoEntrega": "3-4 semanas",
+    "tecnologias": ["Dialogflow", "WhatsApp API", "Node.js"]
+  },
+
+  {
+    "id": 16,
+    "nombre": "Video Marketing Profesional",
+    "precio": 180000,
+    "precioAnterior": 220000,
+    "promocion": "3 videos por $450.000",
+    "imagenes": [
+      "/img/11-servicios/servicio-16a.jpg",
+      "/img/11-servicios/servicio-16b.jpg"
+    ],
+    "categoria": "marketing",
+    "destacado": true,
+    "resumen": "Producción de videos promocionales para redes sociales y sitios web",
+    "descripcionCompleta": "Creamos videos de alto impacto para mostrar tu producto, servicio o marca. Incluye: Guión estratégico, grabación con equipo 4K, edición profesional con motion graphics, subtítulos optimizados para móviles, música licenciada y versiones para Instagram/TikTok/YouTube. Ideal para aumentar engagement y conversiones en tus campañas.",
+    "incluye": [
+      "1 video principal (60 seg)",
+      "3 clips para redes",
+      "Edición profesional",
+      "Música y subtítulos"
+    ],
+    "beneficios": [
+      "Aumenta el tiempo en tu sitio web",
+      "Mejora la retención de clientes"
+    ],
+    "casoExito": "Almango Pop Music logró 50K vistas en su video de lanzamiento",
+    "tiempoEntrega": "3-4 semanas",
+    "tecnologias": ["Premiere Pro", "After Effects", "DaVinci Resolve"],
+    "packs": [
+      {
+        "nombre": "Pack Video Corporativo",
+        "precio": 350000,
+        "incluye": "3 videos + Estrategia de distribución en redes"
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "nombre": "Email Marketing Automatizado",
+    "precio": 120000,
+    "precioAnterior": 150000,
+    "promocion": "Plantillas personalizadas gratis",
+    "imagenes": [
+      "/img/11-servicios/servicio-17a.jpg",
+      "/img/11-servicios/servicio-17b.jpg"
+    ],
+    "categoria": "marketing",
+    "destacado": false,
+    "resumen": "Campañas de email automatizadas para fidelizar clientes y aumentar ventas",
+    "descripcionCompleta": "Sistema de email marketing con flujos automatizados basados en el comportamiento de tus clientes. Incluye: Diseño de templates responsive, segmentación de audiencia, automatización de secuencias (post-compra, abandonos de carrito, cumpleaños), análisis de aperturas/clicks, y integración con tu e-commerce o CRM. Ideal para recuperar carritos abandonados y aumentar ventas recurrentes.",
+    "incluye": [
+      "5 templates personalizados",
+      "3 flujos automatizados",
+      "Informe mensual"
+    ],
+    "beneficios": [
+      "Hasta 20% más de ventas recurrentes",
+      "Mejora la comunicación con clientes"
+    ],
+    "casoExito": "Deira Carteras recuperó 15% de carritos abandonados",
+    "tiempoEntrega": "2-3 semanas",
+    "tecnologias": ["Mailchimp", "Klaviyo", "HubSpot"],
+    "packs": [
+      {
+        "nombre": "Pack Marketing Digital",
+        "precio": 280000,
+        "incluye": "Email Marketing + Redes Sociales por 1 mes"
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "nombre": "Auditoría SEO Técnica Avanzada",
+    "precio": 90000,
+    "precioAnterior": 120000,
+    "promocion": "++ Plan de acción incluido ++",
+    "imagenes": [
+      "/img/11-servicios/servicio-18a.jpg",
+      "/img/11-servicios/servicio-18b.jpg"
+    ],
+    "categoria": "seo",
+    "destacado": true,
+    "resumen": "Diagnóstico profundo de tu sitio web para mejorar posicionamiento en Google",
+    "descripcionCompleta": "Auditoría técnica SEO que identifica errores y oportunidades para rankear mejor en buscadores. Incluye: Análisis de velocidad, indexación, estructura de URLs, metaetiquetas, mobile-friendliness, enlaces rotos, schema markup, competencia y palabras clave. Entrega un reporte ejecutivo con acciones prioritarias para implementar.",
+    "incluye": [
+      "Informe de 30+ puntos técnicos",
+      "Análisis de competencia",
+      "Recomendaciones personalizadas"
+    ],
+    "beneficios": [
+      "Aumenta tu visibilidad orgánica",
+      "Atrae tráfico calificado"
+    ],
+    "casoExito": "Bavaro Propiedades mejoró un 40% en rankings locales",
+    "tiempoEntrega": "1-2 semanas",
+    "tecnologias": ["Google Search Console", "Screaming Frog", "Ahrefs"],
+    "packs": [
+      {
+        "nombre": "Pack SEO Completo",
+        "precio": 220000,
+        "incluye": "Auditoría + Implementación de mejoras"
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "nombre": "Sistema de Reservas Online",
+    "precio": 210000,
+    "precioAnterior": 250000,
+    "promocion": "Integración con WhatsApp gratis",
+    "imagenes": [
+      "/img/11-servicios/servicio-19a.jpg",
+      "/img/11-servicios/servicio-19b.jpg"
+    ],
+    "categoria": "productividad",
+    "destacado": false,
+    "resumen": "Plataforma para gestionar turnos, citas o reservas de forma automatizada",
+    "descripcionCompleta": "Sistema personalizado de reservas que sincroniza disponibilidad en tiempo real, envía recordatorios automáticos y reduce no-shows. Funcionalidades: Calendario interactivo, múltiples ubicaciones/servicios, pagos online (opcional), integración con Google Calendar, confirmación por SMS/WhatsApp, y panel de administración. Ideal para consultorios, salones de belleza, restaurantes o talleres.",
+    "incluye": [
+      "Calendario de disponibilidad",
+      "Recordatorios automáticos",
+      "Panel de administración"
+    ],
+    "beneficios": [
+      "Reduce un 30% las inasistencias",
+      "Ahorra tiempo en coordinación"
+    ],
+    "casoExito": "Capacitaciones ADM optimizó su agenda en un 50%",
+    "tiempoEntrega": "4-5 semanas",
+    "tecnologias": ["React", "Node.js", "Twilio API"],
+    "packs": [
+      {
+        "nombre": "Pack Reservas + Web",
+        "precio": 350000,
+        "incluye": "Sistema de Reservas + Sitio Web Básico"
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "nombre": "App Móvil Híbrida",
+    "precio": 550000,
+    "precioAnterior": 650000,
+    "promocion": "Publicación en stores incluida",
+    "imagenes": [
+      "/img/11-servicios/servicio-20a.jpg",
+      "/img/11-servicios/servicio-20b.jpg"
+    ],
+    "categoria": "desarrollo",
+    "destacado": true,
+    "resumen": "Aplicación móvil para iOS y Android con tecnología cross-platform",
+    "descripcionCompleta": "Desarrollo de app nativa usando React Native o Flutter para lanzar en Apple Store y Google Play. Incluye: Diseño UI/UX personalizado, integración con APIs, autenticación de usuarios, notificaciones push, panel de administración web y soporte post-lanzamiento. Ideal para extender la funcionalidad de tu negocio a móviles con un solo desarrollo para ambas plataformas.",
+    "incluye": [
+      "Diseño UI/UX",
+      "Desarrollo para iOS y Android",
+      "Panel de administración"
+    ],
+    "beneficios": [
+      "Llega a tus clientes en cualquier lugar",
+      "Mejora la experiencia móvil"
+    ],
+    "casoExito": "Chulus Games expandió su mercado con su app móvil",
+    "tiempoEntrega": "12-14 semanas",
+    "tecnologias": ["React Native", "Firebase", "Expo"],
+    "packs": [
+      {
+        "nombre": "Pack App + Backend",
+        "precio": 800000,
+        "incluye": "App Móvil + Sistema de Gestión en la Nube"
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "nombre": "Diseño de Identidad Visual",
+    "precio": 95000,
+    "precioAnterior": 120000,
+    "promocion": "++ Manual de marca gratis ++",
+    "imagenes": [
+      "/img/11-servicios/servicio-21a.jpg",
+      "/img/11-servicios/servicio-21b.jpg"
+    ],
+    "categoria": "diseño",
+    "destacado": false,
+    "resumen": "Creación de logo, paleta de colores y elementos gráficos para tu marca",
+    "descripcionCompleta": "Desarrollo de identidad visual profesional que comunica la esencia de tu negocio. Incluye: Diseño de logo (3 propuestas), paleta de colores, tipografías, iconografía, texturas y aplicaciones en mockups (tarjetas, papelería, redes sociales). Entrega final con manual de marca en PDF y archivos editables (AI, PSD).",
+    "incluye": [
+      "3 propuestas de logo",
+      "Paleta de colores",
+      "Manual de marca básico"
+    ],
+    "beneficios": [
+      "Refuerza la confianza en tu marca",
+      "Consistencia en todos tus canales"
+    ],
+    "casoExito": "Gondra Fotografía posicionó su estilo único",
+    "tiempoEntrega": "3-4 semanas",
+    "tecnologias": ["Adobe Illustrator", "Photoshop", "InDesign"],
+    "packs": [
+      {
+        "nombre": "Pack Branding Total",
+        "precio": 180000,
+        "incluye": "Identidad Visual + Fotografía Profesional de Productos"
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "nombre": "Fotografía Profesional de Productos",
+    "precio": 80000,
+    "precioAnterior": 100000,
+    "promocion": "10 fotos por $70.000",
+    "imagenes": [
+      "/img/11-servicios/servicio-22a.jpg",
+      "/img/11-servicios/servicio-22b.jpg"
+    ],
+    "categoria": "diseño",
+    "destacado": true,
+    "resumen": "Sesión fotográfica para destacar tus productos en e-commerce y redes",
+    "descripcionCompleta": "Fotografía profesional en estudio con iluminación controlada, fondos personalizados y edición de alto nivel. Incluye: Dirección de arte, imágenes en alta resolución, recorte con fondo transparente (PNG), y versiones optimizadas para web. Ideal para catálogos, marketplaces o redes sociales.",
+    "incluye": [
+      "5 fotos por producto",
+      "Edición profesional",
+      "Formatos para web"
+    ],
+    "beneficios": [
+      "Aumenta hasta un 30% las conversiones",
+      "Imagen premium para tu marca"
+    ],
+    "casoExito": "Deira Carteras mejoró sus ventas online con fotos profesionales",
+    "tiempoEntrega": "2 semanas",
+    "tecnologias": ["Photoshop", "Lightroom", "Capture One"],
+    "packs": [
+      {
+        "nombre": "Pack E-Commerce Visual",
+        "precio": 150000,
+        "incluye": "10 fotos de producto + Diseño de banners"
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "nombre": "Tienda en Instagram/Facebook",
+    "precio": 150000,
+    "precioAnterior": 180000,
+    "promocion": "++ Catálogo digital gratis ++",
+    "imagenes": [
+      "/img/11-servicios/servicio-23a.jpg",
+      "/img/11-servicios/servicio-23b.jpg"
+    ],
+    "categoria": "ecommerce",
+    "destacado": true,
+    "resumen": "Convierte tus redes sociales en una tienda funcional sin necesidad de sitio web",
+    "descripcionCompleta": "Configuramos tu tienda directamente en Instagram y Facebook para que puedas vender desde tus publicaciones, historias y reels. Incluye: Catálogo de productos sincronizado con Meta Commerce, configuración de checkout nativo (o derivación a WhatsApp), diseño de plantillas para posts de productos, capacitación para el equipo y análisis de ventas. Ideal para emprendedores que quieren comenzar a vender online rápidamente.",
+    "incluye": [
+      "Configuración de Meta Commerce",
+      "Hasta 50 productos",
+      "Plantillas de posts"
+    ],
+    "beneficios": [
+      "Vende donde ya tienes seguidores",
+      "Sin costos de desarrollo web inicial"
+    ],
+    "casoExito": "Puchulita Música incrementó ventas 35% en 2 meses",
+    "tiempoEntrega": "1-2 semanas",
+    "tecnologias": ["Meta Commerce", "Facebook Pixel"],
+    "packs": [
+      {
+        "nombre": "Pack Redes Sociales + Tienda",
+        "precio": 250000,
+        "incluye": "Tienda en Instagram + Community Management por 1 mes"
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "nombre": "Sistema de Fidelización Digital",
+    "precio": 130000,
+    "precioAnterior": 160000,
+    "promocion": "App móvil incluida",
+    "imagenes": [
+      "/img/11-servicios/servicio-24a.jpg",
+      "/img/11-servicios/servicio-24b.jpg"
+    ],
+    "categoria": "marketing",
+    "destacado": false,
+    "resumen": "Programa de puntos y recompensas para aumentar las ventas recurrentes",
+    "descripcionCompleta": "Sistema digital de fidelización donde los clientes acumulan puntos por compras, reseñas o interacciones. Incluye: Diseño de la estrategia de recompensas, desarrollo de la plataforma web/app, tarjetas digitales, dashboard de administración, e integración con tu e-commerce o POS. Ideal para retail, gastronomía o servicios.",
+    "incluye": [
+      "Sistema de puntos",
+      "Dashboard de administración",
+      "App móvil básica"
+    ],
+    "beneficios": [
+      "Aumenta hasta un 25% las compras recurrentes",
+      "Mejora la retención de clientes"
+    ],
+    "casoExito": "Lina Tienda Bazar logró 300 listas de deseos en 1 mes",
+    "tiempoEntrega": "4-5 semanas",
+    "tecnologias": ["React", "Firebase", "QR Codes"],
+    "packs": [
+      {
+        "nombre": "Pack Marketing 360",
+        "precio": 300000,
+        "incluye": "Fidelización + Email Marketing Automatizado"
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "nombre": "Dashboard de Analytics Personalizado",
+    "precio": 170000,
+    "precioAnterior": 200000,
+    "promocion": "3 meses de actualización",
+    "imagenes": [
+      "/img/11-servicios/servicio-25a.jpg",
+      "/img/11-servicios/servicio-25b.jpg"
+    ],
+    "categoria": "productividad",
+    "destacado": true,
+    "resumen": "Visualización de datos clave de tu negocio en un panel intuitivo",
+    "descripcionCompleta": "Dashboard personalizado que consolida métricas de ventas, marketing, operaciones o finanzas en gráficos interactivos. Conectamos fuentes de datos como Google Analytics, CRM, redes sociales o bases de datos. Incluye: Diseño de KPIs, desarrollo del panel, automatización de reportes y capacitación para el equipo.",
+    "incluye": [
+      "Hasta 5 fuentes de datos",
+      "Gráficos personalizables",
+      "Actualización automática"
+    ],
+    "beneficios": [
+      "Toma decisiones basadas en datos",
+      "Ahorra horas en reportes manuales"
+    ],
+    "casoExito": "Coordinemos Proyectos optimizó su gestión con datos en tiempo real",
+    "tiempoEntrega": "3-4 semanas",
+    "tecnologias": ["Google Data Studio", "Tableau", "Power BI"],
+    "packs": [
+      {
+        "nombre": "Pack Business Intelligence",
+        "precio": 280000,
+        "incluye": "Dashboard + Auditoría de Datos"
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "nombre": "Campañas Google Ads Premium",
+    "precio": 140000,
+    "precioAnterior": 180000,
+    "promocion": "$1,000 en crédito publicitario",
+    "imagenes": [
+      "/img/11-servicios/servicio-26a.jpg",
+      "/img/11-servicios/servicio-26b.jpg"
+    ],
+    "categoria": "marketing",
+    "destacado": false,
+    "resumen": "Gestión profesional de campañas en Google Search y Display",
+    "descripcionCompleta": "Creamos y optimizamos campañas en Google Ads para atraer clientes calificados a tu sitio web. Incluye: Investigación de palabras clave, creación de anuncios, segmentación por ubicación/dispositivo, landing pages optimizadas, seguimiento de conversiones y ajustes semanales. Ideal para negocios locales o e-commerce.",
+    "incluye": [
+      "Configuración inicial",
+      "Optimización semanal",
+      "Informe mensual"
+    ],
+    "beneficios": [
+      "Aparece primero en búsquedas relevantes",
+      "Solo pagas por clicks calificados"
+    ],
+    "casoExito": "Bavaro Propiedades redujo su CPA en un 35%",
+    "tiempoEntrega": "Continuo",
+    "tecnologias": ["Google Ads", "Google Tag Manager", "Google Analytics"],
+    "packs": [
+      {
+        "nombre": "Pack Ads Total",
+        "precio": 250000,
+        "incluye": "Google Ads + Meta Ads por 3 meses"
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "nombre": "Traducción Multilingüe para Webs",
+    "precio": 110000,
+    "precioAnterior": 140000,
+    "promocion": "2 idiomas por $180.000",
+    "imagenes": [
+      "/img/11-servicios/servicio-27a.jpg",
+      "/img/11-servicios/servicio-27b.jpg"
+    ],
+    "categoria": "contenido",
+    "destacado": true,
+    "resumen": "Adaptación de tu sitio web a múltiples idiomas para mercados internacionales",
+    "descripcionCompleta": "Traducción profesional y localización cultural de tu contenido web (inglés, portugués, francés o italiano). Incluye: Implementación técnica con switcher de idiomas, SEO multilingüe (keywords por mercado), y revisión nativa. Ideal para empresas que buscan expandirse globalmente.",
+    "incluye": [
+      "Traducción profesional",
+      "Implementación técnica",
+      "SEO básico por idioma"
+    ],
+    "beneficios": ["Atrae clientes internacionales", "Mejora tu imagen global"],
+    "casoExito": "Deira Carteras captó clientes en 8 países",
+    "tiempoEntrega": "3-4 semanas",
+    "tecnologias": ["i18n", "Google Translate API", "WPML"],
+    "packs": [
+      {
+        "nombre": "Pack Global",
+        "precio": 200000,
+        "incluye": "Traducción a 2 idiomas + Configuración de dominio internacional"
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "nombre": "Web Accesible (WCAG 2.1)",
+    "precio": 190000,
+    "precioAnterior": 230000,
+    "promocion": "Certificado de accesibilidad",
+    "imagenes": [
+      "/img/11-servicios/servicio-28a.jpg",
+      "/img/11-servicios/servicio-28b.jpg"
+    ],
+    "categoria": "desarrollo",
+    "destacado": false,
+    "resumen": "Adaptación de tu sitio web para cumplir con estándares de accesibilidad",
+    "descripcionCompleta": "Implementamos las pautas WCAG 2.1 AA para que tu web sea usable por personas con discapacidad visual, auditiva o motriz. Incluye: Auditoría inicial, ajustes de contraste, navegación por teclado, lectores de pantalla, subtítulos en videos, y certificado de cumplimiento. Requerido por ley en muchos sectores (gobierno, educación, salud).",
+    "incluye": [
+      "Auditoría detallada",
+      "Implementación de mejoras",
+      "Pruebas con usuarios"
+    ],
+    "beneficios": ["Cumple con regulaciones", "Amplía tu audiencia potencial"],
+    "casoExito": "Capacitaciones ADM mejoró su alcance educativo",
+    "tiempoEntrega": "4-5 semanas",
+    "tecnologias": ["ARIA", "NVDA", "Wave"],
+    "packs": [
+      {
+        "nombre": "Pack Inclusivo",
+        "precio": 300000,
+        "incluye": "Web Accesible + Video con subtítulos y audiodescripción"
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "nombre": "Soporte Técnico VIP para PYMES",
+    "precio": 80000,
+    "precioAnterior": 100000,
+    "promocion": "12 meses por $700.000",
+    "imagenes": [
+      "/img/11-servicios/servicio-29a.jpg",
+      "/img/11-servicios/servicio-29b.jpg"
+    ],
+    "categoria": "soporte",
+    "destacado": true,
+    "resumen": "Asistencia técnica prioritaria para resolver problemas web y digitales",
+    "descripcionCompleta": "Soporte remoto ilimitado para tu sitio web, hosting, emails o herramientas digitales. Incluye: Resolución de incidencias, actualizaciones de seguridad, optimización de performance, capacitación al equipo y monitoreo preventivo. Ideal para empresas sin departamento IT interno.",
+    "incluye": [
+      "10 horas/mes de soporte",
+      "Respuesta en menos de 4 horas",
+      "Informe mensual"
+    ],
+    "beneficios": ["Evita costosas caídas técnicas", "Enfócate en tu negocio"],
+    "casoExito": "Lina Tienda Bazar redujo sus tiempos de inactividad a cero",
+    "tiempoEntrega": "Continuo",
+    "tecnologias": ["Zendesk", "TeamViewer", "Git"],
+    "packs": [
+      {
+        "nombre": "Pack Seguridad Total",
+        "precio": 150000,
+        "incluye": "Soporte VIP + Auditoría de Seguridad Trimestral"
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "nombre": "Migración Cloud Segura",
+    "precio": 280000,
+    "precioAnterior": 350000,
+    "promocion": "1 mes de hosting gratis",
+    "imagenes": [
+      "/img/11-servicios/servicio-30a.jpg",
+      "/img/11-servicios/servicio-30b.jpg"
+    ],
+    "categoria": "infraestructura",
+    "destacado": true,
+    "resumen": "Traslado seguro de tu sitio web a servidores cloud de alto rendimiento",
+    "descripcionCompleta": "Migramos tu sitio web o aplicación a infraestructura cloud (AWS, Google Cloud o Azure) con configuración optimizada para velocidad y seguridad. Incluye: Auditoría previa, transferencia de datos sin downtime, configuración de CDN, firewall WAF, backups automatizados y monitoreo 24/7. Ideal para sitios con alto tráfico o que requieren máxima estabilidad.",
+    "incluye": [
+      "Migración sin caídas",
+      "Configuración de CDN",
+      "Monitoreo por 1 mes"
+    ],
+    "beneficios": ["Hasta 10x más velocidad", "Escalabilidad automática"],
+    "casoExito": "Chulus Games soportó tráfico de Black Friday sin caídas",
+    "tiempoEntrega": "2-3 semanas",
+    "tecnologias": ["AWS", "Docker", "Cloudflare"],
+    "packs": [
+      {
+        "nombre": "Pack Cloud Empresarial",
+        "precio": 450000,
+        "incluye": "Migración + Optimización de Bases de Datos"
+      }
+    ]
+  }
+]

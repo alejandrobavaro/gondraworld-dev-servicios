@@ -17,7 +17,7 @@
   },
   {
     "id": 3,
-    "nombre": "E-commerce para Heladerías",
+    "nombre": "E-commerce para Comercios",
     "precio": 120000,
     "imagenes": ["/img/06-tienda/tienda3-a.png", "/img/06-tienda/tienda3-b.png"],
     "categoria": "ecommerce",
